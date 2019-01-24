@@ -13,7 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        Commands\GeneratorCommand::class,
+        Commands\ResetDataBaseCommand::class,
+        Commands\ResetSystemCommand::class
     ];
 
     /**
