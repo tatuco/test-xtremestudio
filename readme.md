@@ -104,7 +104,18 @@ traduccion SQL:
 ```sh
  SELECT * FROM users WHERE id BETWEEN 1 AND 3 AND id IN (5, 9) OR id = 4;
 ```
-
+- Ordenamiento: 
+ ```sh
+    &order=["id","desc"]    
+  ```
+ - Relaciones:
+ ```sh
+ &join=[{"table":"users","fk":"role.user_id","pk":"users.id","type":"inner"}]
+   ```
+  - Especificar columnas, por defecto es ['*']:
+   ```sh
+    &columns=["id as cedula", "name as Nombre"];
+  ```
 ### License
 
 MIT License Luis.
