@@ -116,6 +116,10 @@ traduccion SQL:
    ```sh
     &columns=["id as cedula", "name as Nombre"];
   ```
+  - Filtros por fechas: solo de debe agregar al where la propiedad "type" (date, year, month, day, time)
+   ```sh
+    /api/users?where=[{"op": "eq", "field": "date_created", "value": "2019-01-22", "type": "date"}]
+    ```
 ### License
 
 MIT License Luis.
