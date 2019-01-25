@@ -5,7 +5,7 @@
 Clonar el repositorio. comandos:
 
 ```sh
-$ cd core-lumen
+$ cd carpeta-del-proyecto
 $ cp .env.example .env
 $ php artisan key:generate
 ```
@@ -68,6 +68,43 @@ ir a App/Core/TatucoController.php para establecer en la siguiente propiedad, la
 protected $validateDefault = [];
 
 ```
+#### Do Where:
+El doWhere es una parametro enviado atraves de la url hacia la api, con el objetivo de filtrar,
+ las consultas desde el cliente, evitando crear endpoints sin fin para cada cosa, Ejemplo: 
+
+```sh
+/api/users?where=[{"op": "eq", "field": "id", "value": 1}]
+```
+- Esto seria el quivalente a :
+```sh
+ SELECT * FROM users WHERE id = 1;
+```
+ - donde op representa el operador (<, >, = ...) field representa la columna y value el valor que queremos obtener.
+### Operadores 
+
+
+|   Operador    |    Simbolo    | Descripcion |
+| ------------- | ------------- | ----------- |          
+|      ct       |       like    |   '%luis%'  |
+|      sw       |       like    |   'lu%'     |
+|      ew       |       like    |   '%is'     |
+|      eq       |       =       |             |
+|      gt       |       >       |             |
+|      gte      |       >=      |             |
+|      lte      |       <=      |             |
+|      lt       |       <       |             |
+|      in       |       in      |             |
+|      bt       |       entre   |             |
+
+- por default el operador es "eq", tambien podemos agregar tantas condiciones como queramos:
+```sh
+ where=[{"op":"bt","field":"id","value":[1,3],"filter":"and"},{"op":"in","field":"id","value":[5,9],"filter":"or"},{"op":"eq","field":"id","value":4,"filter":"or"}]
+```
+traduccion SQL:
+```sh
+ SELECT * FROM users WHERE id BETWEEN 1 AND 3 AND id IN (5, 9) OR id = 4;
+```
+
 ### License
 
 MIT License Luis.
