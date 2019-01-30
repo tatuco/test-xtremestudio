@@ -3,15 +3,12 @@
 namespace App\Models;
 
 use App\Acl\Src\Traits\ShinobiTrait;
-use App\Core\TatucoModel;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Core\TatucoModel as Tatuco;
 
-class User extends TatucoModel
+
+class User extends Tatuco
 {
-    use Notifiable, ShinobiTrait;
+    use ShinobiTrait;
 
     /**
      * The attributes that are mass assignable.
