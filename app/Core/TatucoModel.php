@@ -9,8 +9,6 @@
 namespace App\Core;
 
 
-use App\Core\ImageService;
-use App\Models\Context;
 use App\Query\QueryBuilder;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;

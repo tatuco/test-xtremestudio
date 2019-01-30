@@ -19,8 +19,7 @@ class CreatePermissionsTable extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            $table->boolean('enable')->default(true);
-            $table->boolean('disable')->default(false);
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

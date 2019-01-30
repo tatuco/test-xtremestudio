@@ -2,11 +2,12 @@
 
 namespace App\Acl\Src\Models;
 
+use App\Core\TatucoModel;
 use Config;
 use Illuminate\Database\Eloquent\Model;
 use App\Acl\Src\Traits\PermissionTrait;
 
-class Role extends Model
+class Role extends TatucoModel
 {
     use PermissionTrait {
         flushPermissionCache as parentFlushPermissionCache;

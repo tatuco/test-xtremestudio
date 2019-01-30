@@ -84,11 +84,11 @@ class GeneratorCommand extends Command
 
             $this->getBr($name);
 
-            File::append(base_path('routes/api.php'), '$router->get(\'' . str_plural(strtolower($name)) . "', '{$name}Controller@index');\n");
-            File::append(base_path('routes/api.php'), '$router->get(\'' . str_plural(strtolower($name)) . "/{id}', '{$name}Controller@show');\n");
-            File::append(base_path('routes/api.php'), '$router->post(\'' . str_plural(strtolower($name)) . "', '{$name}Controller@store');\n");
-            File::append(base_path('routes/api.php'), '$router->put(\'' . str_plural(strtolower($name)) . "/{id}', '{$name}Controller@update');\n");
-            File::append(base_path('routes/api.php'), '$router->delete(\'' . str_plural(strtolower($name)) . "/{id}', '{$name}Controller@destroy');\n");
+            File::append(base_path('routes/api.php'), 'Route::get(\'' . str_plural(strtolower($name)) . "', '{$name}Controller@index');\n");
+            File::append(base_path('routes/api.php'), 'Route::get(\'' . str_plural(strtolower($name)) . "/{id}', '{$name}Controller@show');\n");
+            File::append(base_path('routes/api.php'), 'Route::post(\'' . str_plural(strtolower($name)) . "', '{$name}Controller@store');\n");
+            File::append(base_path('routes/api.php'), 'Route::put(\'' . str_plural(strtolower($name)) . "/{id}', '{$name}Controller@update');\n");
+            File::append(base_path('routes/api.php'), 'Route::delete(\'' . str_plural(strtolower($name)) . "/{id}', '{$name}Controller@destroy');\n");
 
         } catch (\Exception $e) {
             return "${$e}";

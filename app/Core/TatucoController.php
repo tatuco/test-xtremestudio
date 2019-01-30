@@ -9,7 +9,7 @@
 namespace App\Core;
 
 use Illuminate\Http\Request;
-use Laravel\Lumen\Routing\Controller as BaseController;
+use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Validator;
 
 class TatucoController extends BaseController

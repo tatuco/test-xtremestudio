@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Core;
+namespace App\Http\Controllers\Auth;
+
 
 use App\Acl\Src\Models\Role;
-use App\Models\Tatuco\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Mockery\Exception;

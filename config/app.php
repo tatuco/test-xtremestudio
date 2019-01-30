@@ -180,10 +180,7 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         App\Reports\src\ServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
-        Jenssegers\Agent\AgentServiceProvider::class
-
-
+        Intervention\Image\ImageServiceProvider::class
     ],
 
     /*

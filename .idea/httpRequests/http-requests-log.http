@@ -1,0 +1,108 @@
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T090503.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T090355.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T085449.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T085431.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T084936.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T084632.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T084355.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T084325.500.html
+
+###
+
+POST http://localhost:8000/api/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T084302.405.html
+
+###
+

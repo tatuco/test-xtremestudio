@@ -16,12 +16,10 @@ class CreateParamsTable extends Migration
         Schema::create('params', function (Blueprint $table) {
             $table->increments('id');
             $table->string('code')->unique()->nullable();
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->string('key')->unique();
             $table->string('value');
             $table->string('description')->nullable();
-            $table->boolean('enable')->default(true);
-            $table->boolean('disable')->default(false);
             $table->timestamps();
         });
     }

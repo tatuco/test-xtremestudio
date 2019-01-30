@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\Tatuco\User;
+use App\Models\User;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;

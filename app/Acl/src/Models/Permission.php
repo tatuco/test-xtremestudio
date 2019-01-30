@@ -2,9 +2,10 @@
 
 namespace App\Acl\Src\Models;
 
+use App\Core\TatucoModel;
 use Illuminate\Database\Eloquent\Model;
 
-class Permission extends Model
+class Permission extends TatucoModel
 {
     /**
      * The attributes that are fillable via mass assignment.
