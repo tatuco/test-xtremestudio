@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "code": null,
+    "name": "sysadmin",
+    "email": "sysadmin@gmail.com",
+    "email_verified_at": null,
+    "deleted": 0,
+    "created_at": "2019-01-29 08:41pm",
+    "updated_at": "2019-01-29 08:41pm"
+  },
+  {
+    "id": 2,
+    "code": null,
+    "name": "admin",
+    "email": "admin@gmail.com",
+    "email_verified_at": null,
+    "deleted": 0,
+    "created_at": "2019-01-29 08:41pm",
+    "updated_at": "2019-01-29 08:41pm"
+  },
+  {
+    "id": 3,
+    "code": null,
+    "name": "operador",
+    "email": "operador@gmail.com",
+    "email_verified_at": null,
+    "deleted": 0,
+    "created_at": "2019-01-29 08:41pm",
+    "updated_at": "2019-01-29 08:41pm"
+  },
+  {
+    "id": 4,
+    "code": null,
+    "name": "guest",
+    "email": "guest@gmail.com",
+    "email_verified_at": null,
+    "deleted": 0,
+    "created_at": "2019-01-29 08:41pm",
+    "updated_at": "2019-01-29 08:41pm"
+  }
+]

@@ -1,3 +1,28 @@
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T091618.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-29T091608.400.json
+
+###
+
 POST http://localhost:8000/api/login
 Accept: */*
 Cache-Control: no-cache
