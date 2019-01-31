@@ -1,0 +1,8 @@
+{
+  "status": 500,
+  "message": "Error de servidor",
+  "exception": "Call to undefined method App\\Query\\QueryBuilder::person()",
+  "file": "C:\\laragon\\www\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php",
+  "line": 50,
+  "code": 0
+}

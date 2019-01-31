@@ -1,0 +1,8 @@
+{
+  "status": 500,
+  "message": "Error de servidor",
+  "exception": "Property [id] does not exist on this collection instance.",
+  "file": "C:\\laragon\\www\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php",
+  "line": 2010,
+  "code": 0
+}

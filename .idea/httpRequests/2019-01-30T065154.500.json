@@ -1,0 +1,8 @@
+{
+  "status": 500,
+  "message": "Error de servidor",
+  "exception": "Trying to get property 'person' of non-object",
+  "file": "C:\\laragon\\www\\laravel\\app\\Http\\Repositories\\Acl\\UserRepository.php",
+  "line": 31,
+  "code": 0
+}

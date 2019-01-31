@@ -1,0 +1,12 @@
+[
+  {
+    "id": "000-000-000",
+    "logo": null,
+    "slogan": null,
+    "name": "Company Test",
+    "description": "test company",
+    "deleted": false,
+    "created_at": "2019-01-30 06:14pm",
+    "updated_at": "2019-01-30 06:14pm"
+  }
+]

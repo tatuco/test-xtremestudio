@@ -1,0 +1,650 @@
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T074551.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T074538.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T074523.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T074217.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T074201.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T074146.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T073953.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T073939.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T073318.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T073302.500.html
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T073230.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T073214.500.html
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T073210.500.html
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T073136.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T073025.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T072953.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T071333.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T071253.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T071234.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T071120.200.json
+
+###
+
+GET http://localhost:8000/api/users/1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T071112.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T071101.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T070521.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T065955.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T065933.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T065853.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T065750.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T065154.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T065105.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T065049.500.html
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T065036.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064939.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064919.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064643.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064533.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064457.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064418.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064415.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064414.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064329.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064304.200.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064151.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T064110.500.json
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T063942.200.json
+
+###
+
+GET http://localhost:8000/api/companies
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T063539.200.json
+
+###
+
+GET http://localhost:8000/api/companies
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T063448.200.json
+
+###
+
+GET http://localhost:8000/api/companies
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T063441.200.json
+
+###
+
+GET http://localhost:8000/api/companies
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T063304.200.json
+
+###
+
+GET http://localhost:8000/api/companies
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T062703.200.json
+
+###
+
+GET http://localhost:8000/api/compaines
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+
+{   "email": "sysadmin@gmail.com",   "password": "123456" }
+
+<> 2019-01-30T062657.404.html
+
+###
+

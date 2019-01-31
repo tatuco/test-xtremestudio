@@ -175,6 +175,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        App\Acl\Src\ShinobiServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+        App\Reports\src\ServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class
     ],
 
     /*
@@ -223,6 +229,15 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
+        'Shinobi' =>  App\Acl\Src\ShinobiServiceProvider::class,
+        'Report' => App\Reports\src\ServiceProvider::class,
+        'PDF'   => Barryvdh\DomPDF\ServiceProvider::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Agent' => Jenssegers\Agent\Facades\Agent::class
 
     ],
 
