@@ -55,7 +55,9 @@ class GeneratorCommand extends Command
                 $this->repository($name);
                 $this->model($name);
                 $this->migration($name);
-
+                $this->seeder($name);
+                $this->getBr($name);
+                File::append(base_path('routes/api.php'), 'Route::resource(\'' . str_plural(strtolower($name)) . "', '{$name}Controller', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);\n");
             }else{
                 $array = explode(",", $exceptions);
                 foreach ($array as $a)
@@ -77,18 +79,15 @@ class GeneratorCommand extends Command
                         case 'migration':
                             $this->migration($name);
                             break;
+                        case 'seeder':
+                            $this->seeder($name);
+                            break;
 
                     }
                 }
             }
 
-            $this->getBr($name);
 
-            File::append(base_path('routes/api.php'), 'Route::get(\'' . str_plural(strtolower($name)) . "', '{$name}Controller@index');\n");
-            File::append(base_path('routes/api.php'), 'Route::get(\'' . str_plural(strtolower($name)) . "/{id}', '{$name}Controller@show');\n");
-            File::append(base_path('routes/api.php'), 'Route::post(\'' . str_plural(strtolower($name)) . "', '{$name}Controller@store');\n");
-            File::append(base_path('routes/api.php'), 'Route::put(\'' . str_plural(strtolower($name)) . "/{id}', '{$name}Controller@update');\n");
-            File::append(base_path('routes/api.php'), 'Route::delete(\'' . str_plural(strtolower($name)) . "/{id}', '{$name}Controller@destroy');\n");
 
         } catch (\Exception $e) {
             return "${$e}";
@@ -146,6 +145,27 @@ class GeneratorCommand extends Command
         $migration = $this->getDatePrefix()."_create_".$this->camel_to_snake($name)."_table.php";
 
         file_put_contents((app()->basePath()."/database/migrations/{$migration}"), $controllerTemplate);
+    }
+
+    protected function seeder($name)
+    {
+        $controllerTemplate = str_replace(
+            [
+                '{{modelName}}',
+                '{{modelNamePluralLowerCase}}',
+                '{{modelNameSingularLowerCase}}',
+                '{{modelNamePlural}}'
+            ],
+            [
+                $name,
+                strtolower(str_plural($name)),
+                strtolower($name),
+                $this->camel_to_snake($name)
+            ],
+            $this->getStub('Seeder')
+        );
+
+        file_put_contents((app()->basePath()."/database/seeds/{$name}Seeder.php"), $controllerTemplate);
     }
 
     protected function getDatePrefix()

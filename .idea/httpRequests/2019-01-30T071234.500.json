@@ -1,0 +1,8 @@
+{
+  "status": 500,
+  "message": "Error de servidor",
+  "exception": "Property [person] does not exist on the Eloquent builder instance.",
+  "file": "C:\\laragon\\www\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+  "line": 1301,
+  "code": 0
+}

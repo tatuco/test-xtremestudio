@@ -128,4 +128,16 @@ class TatucoRepository
         return filter_var($email, FILTER_VALIDATE_EMAIL) && preg_match('/@.+\./', $email);
     }
 
+    public function mergePivot($object) {
+       $pivot = [];
+       foreach ($object as $key => $value) {
+           if(is_array($value)) {
+               foreach ($value as $it => $v) {
+                   $object["{$key}_{$it}" ] = $v;
+               }
+           }
+       }
+       return $object;
+    }
+
 }

@@ -15,10 +15,10 @@ class CreatePermissionsTable extends Migration
     {
         Schema::create('permissions', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('code')->unique()->nullable();
-            $table->string('name');
-            $table->string('slug')->unique();
-            $table->text('description')->nullable();
+            $table->char('code', 25)->unique()->nullable();
+            $table->string('name', 25);
+            $table->string('slug', 25)->unique();
+            $table->string('description', 50)->nullable();
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });

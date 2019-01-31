@@ -1,0 +1,8 @@
+{
+  "status": 500,
+  "message": "Error de servidor",
+  "exception": "Undefined index: id",
+  "file": "C:\\laragon\\www\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php",
+  "line": 1923,
+  "code": 0
+}

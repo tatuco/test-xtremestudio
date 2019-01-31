@@ -19,4 +19,19 @@ class UserRepository extends TatucoRepository
         parent::__construct(new User());
     }
 
+    public function index($request = null)
+    {
+        if(isset($_GET['paginate']))
+            $query = $this->model::doWhere($request)->paginate($_GET['paginate']);
+        else
+            $query = $this->model::doWhere($request)->get();
+
+        $result = [];
+        foreach ($query as $user) {
+            $user->person;
+            array_push($result, $user);
+        }
+        return $query;
+    }
+
 }

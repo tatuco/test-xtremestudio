@@ -14,7 +14,7 @@ class PermissionSeeder extends Seeder
         DB::table('permissions')->insert([
             'name'=> 'index users',
             'slug'=>'index.users',
-            'description' => 'listar usuarios',
+            'description' => 'list users',
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
@@ -29,7 +29,7 @@ class PermissionSeeder extends Seeder
         DB::table('permissions')->insert([
             'name'=> 'update user',
             'slug'=>'update.users',
-            'description' => 'actualizar usuario',
+            'description' => 'update user',
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
@@ -44,7 +44,7 @@ class PermissionSeeder extends Seeder
         DB::table('permissions')->insert([
             'name'=> 'show user',
             'slug'=>'show.users',
-            'description' => 'mostrar un usuario',
+            'description' => 'show user',
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
@@ -59,7 +59,7 @@ class PermissionSeeder extends Seeder
         DB::table('permissions')->insert([
             'name'=> 'delete user',
             'slug'=>'delete.users',
-            'description' => 'borrar usuario',
+            'description' => 'delete user',
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
@@ -67,7 +67,7 @@ class PermissionSeeder extends Seeder
           DB::table('permissions')->insert([
             'name'=> 'backup bd',
             'slug'=>'run.backup',
-            'description' => 'correr respaldo de base de datos',
+            'description' => 'runing backup database',
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);

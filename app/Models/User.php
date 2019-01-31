@@ -27,4 +27,10 @@ class User extends Tatuco
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function person()
+    {
+        return $this->belongsToMany('App\Models\Person');
+       // return $this->belongsToMany('App\Models\Person', 'people_user', 'user_id', 'people_id');
+    }
 }
