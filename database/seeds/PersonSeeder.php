@@ -16,9 +16,11 @@ class PersonSeeder extends Seeder
             'name' => 'Luis',
             'last_name' => 'Ramirez',
             'date_birth' => '1995-08-23',
+            'civil_status' => 'single',
             'sex' => 'male',
+            'address' => 'Hugo Silva Endeiza 840',
+            'email' => 'Prueba@hotmail.com',
             'type_person_id' => 1,
-            'company_id' => '000-000-000',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
