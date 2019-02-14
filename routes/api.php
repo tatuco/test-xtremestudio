@@ -66,3 +66,31 @@ Route::resource('employees', 'EmployeeController', ['only' => ['index', 'store',
 /** routes para Access **/ 
  
 Route::resource('accesses', 'AccessController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+ 
+/** routes para Contracts **/ 
+ 
+Route::resource('contracts', 'ContractsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+ 
+/** routes para AdmContracts **/ 
+ 
+Route::resource('admcontracts', 'AdmContractsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+ 
+/** routes para PeopleCompany **/ 
+ 
+Route::resource('peoplecompanies', 'PeopleCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+ 
+/** routes para PositionCompany **/ 
+ 
+Route::resource('positioncompanies', 'PositionCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+ 
+/** routes para Turn **/ 
+ 
+Route::resource('turns', 'TurnController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+ 
+/** routes para RequirementsCompany **/ 
+ 
+Route::resource('requirementscompanies', 'RequirementsCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+ 
+/** routes para RequirementsPeople **/ 
+ 
+Route::resource('requirementspeoples', 'RequirementsPeopleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
