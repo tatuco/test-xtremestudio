@@ -23,5 +23,53 @@ class ContractsSeeder extends Seeder
             'updated_at'=> new DateTime
         ]);
 
+        DB::table('contracts')->insert([
+            'cod_contract' => '00002',
+            'description' => 'Desarrollo Noplanifico',
+            'start_date' => '2018-08-23',
+            'end_date' => '2019-08-23',
+            'endowment' => '15',
+            'company_id' => '000-000-000',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
+        DB::table('contracts')->insert([
+            'cod_contract' => '00003',
+            'description' => 'Desarrollo Siplanifico',
+            'start_date' => '2018-08-23',
+            'end_date' => '2019-08-23',
+            'endowment' => '13',
+            'company_id' => '000-000-000',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
+        DB::table('contracts')->insert([
+            'cod_contract' => '00004',
+            'description' => 'Desarrollo Clasico',
+            'start_date' => '2018-08-12',
+            'end_date' => '2019-08-23',
+            'endowment' => '19',
+            'company_id' => '000-000-000',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
+        DB::table('contracts')->insert([
+            'cod_contract' => '00005',
+            'description' => 'Desarrollo',
+            'start_date' => '2018-08-19',
+            'end_date' => '2019-08-23',
+            'endowment' => '08',
+            'company_id' => '000-000-000',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
     }
 }

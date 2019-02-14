@@ -20,5 +20,23 @@ class AdmContractsSeeder extends Seeder
             'updated_at'=> new DateTime
         ]);
 
+        DB::table('adm_contracts')->insert([
+            'people_id' => '31234897',
+            'company_id' => '000-000-000',
+            'contract_id' => '00002',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
+        DB::table('adm_contracts')->insert([
+            'people_id' => '25916541',
+            'company_id' => '000-000-000',
+            'contract_id' => '00003',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
     }
 }

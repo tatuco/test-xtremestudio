@@ -17,5 +17,26 @@ class UserPersonSeeder extends Seeder
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
+
+        DB::table('person_user')->insert([
+            'user_id' => 1,
+            'person_id' => '25916541',
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
+        DB::table('person_user')->insert([
+            'user_id' => 1,
+            'person_id' => '31234897',
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
+        DB::table('person_user')->insert([
+            'user_id' => 1,
+            'person_id' => '23879654',
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
     }
 }
