@@ -1,8 +1,0 @@
-{
-  "status": 500,
-  "message": "Error de servidor",
-  "exception": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.person_user' doesn't exist (SQL: select `people`.*, `person_user`.`user_id` as `pivot_user_id`, `person_user`.`person_id` as `pivot_person_id` from `people` inner join `person_user` on `people`.`id` = `person_user`.`person_id` where `person_user`.`user_id` = 1)",
-  "file": "C:\\laragon\\www\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
-  "line": 664,
-  "code": "42S02"
-}

@@ -1,8 +1,0 @@
-{
-  "status": 500,
-  "message": "Error de servidor",
-  "exception": "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'people_user.person_id' in 'field list' (SQL: select `people`.*, `people_user`.`people_id` as `pivot_people_id`, `people_user`.`person_id` as `pivot_person_id` from `people` inner join `people_user` on `people`.`id` = `people_user`.`person_id` where `people_user`.`people_id` = 1)",
-  "file": "C:\\laragon\\www\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
-  "line": 664,
-  "code": "42S22"
-}

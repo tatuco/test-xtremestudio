@@ -26,6 +26,14 @@ class UserController extends TatucoController
         parent::__construct(new UserService());
     }
 
+    public function update($id, Request $request)
+    {
+        if ($request->json(['role'])) {
+            $this->service->assignedRole($id, $request->json(['role']));
+        }
+        return parent::update($id, $request);
+    }
+
     public function assignedRole(Request $request)
     {
         $idUser = $request->json(['user']);

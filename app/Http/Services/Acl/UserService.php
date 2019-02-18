@@ -1,10 +1,12 @@
 <?php
 namespace App\Http\Services\Acl;
 
+use App\Acl\Src\Models\Role;
 use App\Core\TatucoService;
 use App\Http\Repositories\Acl\UserRepository;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 
@@ -18,12 +20,35 @@ class UserService extends TatucoService
         parent::__construct(new UserRepository());
     }
 
+    public function index($request)
+    {
+        $users = parent::index($request);
+        foreach ($users as $user) {
+            $user->roles = $user->getRoles();
+        }
+       return $users;
+
+    }
 
     public function store(Request $request){
-        $pass = bcrypt($request->json(['password']));
-        $request->merge(['password' => $pass]);
+        try {
+            DB::beginTransaction();
+            $pass = bcrypt($request->json(['password']));
+            $request->merge(['password' => $pass]);
 
-        return parent::store($request);
+            $user = User::create($request->all());
+
+            if ($request->json(['role'])) {
+                $this->assignedRole($user->id, $request->json(['role']));
+            }
+            $user->roles = $user->getRoles();
+            DB::commit();
+            return $user;
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return parent::errorException($e);
+        }
+
     }
     public function update($id,Request $request)
     {
@@ -38,8 +63,17 @@ class UserService extends TatucoService
     public function assignedRole($idUser, $idRole)
     {
         try{
-
+            /**
+             * antes de asignar el rol, revocar los roles
+             */
             $user=User::find($idUser);
+            $roles = Role::all();
+            $rolesAsigned = [];
+            foreach ($roles as $role) {
+                $user->revokeRole($role->id);
+            }
+
+
             $user->assignRole($idRole);
 
             $user=User::find($idUser);

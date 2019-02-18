@@ -1,0 +1,20 @@
+{
+  "status": true,
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1MjcyMzYsImV4cCI6MTg3NDUyNzIzNiwibmJmIjoxNTUwNTI3MjM2LCJqdGkiOiJBRDRhSEtsYWVhTWpqUVRwIn0.z16BD_t1Q7WKlXWW2H_BGDdjYvhUmdc3d6CDMmy8LGI",
+  "user": {
+    "id": 4,
+    "code": null,
+    "name": "Ysrael Mendez",
+    "email": "ysrael.mendez@plazfer.cl",
+    "email_verified_at": null,
+    "deleted": 0,
+    "created_at": "2019-02-18 04:34pm",
+    "updated_at": "2019-02-18 04:34pm",
+    "roles": {
+      "withTimestamps": true
+    },
+    "person": {
+      "withTimestamps": false
+    }
+  }
+}
