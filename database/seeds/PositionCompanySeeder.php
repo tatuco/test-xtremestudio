@@ -19,5 +19,37 @@ class PositionCompanySeeder extends Seeder
             'updated_at'=> new DateTime
         ]);
 
+        DB::table('position_companies')->insert([
+            'name' => 'Informatico',
+            'company_id' => '000-000-000',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
+        DB::table('position_companies')->insert([
+            'name' => 'Garzon',
+            'company_id' => '000-000-000',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
+        DB::table('position_companies')->insert([
+            'name' => 'Auxiliar',
+            'company_id' => '000-000-000',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
+        DB::table('position_companies')->insert([
+            'name' => 'Enfermero',
+            'company_id' => '000-000-000',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
     }
 }
