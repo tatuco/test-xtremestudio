@@ -1,0 +1,35 @@
+{
+  "status": true,
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1MjcxNzAsImV4cCI6MTg3NDUyNzE3MCwibmJmIjoxNTUwNTI3MTcwLCJqdGkiOiJvaDJPUHNVQklUWDRNZTNFIn0.FRt4EGnU6f6ISGn7zAJ3tLhSRM0HI6qcmSNS6lS9oCM",
+  "user": {
+    "id": 4,
+    "code": null,
+    "name": "Ysrael Mendez",
+    "email": "ysrael.mendez@plazfer.cl",
+    "email_verified_at": null,
+    "deleted": 0,
+    "created_at": "2019-02-18 04:34pm",
+    "updated_at": "2019-02-18 04:34pm",
+    "roles": [
+      {
+        "id": 4,
+        "code": null,
+        "name": "guest",
+        "slug": "guest",
+        "description": "public user of the system",
+        "deleted": 0,
+        "created_at": "2019-02-18 04:34pm",
+        "updated_at": "2019-02-18 04:34pm",
+        "pivot": {
+          "user_id": 4,
+          "role_id": 4,
+          "created_at": "2019-02-18 21:34:48",
+          "updated_at": "2019-02-18 21:34:48"
+        }
+      }
+    ]
+  },
+  "roles": [
+    "guest"
+  ]
+}

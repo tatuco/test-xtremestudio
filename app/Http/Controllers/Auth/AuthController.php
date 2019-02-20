@@ -32,11 +32,13 @@ class AuthController extends BaseController
                 'message' => 'Error al intentar crear el token. Intente de nuevo'
             ], 500);
         }
+        $user = \JWTAuth::toUser($token);
+        $user->roles = $user->getRoles();
 
         return response()->json([
             'status' => true,
             'token' => $token,
-            'user' => \JWTAuth::toUser($token)
+            'user' => $user
         ], 200);
     }
 

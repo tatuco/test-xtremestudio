@@ -1,8 +1,0 @@
-{
-  "status": 500,
-  "message": "Error de servidor",
-  "exception": "array_merge(): Argument #2 is not an array",
-  "file": "C:\\laragon\\www\\laravel\\app\\Core\\TatucoRepository.php",
-  "line": 141,
-  "code": 0
-}

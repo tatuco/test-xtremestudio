@@ -1,0 +1,7 @@
+{
+  "status": true,
+  "message": "role asignado satisfactoriamente. ",
+  "rolesAsigned": [
+    "sysadmin"
+  ]
+}

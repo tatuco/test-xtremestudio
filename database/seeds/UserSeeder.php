@@ -42,5 +42,13 @@ class UserSeeder extends Seeder
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
+
+        DB::table('users')->insert([
+            'name' => "Sysadmin",
+            'email' => 'sysadmin@plazfer.cl',
+            'password' => bcrypt('123456'),
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
     }
 }

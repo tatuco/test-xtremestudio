@@ -12,6 +12,7 @@ namespace App\Core;
 use Carbon\Carbon;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class TatucoService
@@ -98,9 +99,10 @@ class TatucoService
     public function store(Request $request)
     {
         try{
-
+            DB::beginTransaction();
             Log::info('Guardado');
             if($this->object = $this->repository->store($request)){
+                DB::commit();
                 return response()->json([
                     "status" => 201,
                     $this->name => $this->object],
@@ -108,6 +110,7 @@ class TatucoService
             }
 
         }catch (\Exception $e){
+            DB::rollBack();
             return $this->errorException($e);
         }
     }
