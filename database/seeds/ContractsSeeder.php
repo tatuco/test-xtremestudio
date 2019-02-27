@@ -18,6 +18,7 @@ class ContractsSeeder extends Seeder
             'end_date' => '2019-08-23',
             'endowment' => '10',
             'company_id' => '000-000-000',
+            'user_id' => 1,
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -30,6 +31,7 @@ class ContractsSeeder extends Seeder
             'end_date' => '2019-08-23',
             'endowment' => '15',
             'company_id' => '000-000-000',
+            'user_id' => 1,
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -42,6 +44,7 @@ class ContractsSeeder extends Seeder
             'end_date' => '2019-08-23',
             'endowment' => '13',
             'company_id' => '000-000-000',
+            'user_id' => 1,
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -54,6 +57,7 @@ class ContractsSeeder extends Seeder
             'end_date' => '2019-08-23',
             'endowment' => '19',
             'company_id' => '000-000-000',
+            'user_id' => 1,
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -66,6 +70,7 @@ class ContractsSeeder extends Seeder
             'end_date' => '2019-08-23',
             'endowment' => '08',
             'company_id' => '000-000-000',
+            'user_id' => 1,
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime

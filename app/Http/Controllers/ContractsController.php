@@ -8,6 +8,11 @@ use App\Http\Services\ContractsService;
 
 class ContractsController extends TatucoController
 {
+    protected $select = [
+      "id",
+      "cod_contract"
+    ];
+
     public function __construct()
     {
         parent::__construct(new ContractsService());

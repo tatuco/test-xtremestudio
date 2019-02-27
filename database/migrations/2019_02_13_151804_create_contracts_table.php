@@ -22,6 +22,8 @@ class CreatecontractsTable extends Migration
             $table->integer('endowment');
             $table->char('company_id', 25);
             $table->foreign('company_id')->references('id')->on('companies');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });

@@ -1,3 +1,53 @@
+GET http://localhost:8000/api/select/contracts
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
+
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
+
+<> 2019-02-27T025229.200.json
+
+###
+
+GET http://localhost:8000/api/select/contracts
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
+
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
+
+<> 2019-02-27T024945.200.json
+
+###
+
+GET http://localhost:8000/api/select/companies
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
+
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
+
+<> 2019-02-27T023632.200.json
+
+###
+
+GET http://localhost:8000/api/select/companies
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
+
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
+
+###
+
 GET http://localhost:8000/api/select/companies
 Accept: */*
 Cache-Control: no-cache
@@ -591,58 +641,6 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6I
 {   "email": "sysadmin@gmail.com",   "password": "123456" }
 
 <> 2019-02-18T045507.401.json
-
-###
-
-POST http://localhost:8001/api/login
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
-
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
-
-<> 2019-02-18T045448.401.json
-
-###
-
-GET http://localhost:8001/api/users
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
-
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
-
-<> 2019-02-18T045244.200.json
-
-###
-
-GET http://localhost:8001/api/users
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
-
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
-
-<> 2019-02-18T044941.200.json
-
-###
-
-GET http://localhost:8001/api/users
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
-
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
-
-<> 2019-02-18T043651.200.json
 
 ###
 
