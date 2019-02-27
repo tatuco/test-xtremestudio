@@ -14,7 +14,7 @@ class CreateturnTable extends Migration
     public function up()
     {
         Schema::create('turns', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id', true);
             $table->string('description')->nullable();
             $table->integer('working_days')->nullable();
             $table->integer('break_days')->nullable();

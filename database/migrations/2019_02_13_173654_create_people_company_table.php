@@ -14,7 +14,7 @@ class CreatepeoplecompanyTable extends Migration
     public function up()
     {
         Schema::create('people_companies', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id', true);
             $table->char('people_id', 25);
             $table->foreign('people_id')->references('id')->on('people');
             $table->char('company_id', 25);

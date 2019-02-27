@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Create{{modelNamePlural}}Table extends Migration
+class CreateAccessDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class Create{{modelNamePlural}}Table extends Migration
      */
     public function up()
     {
-        Schema::create('{{modelNamePluralLowerCase}}', function (Blueprint $table) {
-            $table->integer('id', true);
-            $table->string('name')->unique()->nullable();
-            $table->string('description')->nullable();
+        Schema::create('access_details', function (Blueprint $table) {
+            $table->increments('id');
+            $table->enum('type', ['input', 'output']);
+            $table->integer('access_id');
+            $table->foreign('access_id')->references('id')->on('accesses')->onDelete('cascade');
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
@@ -29,6 +30,6 @@ class Create{{modelNamePlural}}Table extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('{{modelNamePluralLowerCase}}');
+        Schema::dropIfExists('access_details');
     }
 }

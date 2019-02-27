@@ -14,7 +14,7 @@ class CreatePersonUserTable extends Migration
     public function up()
     {
         Schema::create('person_user', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id', true);
             $table->char('person_id', 25);
             $table->foreign('person_id')->references('id')->on('people')->onDelete('cascade');
             $table->integer('user_id')->unsigned()->index();

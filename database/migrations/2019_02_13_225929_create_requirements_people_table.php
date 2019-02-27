@@ -14,7 +14,7 @@ class CreaterequirementspeopleTable extends Migration
     public function up()
     {
         Schema::create('requirements_people', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id', true);
             $table->string('description')->nullable();
             $table->char('people_id', 25);
             $table->foreign('people_id')->references('id')->on('people');

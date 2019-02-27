@@ -14,7 +14,7 @@ class CreaterequirementscompanyTable extends Migration
     public function up()
     {
         Schema::create('requirements_company', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id', true);
             $table->string('description')->nullable();
             $table->char('company_id', 25);
             $table->foreign('company_id')->references('id')->on('companies');

@@ -14,7 +14,7 @@ class CreatecontractsTable extends Migration
     public function up()
     {
         Schema::create('contracts', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id', true);
             $table->string('cod_contract')->unique()->nullable();
             $table->string('description')->nullable();
             $table->date('start_date');

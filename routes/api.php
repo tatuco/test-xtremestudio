@@ -98,3 +98,7 @@ Route::resource('requirementscompanies', 'RequirementsCompanyController', ['only
 /** routes para RequirementsPeople **/ 
  
 Route::resource('requirementspeoples', 'RequirementsPeopleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+ 
+/** routes para AccessDetails **/ 
+ 
+Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
