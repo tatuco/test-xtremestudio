@@ -23,6 +23,7 @@ class CreatepeoplecompanyTable extends Migration
             $table->foreign('position_id')->references('id')->on('position_companies');
             $table->char('contract_id', 25);
             $table->foreign('contract_id')->references('cod_contract')->on('contracts');
+            $table->enum("type_contract", ["spot", "fixet"]);
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });

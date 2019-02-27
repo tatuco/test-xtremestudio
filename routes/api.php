@@ -43,9 +43,12 @@ Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthContr
         Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
         Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
 //});
- 
 
- 
+
+Route::group(['prefix' => 'select'], function () {
+    Route::get('/companies', 'CompanyController@select');
+});
+
 /** routes para Company **/
 
 Route::resource('companies', 'CompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);

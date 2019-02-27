@@ -8,6 +8,11 @@ use App\Http\Services\CompanyService;
 
 class CompanyController extends TatucoController
 {
+    protected $select = [
+      "id",
+      "name"
+    ];
+
     public function __construct()
     {
         parent::__construct(new CompanyService());
