@@ -1,0 +1,27 @@
+000-000-000[
+  {
+    "id": 1,
+    "cod_contract": "00001",
+    "company_id": "000-000-000"
+  },
+  {
+    "id": 2,
+    "cod_contract": "00002",
+    "company_id": "000-000-000"
+  },
+  {
+    "id": 3,
+    "cod_contract": "00003",
+    "company_id": "000-000-000"
+  },
+  {
+    "id": 4,
+    "cod_contract": "00004",
+    "company_id": "000-000-000"
+  },
+  {
+    "id": 5,
+    "cod_contract": "00005",
+    "company_id": "000-000-000"
+  }
+]

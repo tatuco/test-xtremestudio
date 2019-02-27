@@ -236,9 +236,9 @@ class TatucoService
         return Carbon::now()->format('Y-m-d H:i:s');
     }
 
-    public function select($select)
+    public function select(Request $request,$select)
     {
-        return $this->repository->select($select);
+        return $this->repository->select($request, $select)->get();
     }
 
     function isDateBetweenDates(DateTime $date, DateTime $startDate, DateTime $endDate) {

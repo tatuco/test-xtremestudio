@@ -1,0 +1,13 @@
+GET /api/select/contracts?company_id=000-000-000 HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
+Cache-Control: no-cache
+Connection: Keep-Alive
+Content-Length: 82
+Content-Type: application/json
+Host: localhost:8000
+User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_152-release)
+
+{
+"role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456"}[{"id": 1, "cod_contract": "00001", "company_id": "000-000-000"}, {"id": 2, "cod_contract": "00002", "company_id": "000-000-000"}, {"id": 3, "cod_contract": "00003", "company_id": "000-000-000"}, {"id": 4, "cod_contract": "00004", "company_id": "000-000-000"}, {"id": 5, "cod_contract": "00005", "company_id": "000-000-000"}]

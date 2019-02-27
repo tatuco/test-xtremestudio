@@ -15,7 +15,8 @@ class CreateaccessTable extends Migration
     {
         Schema::create('accesses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique()->nullable();
+            $table->char('person_id', 25);
+            $table->foreign('person_id')->references('id')->on('people')->onDelete('cascade');
             $table->string('description')->nullable();
             $table->boolean('deleted')->default(false);
             $table->timestamps();

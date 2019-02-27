@@ -19,4 +19,13 @@ class ContractsRepository extends TatucoRepository
         parent::__construct(new Contracts());
     }
 
+    public function select($request, $select)
+    {
+        $query = $this->model::select($select);
+        if(isset($_GET['company_id']))
+        {
+            $query->where('company_id', '=', $request->company_id);
+        }
+        return $query;
+    }
 }

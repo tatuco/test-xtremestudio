@@ -10,7 +10,8 @@ class ContractsController extends TatucoController
 {
     protected $select = [
       "id",
-      "cod_contract"
+      "cod_contract",
+       "company_id"
     ];
 
     public function __construct()
