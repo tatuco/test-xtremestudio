@@ -45,10 +45,14 @@ Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthContr
 //});
 
 
-Route::group(['prefix' => 'select'], function () {
-    Route::get('/companies', 'CompanyController@select');
-    Route::get('/contracts', 'ContractsController@select');
-});
+        Route::group(['prefix' => 'select'], function () {
+            Route::get('/companies', 'CompanyController@select');
+            Route::get('/contracts', 'ContractsController@select');
+        });
+
+        Route::group(['prefix' => 'charts'], function () {
+            Route::get('/fte', 'ChartController@fte');
+        });
 
 /** routes para Company **/
 
