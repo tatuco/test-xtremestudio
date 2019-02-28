@@ -9,14 +9,33 @@
 namespace App\Http\Repositories;
 
 use App\Core\TatucoRepository;
+use App\Models\Access;
 use App\Models\Chart;
+use App\Models\Person;
+use App\Query\QueryBuilder;
 
 class ChartRepository extends TatucoRepository
 {
 
     public function __construct()
     {
-        parent::__construct(new Chart());
+        parent::__construct(new Person());
+    }
+
+    public function fte($request)
+    {
+        $query = [];
+        $query = QueryBuilder::for(Access::class)
+            ->join('people as p', 'accesses.person_id', 'p.id')
+            ->join('people_companies as pc', 'p.id', 'people_id')
+            ->join('contracts as c', 'pc.contract_id', 'c.id')
+            ->select('accesses.id', 'accesses.created_at')
+            ->whereBetween('accesses.created_at', [$request->start, $request->end]);
+        if ($request->contract_id)
+        {
+            $query->where('c.id', $request->contract_id);
+        }
+        return $query;
     }
 
 }

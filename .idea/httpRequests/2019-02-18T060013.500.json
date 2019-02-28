@@ -1,8 +1,0 @@
-{
-  "status": 500,
-  "message": "Error de servidor",
-  "exception": "SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test2@gmail.com' for key 'users_email_unique' (SQL: insert into `users` (`name`, `email`, `password`, `updated_at`, `created_at`) values (test2, test2@gmail.com, $2y$10$aceXV6ikLDPJFLHd8BB3N.SFJjAqPLPS.p7O9kDqjqpUIsS25l17S, 2019-02-18 23:00:13, 2019-02-18 23:00:13))",
-  "file": "C:\\Users\\COMPUMAX\\PhpstormProjects\\yoplanifico-api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
-  "line": 664,
-  "code": "23000"
-}

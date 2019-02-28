@@ -12,4 +12,9 @@ class ChartController extends TatucoController
     {
         parent::__construct(new ChartService());
     }
+
+    public function fte(Request $request)
+    {
+        return $this->service->fte($request);
+    }
 }
