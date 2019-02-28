@@ -14,7 +14,7 @@ class CreatecontractsTable extends Migration
     public function up()
     {
         Schema::create('contracts', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id', true);
             $table->string('cod_contract')->unique()->nullable();
             $table->string('description')->nullable();
             $table->date('start_date');
@@ -22,6 +22,8 @@ class CreatecontractsTable extends Migration
             $table->integer('endowment');
             $table->char('company_id', 25);
             $table->foreign('company_id')->references('id')->on('companies');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });

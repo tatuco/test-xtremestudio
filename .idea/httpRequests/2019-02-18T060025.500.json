@@ -1,8 +1,0 @@
-{
-  "status": 500,
-  "message": "Error de servidor",
-  "exception": "Undefined property: App\\Http\\Services\\Acl\\UserService::$service",
-  "file": "C:\\Users\\COMPUMAX\\PhpstormProjects\\yoplanifico-api\\app\\Http\\Services\\Acl\\UserService.php",
-  "line": 42,
-  "code": 0
-}

@@ -69,9 +69,9 @@ class TatucoController extends BaseController
         return $this->service->destroy($id, $request);
     }
 
-    public function select()
+    public function select(Request $request)
     {
-        return $this->service->select($this->select);
+        return $this->service->select($request, $this->select);
     }
 
     public function test_()

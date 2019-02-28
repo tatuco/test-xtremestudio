@@ -1,8 +1,0 @@
-{
-  "status": 500,
-  "message": "Error de servidor",
-  "exception": "SQLSTATE[HY000]: General error: 1364 Field 'name' doesn't have a default value (SQL: insert into `users` (`email`, `password`, `updated_at`, `created_at`) values (ysrael.mendez@plazfer.cl, $2y$10$W8lNJ3OrOC5hx5RkYUA6ceUv.iZxk1MkU.BJ3WPevOLUQ0qkErYES, 2019-02-18 22:08:48, 2019-02-18 22:08:48))",
-  "file": "C:\\Users\\COMPUMAX\\PhpstormProjects\\yoplanifico-api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
-  "line": 664,
-  "code": "HY000"
-}

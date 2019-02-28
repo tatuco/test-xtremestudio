@@ -104,10 +104,12 @@ class TatucoRepository
 
     }*/
 
-   public function select($select)
+   public function select($request, $select)
    {
        $query = $this->model::select($select);
-       return $query->get();
+
+       return $query;
+      // return $this->model::doWhere($request)->get();
    }
 
     public function saveModel($model, $data)

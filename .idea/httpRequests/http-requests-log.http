@@ -1,4 +1,4 @@
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte?contract_id=1
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
@@ -7,11 +7,11 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-20T113938.200.json
+<> 2019-02-27T080122.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte?contract_id=1
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
@@ -20,11 +20,11 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-20T113750.200.json
+<> 2019-02-27T075741.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
@@ -33,11 +33,11 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-20T113418.200.json
+<> 2019-02-27T075642.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
@@ -46,11 +46,11 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-20T113254.200.json
+<> 2019-02-27T075614.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
@@ -59,11 +59,11 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-20T113119.500.html
+<> 2019-02-27T075119.500.html
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
@@ -72,11 +72,11 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-20T111628.200.json
+<> 2019-02-27T075049.500.html
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
@@ -85,11 +85,11 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T060052.201.json
+<> 2019-02-27T075028.500.html
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
@@ -98,553 +98,553 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T060025.500.json
+<> 2019-02-27T074659.500.html
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/select/contracts?company_id=000-000-000
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1, "name": "test2", "email": "test2@gmail.com", "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T060013.500.json
+<> 2019-02-27T074654.200.json
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1, "name": "test2", "email": "test2@gmail.com", "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T055457.500.html
+<> 2019-02-27T074131.200.json
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1, "name": "test2", "email": "test2@gmail.com", "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T055444.500.html
+<> 2019-02-27T074041.200.json
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1, "name": "test2", "email": "test2@gmail.com", "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T055420.500.html
+<> 2019-02-27T074025.200.json
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1, "name": "test2", "email": "test2@gmail.com", "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T055337.500.html
+<> 2019-02-27T074015.200.json
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1, "name": "test", "email": "test@gmail.com", "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T055159.500.html
+<> 2019-02-27T074000.200.json
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1, "name": "test", "email": "test@gmail.com", "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T055147.500.html
+<> 2019-02-27T073931.200.json
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1, "name": "test", "email": "test@gmail.com", "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T055027.500.html
+<> 2019-02-27T073853.200.json
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1, "name": "test", "email": "test@gmail.com", "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T054955.500.html
+<> 2019-02-27T073817.200.json
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1, "name": "test", "email": "test@gmail.com", "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T054936.500.html
+<> 2019-02-27T073803.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051528.200.json
+<> 2019-02-27T073726.200.json
 
 ###
 
-PUT http://localhost:8001/api/users/4
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051522.200.json
+<> 2019-02-27T073710.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 1 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051501.200.json
+<> 2019-02-27T073658.500.html
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 4 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051448.200.json
+<> 2019-02-27T073637.200.html
 
 ###
 
-GET http://localhost:8001/api/users/4
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 4 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051441.200.json
+<> 2019-02-27T073616.200.json
 
 ###
 
-PUT http://localhost:8001/api/users/4
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 4 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051434.200.json
+<> 2019-02-27T073608.200.json
 
 ###
 
-PUT http://localhost:8001/api/users/4
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 4 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051405.500.html
+<> 2019-02-27T073552.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 4 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051216.200.json
+<> 2019-02-27T073509.200.json
 
 ###
 
-PUT http://localhost:8001/api/users/4
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{  "role": 4 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051206.200.json
+<> 2019-02-27T073447.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "user": 4, "role": 1 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051116.200.json
+<> 2019-02-27T073404.200.json
 
 ###
 
-POST http://localhost:8001/api/users/role
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "user": 4, "role": 1 }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T051031.200.json
+<> 2019-02-27T073350.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T050914.200.json
+<> 2019-02-27T073343.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T050852.200.json
+<> 2019-02-27T073255.200.json
 
 ###
 
-POST http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T050848.500.json
+<> 2019-02-27T073229.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T050521.200.json
+<> 2019-02-27T072953.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T050050.200.json
+<> 2019-02-27T072941.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T050036.200.json
+<> 2019-02-27T072935.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T050000.200.json
+<> 2019-02-27T072914.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T045942.200.json
+<> 2019-02-27T072840.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T045930.200.json
+<> 2019-02-27T072819.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T045901.200.json
+<> 2019-02-27T072737.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T045809.200.json
+<> 2019-02-27T072719.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T045729.200.json
+<> 2019-02-27T072652.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T045659.200.json
+<> 2019-02-27T072217.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "ysrael.mendez@plazfer.cl",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T045628.200.json
+<> 2019-02-27T072207.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T045507.401.json
+<> 2019-02-27T072138.200.json
 
 ###
 
-POST http://localhost:8001/api/login
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T045448.401.json
+<> 2019-02-27T072037.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T045244.200.json
+<> 2019-02-27T071726.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T044941.200.json
+<> 2019-02-27T071712.500.html
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T043651.200.json
+<> 2019-02-27T071647.500.html
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T043618.500.json
+<> 2019-02-27T071018.200.json
 
 ###
 
-GET http://localhost:8001/api/users
+GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NDg4MTQ0NjksImV4cCI6MTg3MjgxNDQ2OSwibmJmIjoxNTQ4ODE0NDY5LCJqdGkiOiJMcHJtMEx3enpvdUxqbkpnIn0.nWH2y9vtw58SdaXRATh2cS4I-UFajvNZIAy42APpGj4.+*- qQ8|1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
 
-{   "email": "sysadmin@gmail.com",   "password": "123456" }
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
-<> 2019-02-18T043517.200.json
+<> 2019-02-27T070949.200.json
 
 ###
 

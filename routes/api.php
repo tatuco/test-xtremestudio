@@ -43,9 +43,17 @@ Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthContr
         Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
         Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
 //});
- 
 
- 
+
+        Route::group(['prefix' => 'select'], function () {
+            Route::get('/companies', 'CompanyController@select');
+            Route::get('/contracts', 'ContractsController@select');
+        });
+
+        Route::group(['prefix' => 'charts'], function () {
+            Route::get('/fte', 'ChartController@fte');
+        });
+
 /** routes para Company **/
 
 Route::resource('companies', 'CompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
@@ -94,3 +102,7 @@ Route::resource('requirementscompanies', 'RequirementsCompanyController', ['only
 /** routes para RequirementsPeople **/ 
  
 Route::resource('requirementspeoples', 'RequirementsPeopleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+ 
+/** routes para AccessDetails **/ 
+ 
+Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
