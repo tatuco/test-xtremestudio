@@ -24,6 +24,12 @@ class CreatecontractsTable extends Migration
             $table->foreign('company_id')->references('id')->on('companies');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('adm_aux_id')->unsigned()->index();
+            $table->foreign('adm_aux_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('admec_id')->unsigned()->index();
+            $table->foreign('admec_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('admec_aux_id')->unsigned()->index();
+            $table->foreign('admec_aux_id')->references('id')->on('users')->onDelete('cascade');
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });

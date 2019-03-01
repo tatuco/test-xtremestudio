@@ -19,6 +19,9 @@ class ContractsSeeder extends Seeder
             'endowment' => '10',
             'company_id' => '000-000-000',
             'user_id' => 1,
+            'adm_aux_id' => 2,
+            'admec_id' => 3,
+            'admec_aux_id' => 4,
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -32,6 +35,9 @@ class ContractsSeeder extends Seeder
             'endowment' => '15',
             'company_id' => '000-000-000',
             'user_id' => 1,
+            'adm_aux_id' => 2,
+            'admec_id' => 3,
+            'admec_aux_id' => 4,
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -45,6 +51,9 @@ class ContractsSeeder extends Seeder
             'endowment' => '13',
             'company_id' => '000-000-000',
             'user_id' => 1,
+            'adm_aux_id' => 2,
+            'admec_id' => 3,
+            'admec_aux_id' => 4,
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -58,6 +67,9 @@ class ContractsSeeder extends Seeder
             'endowment' => '19',
             'company_id' => '000-000-000',
             'user_id' => 1,
+            'adm_aux_id' => 2,
+            'admec_id' => 3,
+            'admec_aux_id' => 4,
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -71,6 +83,9 @@ class ContractsSeeder extends Seeder
             'endowment' => '08',
             'company_id' => '000-000-000',
             'user_id' => 1,
+            'adm_aux_id' => 2,
+            'admec_id' => 3,
+            'admec_aux_id' => 4,
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime

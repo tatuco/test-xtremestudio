@@ -24,6 +24,7 @@ class CreatepeoplecompanyTable extends Migration
             $table->char('contract_id', 25);
             $table->foreign('contract_id')->references('cod_contract')->on('contracts');
             $table->enum("type_contract", ["spot", "fixet"]);
+            $table->enum("type_employee", ["direct", "indirect"]);
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
