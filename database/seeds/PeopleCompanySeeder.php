@@ -17,6 +17,7 @@ class PeopleCompanySeeder extends Seeder
             'position_id' => '1',
             'contract_id' => '00001',
             'type_contract' => 'fixet',
+            'type_employee' => 'direct',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -28,6 +29,7 @@ class PeopleCompanySeeder extends Seeder
             'position_id' => '5',
             'contract_id' => '00001',
             'type_contract' => 'spot',
+            'type_employee' => 'direct',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -39,6 +41,7 @@ class PeopleCompanySeeder extends Seeder
             'position_id' => '2',
             'contract_id' => '00002',
             'type_contract' => 'fixet',
+            'type_employee' => 'direct',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -50,6 +53,7 @@ class PeopleCompanySeeder extends Seeder
             'position_id' => '3',
             'contract_id' => '00003',
             'type_contract' => 'fixet',
+            'type_employee' => 'direct',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -61,6 +65,7 @@ class PeopleCompanySeeder extends Seeder
             'position_id' => '4',
             'contract_id' => '00004',
             'type_contract' => 'fixet',
+            'type_employee' => 'indirect',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
