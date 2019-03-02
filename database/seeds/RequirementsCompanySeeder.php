@@ -13,8 +13,8 @@ class RequirementsCompanySeeder extends Seeder
     {
         DB::table('requirements_company')->insert([
             'description' => 'Se agragaran campos segun cantidad de requisitos',
-            'contract_id' => '00001',
-            'company_id' => '000-000-000',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'check' => 'active',
             'deleted' => false,
             'created_at'=> new DateTime,
@@ -23,8 +23,8 @@ class RequirementsCompanySeeder extends Seeder
 
         DB::table('requirements_company')->insert([
             'description' => 'Se agragaran campos segun cantidad de requisitos',
-            'contract_id' => '00002',
-            'company_id' => '000-000-000',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'check' => 'active',
             'deleted' => false,
             'created_at'=> new DateTime,
@@ -33,8 +33,8 @@ class RequirementsCompanySeeder extends Seeder
 
         DB::table('requirements_company')->insert([
             'description' => 'Se agragaran campos segun cantidad de requisitos',
-            'contract_id' => '00003',
-            'company_id' => '000-000-000',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'check' => 'active',
             'deleted' => false,
             'created_at'=> new DateTime,
@@ -43,8 +43,8 @@ class RequirementsCompanySeeder extends Seeder
 
         DB::table('requirements_company')->insert([
             'description' => 'Se agragaran campos segun cantidad de requisitos',
-            'contract_id' => '00004',
-            'company_id' => '000-000-000',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'check' => 'active',
             'deleted' => false,
             'created_at'=> new DateTime,

@@ -16,8 +16,8 @@ class TurnSeeder extends Seeder
             'working_days' => '5',
             'break_days' => '2',
             'shift' => 'diurnal',
-            'company_id' => '000-000-000',
-            'contract_id' => '00001',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -28,8 +28,8 @@ class TurnSeeder extends Seeder
             'working_days' => '4',
             'break_days' => '3',
             'shift' => 'diurnal',
-            'company_id' => '000-000-000',
-            'contract_id' => '00002',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -40,8 +40,8 @@ class TurnSeeder extends Seeder
             'working_days' => '7',
             'break_days' => '7',
             'shift' => 'diurnal',
-            'company_id' => '000-000-000',
-            'contract_id' => '00003',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -52,8 +52,8 @@ class TurnSeeder extends Seeder
             'working_days' => '15',
             'break_days' => '15',
             'shift' => 'diurnal',
-            'company_id' => '000-000-000',
-            'contract_id' => '00004',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime

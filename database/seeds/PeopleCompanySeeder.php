@@ -12,66 +12,16 @@ class PeopleCompanySeeder extends Seeder
     public function run()
     {
         DB::table('people_companies')->insert([
-            'people_id' => '24356393',
-            'company_id' => '000-000-000',
+            'people_id' => '178672495',
+            'company_id' => '930770000',
             'position_id' => '1',
-            'contract_id' => '00001',
+            'contract_id' => '4540002894',
             'type_contract' => 'fixet',
             'type_employee' => 'direct',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
-
-        DB::table('people_companies')->insert([
-            'people_id' => '12536829',
-            'company_id' => '000-000-000',
-            'position_id' => '5',
-            'contract_id' => '00001',
-            'type_contract' => 'spot',
-            'type_employee' => 'direct',
-            'deleted' => false,
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-        ]);
-
-        DB::table('people_companies')->insert([
-            'people_id' => '25916541',
-            'company_id' => '000-000-000',
-            'position_id' => '2',
-            'contract_id' => '00002',
-            'type_contract' => 'fixet',
-            'type_employee' => 'direct',
-            'deleted' => false,
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-        ]);
-
-        DB::table('people_companies')->insert([
-            'people_id' => '31234897',
-            'company_id' => '000-000-000',
-            'position_id' => '3',
-            'contract_id' => '00003',
-            'type_contract' => 'fixet',
-            'type_employee' => 'direct',
-            'deleted' => false,
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-        ]);
-
-        DB::table('people_companies')->insert([
-            'people_id' => '23879654',
-            'company_id' => '000-000-000',
-            'position_id' => '4',
-            'contract_id' => '00004',
-            'type_contract' => 'fixet',
-            'type_employee' => 'indirect',
-            'deleted' => false,
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-        ]);
-
-
 
     }
 }
