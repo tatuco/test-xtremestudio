@@ -22,13 +22,13 @@ class CreatecontractsTable extends Migration
             $table->integer('endowment');
             $table->char('company_id', 25);
             $table->foreign('company_id')->references('id')->on('companies');
-            $table->char('user_id', 25)->unsigned()->index();
+            $table->char('user_id', 25);
             $table->foreign('user_id')->references('id')->on('people')->onDelete('cascade');
-            $table->char('adm_aux_id', 25)->unsigned()->index();
+            $table->char('adm_aux_id', 25);
             $table->foreign('adm_aux_id')->references('id')->on('people')->onDelete('cascade');
-            $table->char('admec_id', 25)->unsigned()->index();
+            $table->char('admec_id', 25);
             $table->foreign('admec_id')->references('id')->on('people')->onDelete('cascade');
-            $table->char('admec_aux_id', 25)->unsigned()->index();
+            $table->char('admec_aux_id', 25);
             $table->foreign('admec_aux_id')->references('id')->on('people')->onDelete('cascade');
             $table->boolean('deleted')->default(false);
             $table->timestamps();
