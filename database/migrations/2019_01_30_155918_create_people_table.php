@@ -27,7 +27,7 @@ class CreatePeopleTable extends Migration
             $table->string('email', 25)->unique()->nullable();
             //$table->integer('type_person_id');
             //$table->foreign('type_person_id')->references('id')->on('person_types');
-            $table->enum('status_people', ['Asignado', 'Eliminado', 'Reserva']);
+            //$table->enum('status_people', ['Asignado', 'Eliminado', 'Reserva']);
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
