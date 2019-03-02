@@ -17,8 +17,8 @@ class CreatecompanyTable extends Migration
             $table->char('id', 25)->primary();
             $table->string('logo', 25)->nullable();
             $table->string('slogan', 25)->nullable();
-            $table->string('name', 25)->unique()->nullable();
-            $table->string('description', 25)->nullable();
+            $table->string('name', 150)->unique()->nullable();
+            $table->string('description', 150)->nullable();
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });

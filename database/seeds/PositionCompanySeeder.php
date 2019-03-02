@@ -13,8 +13,8 @@ class PositionCompanySeeder extends Seeder
     {
         DB::table('position_companies')->insert([
             'name' => 'Mecanico',
-            'company_id' => '000-000-000',
-            'contract_id' => '00001',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -22,8 +22,8 @@ class PositionCompanySeeder extends Seeder
 
         DB::table('position_companies')->insert([
             'name' => 'Informatico',
-            'company_id' => '000-000-000',
-            'contract_id' => '00001',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -31,8 +31,8 @@ class PositionCompanySeeder extends Seeder
 
         DB::table('position_companies')->insert([
             'name' => 'Garzon',
-            'company_id' => '000-000-000',
-            'contract_id' => '00001',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -40,8 +40,8 @@ class PositionCompanySeeder extends Seeder
 
         DB::table('position_companies')->insert([
             'name' => 'Auxiliar',
-            'company_id' => '000-000-000',
-            'contract_id' => '00001',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -49,8 +49,8 @@ class PositionCompanySeeder extends Seeder
 
         DB::table('position_companies')->insert([
             'name' => 'Enfermero',
-            'company_id' => '000-000-000',
-            'contract_id' => '00001',
+            'company_id' => '930770000',
+            'contract_id' => '4540002894',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
