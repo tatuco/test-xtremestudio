@@ -19,12 +19,12 @@ class CreatepeoplecompanyTable extends Migration
             $table->foreign('people_id')->references('id')->on('people');
             $table->char('company_id', 25);
             $table->foreign('company_id')->references('id')->on('companies');
-            $table->integer('position_id');
-            $table->foreign('position_id')->references('id')->on('position_companies');
-            $table->char('contract_id', 25);
+            $table->char('position_company', 255);
+            //$table->foreign('position_id')->references('id')->on('position_companies');
+            $table->char('contract_id', 255);
             $table->foreign('contract_id')->references('cod_contract')->on('contracts');
-            $table->enum("type_contract", ["spot", "fixet"]);
-            $table->enum("type_employee", ["direct", "indirect"]);
+            $table->enum("type_contract", ["NULL", "spot", "fixet"]);
+            $table->enum("type_employee", ["NULL", "direct", "indirect"]);
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
