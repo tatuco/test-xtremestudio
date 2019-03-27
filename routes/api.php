@@ -52,6 +52,7 @@ Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthContr
 
         Route::group(['prefix' => 'charts'], function () {
             Route::get('/fte', 'ChartController@fte');
+            Route::get('/eecc', 'ChartController@eecc');
         });
 
 /** routes para Company **/
