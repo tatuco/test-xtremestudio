@@ -8,8 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-        <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
-        <link href="{{ asset('../css/welcome.css') }}" rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}">
+        <link href="{{ asset('assets/css/welcome.css') }}" rel='stylesheet'>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -29,8 +29,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                  <img src="{{ asset('../images/logocentinela.png') }}"  class="centinela-img">
-                  <img src="{{ asset('../images/yoplanifico.png') }}"  class="yoplanifico-img">
+                  <img src="{{ asset('assets/images/logocentinela.png') }}"  class="centinela-img">
+                  <img src="{{ asset('assets/images/yoplanifico.png') }}"  class="yoplanifico-img">
             </div>
 
                 <div class="links">
