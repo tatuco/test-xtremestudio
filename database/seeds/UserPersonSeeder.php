@@ -13,28 +13,7 @@ class UserPersonSeeder extends Seeder
     {
         DB::table('person_user')->insert([
             'user_id' => 1,
-            'person_id' => '24356393',
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-        ]);
-
-        DB::table('person_user')->insert([
-            'user_id' => 2,
-            'person_id' => '25916541',
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-        ]);
-
-        DB::table('person_user')->insert([
-            'user_id' => 3,
-            'person_id' => '31234897',
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-        ]);
-
-        DB::table('person_user')->insert([
-            'user_id' => 4,
-            'person_id' => '23879654',
+            'person_id' => '017387633-5',
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
