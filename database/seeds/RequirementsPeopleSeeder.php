@@ -13,7 +13,7 @@ class RequirementsPeopleSeeder extends Seeder
     {
         DB::table('requirements_people')->insert([
             'description' => 'Se agragaran campos segun cantidad de requisitos',
-            'people_id' => '178672495',
+            'people_id' => '128363203',
             'company_id' => '930770000',
             'contract_id' => '4540002894',
             'check' => 'active',
