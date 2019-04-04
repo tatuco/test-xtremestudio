@@ -37,8 +37,7 @@
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://yoplanifico.cl">Yo Planifico</a>
                     <a href="http://www.aminerals.cl/">Antofasta Minerals</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Plazfer Spa</a>
+                    <a href="https://plazfer.cl">Plazfer Spa</a>
                     <a href="https://github.com/plazfer">GitHub</a>
                 </div>
             </div>
