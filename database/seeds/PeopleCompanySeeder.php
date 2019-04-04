@@ -11,7 +11,7 @@ class PeopleCompanySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('people_companies')->insert([
+    /*    DB::table('people_companies')->insert([
             'people_id' => '178672495',
             'company_id' => '930770000',
             'position_company' => '1',
@@ -22,6 +22,7 @@ class PeopleCompanySeeder extends Seeder
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
+    */
     // NEW *****************************************************
             
         DB::table('people_companies')->insert([
