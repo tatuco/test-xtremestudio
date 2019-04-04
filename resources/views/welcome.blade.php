@@ -8,8 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-        <link rel="icon" type="image/x-icon" href="{{ URL::asset('images/favicon.ico') }}">
-        <link href="{{ URL::asset('css/welcome.css') }}" rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="{{ URL::to('images/favicon.ico') }}">
+        <link href="{{ URL::to('css/welcome.css') }}" rel='stylesheet'>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -29,8 +29,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                  <img src="{{ URL::asset('images/logocentinela.png') }}"  class="centinela-img">
-                  <img src="{{ URL::asset('images/yoplanifico.png') }}"  class="yoplanifico-img">
+                  <img src="{{ URL::to('images/logocentinela.png') }}"  class="centinela-img">
+                  <img src="{{ URL::to('images/yoplanifico.png') }}"  class="yoplanifico-img">
             </div>
 
                 <div class="links">
