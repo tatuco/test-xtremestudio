@@ -5,9 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aafc0e70-5c04-46f7-ac93-f03ed14167ec" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bd43a32e-06b5-4373-ad22-ae69eacef664.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bd43a32e-06b5-4373-ad22-ae69eacef664.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-02-27T070949.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-02-27T071018.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-02-27T071647.500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/ChartRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/ChartRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/ChartService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/ChartService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,17 +50,34 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="yo-planifico" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="yo-planifico" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+<<<<<<< HEAD
+=======
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="yo-planifico" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="yoplanifico: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="yo-planifico" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="yoplanifico: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="people_companies: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Services/ChartService.php">
@@ -115,6 +149,9 @@
         </entry>
       </file>
     </leaf>
+=======
+    <leaf />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -182,12 +219,17 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_02_27_220132_create_access_details_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/AccessSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Core/DateService.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Http/Services/ChartService.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ChartController.php" />
-        <option value="$PROJECT_DIR$/app/Core/DateService.php" />
         <option value="$PROJECT_DIR$/app/Http/Repositories/ChartRepository.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/Http/Services/ChartService.php" />
         <option value="$PROJECT_DIR$/.env" />
+=======
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
       </list>
     </option>
   </component>
@@ -308,11 +350,18 @@
       <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
     </include_path>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
     <option name="height" value="916" />
+=======
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="793" />
+    <option name="width" value="814" />
+    <option name="height" value="867" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -339,6 +388,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -371,6 +421,9 @@
           <select />
         </subPane>
       </pane>
+=======
+      <pane id="ProjectPane" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
       <pane id="Scope" />
     </panes>
   </component>
@@ -379,8 +432,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="ContractS&#9;FILE&#9;file://C:/Users/COMPUMAX/PhpstormProjects/yoplanifico-api/app/Http/Controllers/ContractsController.php&#10;user&#9;null&#9;null&#10;User&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../api-schedulebooking" />
+=======
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/hercules/hercules-3.13" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -403,6 +461,47 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/charts/eecc" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="contract_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{  &quot;role&quot;: 1, &quot;name&quot;: &quot;test23&quot;, &quot;email&quot;: &quot;test3@gmail.com&quot;, &quot;password&quot;: &quot;123456&quot; }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8000" />
@@ -1598,11 +1697,18 @@
       <workItem from="1550702906543" duration="1280000" />
       <workItem from="1550722487955" duration="2260000" />
       <workItem from="1551198188059" duration="28305000" />
+<<<<<<< HEAD
       <workItem from="1555276283920" duration="1001000" />
+=======
+      <workItem from="1553316616301" duration="6196000" />
+      <workItem from="1553614025699" duration="736000" />
+      <workItem from="1553650688255" duration="232000" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="84755000" />
   </component>
   <component name="ToolWindowManager">
@@ -1610,6 +1716,14 @@
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24293059" />
+=======
+    <option name="totallyTimeSpent" value="90918000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16717096" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1623,6 +1737,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50064266" side_tool="true" visible="true" weight="0.35121328" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993573" visible="true" weight="0.35121328" />
       <window_info active="true" anchor="bottom" id="REST Client" order="12" visible="true" weight="0.33692724" />
@@ -1630,6 +1745,16 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.32969153" />
+=======
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3502455" />
+      <window_info anchor="bottom" id="REST Client" order="12" visible="true" weight="0.2831424" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32733223" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.18986385" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30719796" />
@@ -1659,6 +1784,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/database/seeds/RequirementsPeopleSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408" />
@@ -1683,6 +1809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_13_160605_create_adm_contracts_table.php" />
     <entry file="file://$PROJECT_DIR$/database/seeds/AdmContractsSeeder.php" />
+=======
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
     <entry file="file://$PROJECT_DIR$/database/seeds/ContractsSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -1871,20 +1999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="53" column="54" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ChartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Core/TatucoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
@@ -1945,25 +2059,296 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Core/DateService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
           <folding>
             <element signature="e#123#141#0#PHP" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/bd43a32e-06b5-4373-ad22-ae69eacef664.SCHEMA:yoplanifico">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>bd43a32e-06b5-4373-ad22-ae69eacef664.SCHEMA:yoplanifico</OriginalElement>
+          <nodes>
+            <node x="979.0" y="857.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.requirements_people</node>
+            <node x="2086.269097222222" y="507.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.permission_role</node>
+            <node x="464.0" y="879.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.position_companies</node>
+            <node x="401.0" y="66.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.companies</node>
+            <node x="241.0" y="846.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.turns</node>
+            <node x="1845.4166666666667" y="507.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.permission_user</node>
+            <node x="222.0" y="1141.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.person_types</node>
+            <node x="0.0" y="868.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.requirements_company</node>
+            <node x="1240.4166666666667" y="485.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.accesses</node>
+            <node x="0.0" y="1141.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.params</node>
+            <node x="2114.080034722222" y="66.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.permissions</node>
+            <node x="794.1647569444444" y="408.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.contracts</node>
+            <node x="670.0" y="1141.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.password_resets</node>
+            <node x="1857.3147569444443" y="66.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.roles</node>
+            <node x="1571.1513888888887" y="44.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.users</node>
+            <node x="1443.4166666666667" y="507.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.person_user</node>
+            <node x="903.0166666666667" y="0.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people</node>
+            <node x="450.0" y="1141.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.migrations</node>
+            <node x="1230.9166666666667" y="890.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.access_details</node>
+            <node x="1644.4166666666667" y="507.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.role_user</node>
+            <node x="659.0" y="846.0">bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people_companies</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.requirements_people" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.contracts">
+              <point x="0.0" y="-114.0" />
+              <point x="1089.5" y="766.0" />
+              <point x="967.8647569444445" y="766.0" />
+              <point x="77.20000000000005" y="169.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.person_user" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.users">
+              <point x="45.25" y="-70.0" />
+              <point x="1579.1666666666667" y="388.0" />
+              <point x="1607.6513888888887" y="388.0" />
+              <point x="-73.0" y="125.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people_companies" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.contracts">
+              <point x="0.0" y="-125.0" />
+              <point x="809.0" y="816.0" />
+              <point x="929.2647569444443" y="816.0" />
+              <point x="38.59999999999991" y="169.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.turns" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.contracts">
+              <point x="50.75" y="-125.0" />
+              <point x="393.25" y="796.0" />
+              <point x="852.0647569444445" y="796.0" />
+              <point x="-38.59999999999991" y="169.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.turns" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.companies">
+              <point x="-50.75" y="-125.0" />
+              <point x="291.75" y="388.0" />
+              <point x="446.75" y="388.0" />
+              <point x="-45.75" y="103.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.requirements_company" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.companies">
+              <point x="-55.25" y="-103.0" />
+              <point x="55.250000000000114" y="378.0" />
+              <point x="416.25" y="378.0" />
+              <point x="-76.25" y="103.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people_companies" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.companies">
+              <point x="-100.0" y="-125.0" />
+              <point x="709.0" y="776.0" />
+              <point x="618.7956597222222" y="776.0" />
+              <point x="618.7956597222222" y="388.0" />
+              <point x="507.75" y="388.0" />
+              <point x="15.25" y="103.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.person_user" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people">
+              <point x="-45.25" y="-70.0" />
+              <point x="1488.6666666666667" y="368.0" />
+              <point x="1187.0791666666667" y="368.0" />
+              <point x="132.5625" y="169.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.role_user" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.roles">
+              <point x="45.25" y="-70.0" />
+              <point x="1780.1666666666667" y="388.0" />
+              <point x="1901.5647569444443" y="388.0" />
+              <point x="-44.25" y="103.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.position_companies" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.companies">
+              <point x="-43.75" y="-92.0" />
+              <point x="507.75" y="776.0" />
+              <point x="487.0" y="776.0" />
+              <point x="487.0" y="388.0" />
+              <point x="477.25" y="388.0" />
+              <point x="-15.25" y="103.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.position_companies" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.contracts">
+              <point x="43.75" y="-92.0" />
+              <point x="595.25" y="806.0" />
+              <point x="890.6647569444444" y="806.0" />
+              <point x="0.0" y="169.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.accesses" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people">
+              <point x="0.0" y="-92.0" />
+              <point x="1331.9166666666667" y="378.0" />
+              <point x="1149.2041666666667" y="378.0" />
+              <point x="94.6875" y="169.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.contracts" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people">
+              <point x="0.0" y="-169.0" />
+              <point x="890.6647569444444" y="368.0" />
+              <point x="959.8291666666667" y="368.0" />
+              <point x="-94.6875" y="169.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.role_user" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.users">
+              <point x="-45.25" y="-70.0" />
+              <point x="1689.6666666666667" y="388.0" />
+              <point x="1680.6513888888887" y="388.0" />
+              <point x="0.0" y="125.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.permission_role" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.permissions">
+              <point x="54.25" y="-70.0" />
+              <point x="2249.019097222222" y="388.0" />
+              <point x="2246.830034722222" y="388.0" />
+              <point x="44.25" y="103.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.permission_role" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.roles">
+              <point x="-54.25" y="-70.0" />
+              <point x="2140.519097222222" y="378.0" />
+              <point x="1990.0647569444443" y="378.0" />
+              <point x="44.25" y="103.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.requirements_people" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people">
+              <point x="73.66666666666674" y="-114.0" />
+              <point x="1163.1666666666667" y="826.0" />
+              <point x="1166.9550347222223" y="826.0" />
+              <point x="1166.9550347222223" y="388.0" />
+              <point x="1111.3291666666667" y="388.0" />
+              <point x="56.8125" y="169.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.permission_user" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.users">
+              <point x="-54.25" y="-70.0" />
+              <point x="1899.6666666666667" y="378.0" />
+              <point x="1753.6513888888887" y="378.0" />
+              <point x="73.0" y="125.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.permission_user" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.permissions">
+              <point x="54.25" y="-70.0" />
+              <point x="2008.1666666666667" y="388.0" />
+              <point x="2158.330034722222" y="388.0" />
+              <point x="-44.25" y="103.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people_companies" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people">
+              <point x="100.0" y="-125.0" />
+              <point x="909.0" y="826.0" />
+              <point x="1052.8940972222222" y="826.0" />
+              <point x="1052.8940972222222" y="388.0" />
+              <point x="1073.4541666666667" y="388.0" />
+              <point x="18.9375" y="169.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.requirements_company" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.contracts">
+              <point x="55.25" y="-103.0" />
+              <point x="165.75" y="786.0" />
+              <point x="813.4647569444444" y="786.0" />
+              <point x="-77.20000000000005" y="169.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.access_details" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.accesses">
+              <point x="0.0" y="-81.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.requirements_people" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.companies">
+              <point x="-73.66666666666674" y="-114.0" />
+              <point x="1015.8333333333333" y="776.0" />
+              <point x="716.8397569444444" y="776.0" />
+              <point x="716.8397569444444" y="378.0" />
+              <point x="538.25" y="378.0" />
+              <point x="45.75" y="103.0" />
+            </edge>
+            <edge source="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.contracts" target="bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.companies">
+              <point x="-77.20000000000005" y="-169.0" />
+              <point x="813.4647569444444" y="368.0" />
+              <point x="568.75" y="368.0" />
+              <point x="76.25" y="103.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.962618873445501" x="489.0" y="675.0" />
+          <SelectedNodes>
+            <node>bd43a32e-06b5-4373-ad22-ae69eacef664.TABLE:yoplanifico.people_companies</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://bd43a32e-06b5-4373-ad22-ae69eacef664/schema/yoplanifico/table/people">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://bd43a32e-06b5-4373-ad22-ae69eacef664/schema/yoplanifico/table/person_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://bd43a32e-06b5-4373-ad22-ae69eacef664/schema/yoplanifico/table/people_companies">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://bd43a32e-06b5-4373-ad22-ae69eacef664/schema/yoplanifico/table/position_companies">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Traits/doWhereTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="39" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Services/Acl/UserService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="55" column="50" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="50" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Repositories/ChartRepository.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="374">
           <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+=======
+        <state relative-caret-position="291">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Services/ChartService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ChartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Traits/doWhereTrait.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="646">
           <caret line="38" column="39" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="39" />
         </state>
@@ -1973,16 +2358,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="55" column="50" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="50" />
+=======
+        <state relative-caret-position="529">
+          <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+>>>>>>> 5ca40c55607a585f71647a68f051f866ddc24456
         </state>
       </provider>
     </entry>
