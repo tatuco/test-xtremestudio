@@ -7,6 +7,56 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
+<> 2019-04-14T043150.200.json
+
+###
+
+GET http://localhost:8000/api/select/contracts?contract_id=1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
+
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
+
+<> 2019-04-14T043136.200.json
+
+###
+
+GET http://localhost:8000/api/select/companies?contract_id=1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
+
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
+
+<> 2019-04-14T043048.200.json
+
+###
+
+GET http://localhost:8000/api/select/companies?contract_id=1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
+
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
+
+###
+
+GET http://localhost:8000/api/charts/fte?contract_id=1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
+
+{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
+
 <> 2019-02-27T080122.200.json
 
 ###
@@ -593,58 +643,6 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
 <> 2019-02-27T071726.200.json
-
-###
-
-GET http://localhost:8000/api/charts/fte
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
-
-{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
-
-<> 2019-02-27T071712.500.html
-
-###
-
-GET http://localhost:8000/api/charts/fte
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
-
-{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
-
-<> 2019-02-27T071647.500.html
-
-###
-
-GET http://localhost:8000/api/charts/fte
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
-
-{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
-
-<> 2019-02-27T071018.200.json
-
-###
-
-GET http://localhost:8000/api/charts/fte
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
-
-{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
-
-<> 2019-02-27T070949.200.json
 
 ###
 
