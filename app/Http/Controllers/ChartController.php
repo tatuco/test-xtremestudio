@@ -17,4 +17,9 @@ class ChartController extends TatucoController
     {
         return $this->service->fte($request);
     }
+
+    public function eecc(Request $request)
+    {
+        return $this->service->eecc($request);
+    }
 }

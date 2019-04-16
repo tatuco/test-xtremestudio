@@ -52,6 +52,15 @@ class ChartService extends TatucoService
 
         return $list;
     }
+    public function eecc($request)
+    {
+        $start = Carbon::now()->startOfWeek();
+        $end = Carbon::now()->endOfWeek();
+        $request->merge(['start' => $start->format('Y-m-d'), 'end' => $end->format('Y-m-d')]);
+        $resp = $this->repository->eecc($request)->get();
+        return $resp;
+
+    }
 
     public function searchDay($array, $key, $day)
     {
