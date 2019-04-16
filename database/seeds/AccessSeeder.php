@@ -12,67 +12,67 @@ class AccessSeeder extends Seeder
     public function run()
     {
         DB::table('accesses')->insert([
-            'person_id'=> '24356393',
+            'person_id'=> '105229038',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
 
         DB::table('accesses')->insert([
-            'person_id'=> '23879654',
+            'person_id'=> '119019397',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
 
         DB::table('accesses')->insert([
-            'person_id'=> '34765123',
+            'person_id'=> '124247977',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
 
         DB::table('accesses')->insert([
-            'person_id'=> '32123987',
+            'person_id'=> '129430435',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
         DB::table('accesses')->insert([
-            'person_id'=> '12536829',
-            'deleted' => false,
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-        ]);
-
-        DB::table('accesses')->insert([
-            'person_id'=> '25703883',
-            'deleted' => false,
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-        ]);
-        DB::table('accesses')->insert([
-            'person_id'=> '34098612',
+            'person_id'=> '134263156',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
 
         DB::table('accesses')->insert([
-            'person_id'=> '12345678',
+            'person_id'=> '145939402',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
         DB::table('accesses')->insert([
-            'person_id'=> '31234897',
+            'person_id'=> '156925683',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
 
         DB::table('accesses')->insert([
-            'person_id'=> '25916541',
+            'person_id'=> '161359858',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+        DB::table('accesses')->insert([
+            'person_id'=> '169269157',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+
+        DB::table('accesses')->insert([
+            'person_id'=> '172775853',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
