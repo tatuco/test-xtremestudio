@@ -16,8 +16,8 @@ class ContractsSeeder extends Seeder
         DB::table('contracts')->insert([
             'cod_contract' => '4540002894',
             'description' => ' MA1020035916/10 SERVICIOS DE MANTENIMIENTO MECÁNICO Y PROGRAMACIÓN DE CARÁCTER PERMANENTE Y SPOTS EN ÁREAS DE CHANCADO PRIMARIO Y PLANTA CHANCADO SECUNDARIO Y TERCIARIO.',
-            'start_date' => '27/4/18',
-            'end_date' => '30/6/21',
+            'start_date' => '2018/04/27',
+            'end_date' => '2021/06/30',
             'endowment' => 30,
             'company_id'=> 930770000,
             'user_id'=> '012691151-3',
@@ -31,8 +31,8 @@ class ContractsSeeder extends Seeder
         DB::table('contracts')->insert([
             'cod_contract' => '4540002870',
             'description' => ' MA1020035916/30 SERVICIOS DE MANTENIMIENTO MECÁNICO Y PROGRAMACIÓN DE CARÁCTER PERMANENTE Y SPOTS EN ÁREAS DE FLOTACIÓN Y RELAVES.',
-            'start_date' => '27/4/18',
-            'end_date' => '30/6/21',
+            'start_date' => '2018/04/27',
+            'end_date' => '2021/06/30',
             'endowment' => 30,
             'company_id'=> 761325930,
             'user_id'=> '012691151-3',
@@ -46,8 +46,8 @@ class ContractsSeeder extends Seeder
         DB::table('contracts')->insert([
             'cod_contract' => '4540002892',
             'description' => '" MA1020035916/20-40 SERVICIOS DE MANTENIMIENTO MECÁNICO Y PROGRAMACIÓN DE CARÁCTER PERMANENTE Y SPOTS EN ÁREAS DE MOLIENDA CIRCUITO CORREAS DE PEBBLES REMOLIENDA CONCENTRADO Y PLANTA DE MOLIBDENO."',
-            'start_date' => '27/4/18',
-            'end_date' => '30/6/21',
+            'start_date' => '2018/04/27',
+            'end_date' => '2021/06/30',
             'endowment' => 50,
             'company_id'=> 772762801,
             'user_id'=> '012691151-3',
