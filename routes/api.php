@@ -23,6 +23,9 @@ Route::get('/', function (){
        "time" => \Carbon\Carbon::now()
    ]);
 });
+Route::post('/prueba', function(){
+   return response()->json(['respiesta' => 'soy la api'], 200);
+});
 Route::post('/login', ['uses' => 'Auth\AuthController@login', 'as' => 'login']);
 Route::post('/logout', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@logout', 'as' => 'logout']);
 Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@validate', 'as' => 'validate']);
@@ -107,3 +110,7 @@ Route::resource('requirementspeoples', 'RequirementsPeopleController', ['only' =
 /** routes para AccessDetails **/ 
  
 Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+ 
+/** routes para Employe **/ 
+ 
+Route::resource('employes', 'EmployeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);

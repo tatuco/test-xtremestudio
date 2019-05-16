@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatepositioncompanyTable extends Migration
+class CreateemployeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreatepositioncompanyTable extends Migration
      */
     public function up()
     {
-        Schema::create('position_companies', function (Blueprint $table) {
+        Schema::create('employes', function (Blueprint $table) {
             $table->integer('id', true);
-            $table->string('name')->nullable();
+            $table->string('name')->unique()->nullable();
+            $table->string('description')->nullable();
+            $table->integer('contract_id');
+            $table->foreign('contract_id')->references('id')->on('contracts');
             $table->char('company_id', 25);
             $table->foreign('company_id')->references('id')->on('companies');
-            $table->char('contract_id', 25);
-            $table->foreign('contract_id')->references('cod_contract')->on('contracts');
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
@@ -32,6 +33,6 @@ class CreatepositioncompanyTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('position_companies');
+        Schema::dropIfExists('employes');
     }
 }
