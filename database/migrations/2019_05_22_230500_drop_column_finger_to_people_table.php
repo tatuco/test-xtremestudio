@@ -14,7 +14,7 @@ class DropColumnFingerToPeopleTable extends Migration
      */
     public function up()
     {
-        DB::connection()->getPdo()->exec("ALTER TABLE people DROP COLUMN thumbprint;");
+      //  DB::connection()->getPdo()->exec("ALTER TABLE people DROP COLUMN thumbprint;");
     }
 
     /**
