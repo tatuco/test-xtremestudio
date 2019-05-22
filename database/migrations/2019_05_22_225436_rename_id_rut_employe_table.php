@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RenamePeopleCompaniesToEmployesTables extends Migration
+class RenameIdRutEmployeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class RenamePeopleCompaniesToEmployesTables extends Migration
      */
     public function up()
     {
-         DB::connection()->getPdo()->exec("ALTER TABLE people_companies RENAME employes;");
+        DB::connection()->getPdo()->exec("alter table employes modify id int(25) not null;");
+
     }
 
     /**
@@ -24,6 +25,6 @@ class RenamePeopleCompaniesToEmployesTables extends Migration
      */
     public function down()
     {
-
+        //
     }
 }

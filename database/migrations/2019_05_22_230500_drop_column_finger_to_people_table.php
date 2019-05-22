@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RenamePeopleCompaniesToEmployesTables extends Migration
+class DropColumnFingerToPeopleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class RenamePeopleCompaniesToEmployesTables extends Migration
      */
     public function up()
     {
-         DB::connection()->getPdo()->exec("ALTER TABLE people_companies RENAME employes;");
+        DB::connection()->getPdo()->exec("ALTER TABLE people DROP COLUMN thumbprint;");
     }
 
     /**
@@ -24,6 +24,8 @@ class RenamePeopleCompaniesToEmployesTables extends Migration
      */
     public function down()
     {
-
+        Schema::table('people', function (Blueprint $table) {
+            //
+        });
     }
 }
