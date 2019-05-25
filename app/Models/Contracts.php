@@ -7,5 +7,5 @@ use App\Core\TatucoModel;
 
 class Contracts extends TatucoModel
 {
-    protected $guarded = ['id'];
+    protected $guarded = ['cod_contract'];
 }

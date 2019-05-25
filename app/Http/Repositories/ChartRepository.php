@@ -26,15 +26,15 @@ class ChartRepository extends TatucoRepository
     {
         $query = [];
         $query = QueryBuilder::for(Access::class)
-            ->leftJoin('people as p', 'accesses.person_id', 'p.id')
-            ->leftJoin('people_companies as pc', 'p.id', 'people_id')
-            ->leftJoin('contracts as c', 'pc.contract_id', 'c.id')
-            ->select('accesses.id', 'accesses.created_at')
-            ->whereBetween('accesses.created_at', [$request->start, $request->end]);
+            ->leftJoin('employes as e', 'accesses.employe_id', 'e.id')
+            ->leftJoin('people as p', 'e.people_id', 'p.id')
+            ->leftJoin('contracts as c', 'e.contract_id', 'c.cod_contract')
+            ->select('accesses.id', 'accesses.date_input')
+            ->whereBetween('accesses.date_input', [$request->start, $request->end]);
         echo $query->toSql();
         if ($request->contract_id)
         {
-            $query->where('c.id', $request->contract_id);
+            $query->where('c.cod_contract', $request->contract_id);
         }
         return $query;
     }
