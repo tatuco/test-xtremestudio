@@ -31,7 +31,7 @@ class ChartRepository extends TatucoRepository
             ->leftJoin('contracts as c', 'pc.contract_id', 'c.id')
             ->select('accesses.id', 'accesses.created_at')
             ->whereBetween('accesses.created_at', [$request->start, $request->end]);
-       // echo $query->toSql();
+        echo $query->toSql();
         if ($request->contract_id)
         {
             $query->where('c.id', $request->contract_id);
