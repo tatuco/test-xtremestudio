@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
          $this->call(PersonTypeSeeder::class);
          $this->call(RequirementsPeopleSeeder::class);
          $this->call(UserPersonSeeder::class);        
-         $this->call(PeopleCompanySeeder::class);
+      //   $this->call(PeopleCompanySeeder::class);
         // $this->call(AccessSeeder::class);
         // $this->call(AccessDetailsSeeder::class);
 

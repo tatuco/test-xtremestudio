@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -20,6 +21,7 @@ class CreateFingersPeopleTable extends Migration
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
+        DB::connection()->getPdo()->exec("ALTER TABLE fingers_people ADD finger BLOB DEFAULT NULL;");
     }
 
     /**

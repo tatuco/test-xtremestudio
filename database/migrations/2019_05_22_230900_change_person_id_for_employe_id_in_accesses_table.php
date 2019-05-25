@@ -14,8 +14,8 @@ class ChangePersonIdForEmployeIdInAccessesTable extends Migration
      */
     public function up()
     {
-        DB::connection()->getPdo()->exec("drop index accesses_person_id_foreign on accesses;");
         DB::connection()->getPdo()->exec("alter table accesses drop foreign key accesses_person_id_foreign;");
+        DB::connection()->getPdo()->exec("drop index accesses_person_id_foreign on accesses;");
         DB::connection()->getPdo()->exec("alter table accesses drop column person_id;");
         DB::connection()->getPdo()->exec("alter table accesses add employe_id int(25) not null;");
         DB::connection()->getPdo()->exec("alter table accesses

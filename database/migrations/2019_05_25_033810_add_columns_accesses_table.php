@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateColumnFingerInFingersPeopleTable extends Migration
+class AddColumnsAccessesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,8 @@ class CreateColumnFingerInFingersPeopleTable extends Migration
      */
     public function up()
     {
-       /*
-        *   alter table fingers_people
-	        add finger blob default null null;
-        */
-         DB::connection()->getPdo()->exec("ALTER TABLE fingers_people ADD finger BLOB DEFAULT NULL;");
-
+        DB::connection()->getPdo()->exec("alter table accesses add date_output datetime null;");
+        DB::connection()->getPdo()->exec("alter table accesses add date_input datetime null;");
     }
 
     /**
@@ -29,6 +25,6 @@ class CreateColumnFingerInFingersPeopleTable extends Migration
      */
     public function down()
     {
-        DB::connection()->getPdo()->exec("ALTER TABLE fingers_people DROP COLUMN finger;");
+        //
     }
 }
