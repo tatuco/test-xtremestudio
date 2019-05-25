@@ -56,4 +56,13 @@ class ChartRepository extends TatucoRepository
         return $query;
     }
 
+    public function edades($request) {
+        /*
+         *  select accesses.id, accesses.created_at, p.date_birth
+            from accesses
+                left join employes as e on accesses.employe_id = e.id
+                left join people as p on e.people_id = p.id
+                left join contracts as c on e.contract_id = c.cod_contract
+         */
+    }
 }
