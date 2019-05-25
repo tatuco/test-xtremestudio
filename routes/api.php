@@ -31,9 +31,9 @@ Route::post('/logout', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthContro
 Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@validate', 'as' => 'validate']);
 
 
-//Route::group([
-//    'middleware' => ['jwt.auth']
-//    ], function (){
+Route::group([
+    'middleware' => ['jwt.auth']
+    ], function (){
 
         Route::resource('users', 'Acl\UserController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
         Route::resource('params', 'Acl\ParamController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
@@ -45,7 +45,7 @@ Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthContr
         Route::post('roles/permission', 'Acl\RoleController@assignedPermission');
         Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
         Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
-//});
+
 
 
         Route::group(['prefix' => 'select'], function () {
@@ -114,3 +114,4 @@ Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index',
 /** routes para Employe **/ 
  
 Route::resource('employes', 'EmployeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+});
