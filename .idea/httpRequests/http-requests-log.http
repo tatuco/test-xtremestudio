@@ -1,3 +1,35 @@
+GET http://localhost:8000/api/charts/eecc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-25T034016.200.json
+
+###
+
+GET http://localhost:8000/api/charts/eecc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-25T033958.200.json
+
+###
+
+GET http://localhost:8000/api/charts/eecc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-25T032828.500.html
+
+###
+
+GET http://localhost:8000/api/charts/fte
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-25T032818.200.json
+
+###
+
 GET http://localhost:8000/api/charts/fte
 Accept: */*
 Cache-Control: no-cache
@@ -586,56 +618,4 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6I
 {  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
 
 <> 2019-02-27T073255.200.json
-
-###
-
-GET http://localhost:8000/api/charts/fte
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
-
-{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
-
-<> 2019-02-27T073229.200.json
-
-###
-
-GET http://localhost:8000/api/charts/fte
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
-
-{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
-
-<> 2019-02-27T072953.200.json
-
-###
-
-GET http://localhost:8000/api/charts/fte
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
-
-{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
-
-<> 2019-02-27T072941.200.json
-
-###
-
-GET http://localhost:8000/api/charts/fte
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMS9hcGkvbG9naW4iLCJpYXQiOjE1NTA1Mjc1MjEsImV4cCI6MTg3NDUyNzUyMSwibmJmIjoxNTUwNTI3NTIxLCJqdGkiOiJpNUs1aTNCQzlnbW05OTNQIn0.NGKJ63BJg9VbfoVbdbszndrqQFKohzXndIEHR5uoqZM
-
-{  "role": 1, "name": "test23", "email": "test3@gmail.com", "password": "123456" }
-
-<> 2019-02-27T072935.200.json
 
