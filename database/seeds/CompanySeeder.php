@@ -50,5 +50,25 @@ class CompanySeeder extends Seeder
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
+        DB::table('companies')->insert([
+            'id' => '24356393',
+            'logo' => '',
+            'slogan' => '',
+            'name' => 'DEVELOPMENT LUIS RAMIREZ CA.',
+            'description' => '',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+        DB::table('companies')->insert([
+            'id' => '93534124214',
+            'logo' => '',
+            'slogan' => '',
+            'name' => 'ZIPPYTTECHA.',
+            'description' => '',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
     }
 }

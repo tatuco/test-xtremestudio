@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Core\TatucoController;
 use App\Http\Services\ChartService;
+use Symfony\Component\Routing\Matcher\RedirectableUrlMatcher;
 
 class ChartController extends TatucoController
 {
@@ -21,5 +22,10 @@ class ChartController extends TatucoController
     public function eecc(Request $request)
     {
         return $this->service->eecc($request);
+    }
+
+    public function ages(Request $request)
+    {
+        return $this->service->ages($request);
     }
 }

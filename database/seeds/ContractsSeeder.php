@@ -58,5 +58,35 @@ class ContractsSeeder extends Seeder
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
+        DB::table('contracts')->insert([
+            'cod_contract' => '4540003012',
+            'description' => '" MA1020035916/20-40 SERVICIOS DE PROGRAMACIÓN DE CARÁCTER PERMANENTE Y SPOTS EN ÁREAS DE MOLIENDA CIRCUITO CORREAS DE PEBBLES REMOLIENDA CONCENTRADO Y PLANTA DE MOLIBDENO."',
+            'start_date' => '2018/04/27',
+            'end_date' => '2021/06/30',
+            'endowment' => 50,
+            'company_id'=> 24356393,
+            'user_id'=> '012691151-3',
+            'adm_aux_id'=> '017387633-5',
+            'admec_id'=> '007367179-5',
+            'admec_aux_id'=> '000000000-0',
+            'deleted'=> FALSE,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+        DB::table('contracts')->insert([
+            'cod_contract' => '4540003013',
+            'description' => '" MA1020035916/20-40 SERVICIOS DE PROGRAMACIÓN DE CARÁCTER PERMANENTE Y SPOTS EN ÁREAS DE MOLIENDA CIRCUITO CORREAS DE PEBBLES REMOLIENDA CONCENTRADO Y PLANTA DE MOLIBDENO."',
+            'start_date' => '2018/04/27',
+            'end_date' => '2021/06/30',
+            'endowment' => 50,
+            'company_id'=> 93534124214,
+            'user_id'=> '012691151-3',
+            'adm_aux_id'=> '017387633-5',
+            'admec_id'=> '007367179-5',
+            'admec_aux_id'=> '000000000-0',
+            'deleted'=> FALSE,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
     }
 }

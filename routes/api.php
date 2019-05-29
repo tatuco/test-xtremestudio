@@ -56,6 +56,7 @@ Route::group([
         Route::group(['prefix' => 'charts'], function () {
             Route::get('/fte', 'ChartController@fte');
             Route::get('/eecc', 'ChartController@eecc');
+            Route::get('/ages', 'ChartController@ages');
         });
 
 /** routes para Company **/

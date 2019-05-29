@@ -9,8 +9,8 @@ use App\Http\Services\ContractsService;
 class ContractsController extends TatucoController
 {
     protected $select = [
-      "id",
-      "cod_contract",
+      "cod_contract as id",
+        "cod_contract",
        "company_id"
     ];
 

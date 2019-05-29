@@ -13,6 +13,7 @@ use App\Models\Access;
 use App\Models\Chart;
 use App\Models\Person;
 use App\Query\QueryBuilder;
+use Illuminate\Support\Facades\Cache;
 
 class ChartRepository extends TatucoRepository
 {
@@ -31,32 +32,36 @@ class ChartRepository extends TatucoRepository
             ->leftJoin('contracts as c', 'e.contract_id', 'c.cod_contract')
             ->select('accesses.id', 'accesses.date_input')
             ->whereBetween('accesses.date_input', [$request->start, $request->end]);
-      //  echo $query->toSql();
+        //echo $query->toSql();
         if ($request->contract_id)
         {
             $query->where('c.cod_contract', $request->contract_id);
         }
+      /*  $valor_cacheado = Cache::remember('users', 50, function () {
+            return User::all();
+        });*/
         return $query;
     }
 
     public function eecc($request)
     {
-        $query = [];
         $query = QueryBuilder::for(Access::class)
             ->leftJoin('employes as e', 'accesses.employe_id', 'e.id')
             ->leftJoin('position_companies as pc', 'e.position_company', 'pc.id')
             ->leftJoin('contracts as c', 'e.contract_id', 'c.cod_contract')
-            ->select('accesses.id', 'accesses.date_input', 'pc.name')
+            ->select('pc.name', 'pc.id')
+            ->selectRaw('DATE_FORMAT(accesses.date_input, \'%Y-%m-%d\') AS date_input')
             ->whereBetween('accesses.date_input', [$request->start, $request->end]);
      //   echo $query->toSql();
         if ($request->contract_id)
         {
             $query->where('c.cod_contract', $request->contract_id);
         }
+        $query->orderBy('accesses.date_input', 'asc');
         return $query;
     }
 
-    public function edades($request) {
+    public function ages($request) {
         /*
          *  select accesses.id, accesses.created_at, p.date_birth
             from accesses
@@ -64,5 +69,17 @@ class ChartRepository extends TatucoRepository
                 left join people as p on e.people_id = p.id
                 left join contracts as c on e.contract_id = c.cod_contract
          */
+        $query = QueryBuilder::for(Access::class)
+            ->leftJoin('employes as e', 'accesses.employe_id', 'e.id')
+            ->leftJoin('people as p', 'e.people_id', 'p.id')
+            ->leftJoin('contracts as c', 'e.contract_id', 'c.cod_contract')
+            ->select('accesses.id', 'p.date_birth')
+            ->whereBetween('accesses.date_input', [$request->start, $request->end]);
+     //   echo $query->toSql();
+        if ($request->contract_id)
+        {
+            $query->where('c.cod_contract', $request->contract_id);
+        }
+        return $query;
     }
 }

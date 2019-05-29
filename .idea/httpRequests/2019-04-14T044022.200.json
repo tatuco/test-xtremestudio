@@ -1,1 +1,0 @@
-select `accesses`.`id`, `accesses`.`created_at` from `accesses` inner join `people` as `p` on `accesses`.`person_id` = `p`.`id` inner join `people_companies` as `pc` on `p`.`id` = `people_id` inner join `contracts` as `c` on `pc`.`contract_id` = `c`.`id`[0, 0, 0, 0, 0,0, 0]
