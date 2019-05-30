@@ -11,13 +11,26 @@ class FileTypeSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('filetypes')->insert([
-            'name' => '',
+        DB::table('file_types')->insert([
+            'name' => 'pdf',
             'description' => '',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
-
+        DB::table('file_types')->insert([
+            'name' => 'xls',
+            'description' => '',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+        DB::table('file_types')->insert([
+            'name' => 'docs',
+            'description' => '',
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
     }
 }

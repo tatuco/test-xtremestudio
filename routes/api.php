@@ -112,35 +112,37 @@ Route::resource('requirementspeoples', 'RequirementsPeopleController', ['only' =
  
 Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
  
-/** routes para Employe **/ 
+    /** routes para Employe **/
  
-Route::resource('employes', 'EmployeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+    Route::resource('employes', 'EmployeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
+    /** routes para FileType **/
+
+    Route::resource('filetypes', 'FileTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
+    /** routes para SubEvent **/
+
+    Route::resource('subevents', 'SubEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
+    /** routes para Event **/
+
+    Route::resource('events', 'EventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
+    /** routes para Detention **/
+
+    Route::resource('detentions', 'DetentionController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
+    /** routes para File **/
+
+    Route::resource('files', 'FileController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
+    /** routes para DetentionEvent **/
+
+    Route::resource('detentionevents', 'DetentionEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
+    /** routes para DetentionType **/
+
+    Route::resource('detentiontypes', 'DetentionTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 });
  
-/** routes para FileType **/ 
- 
-Route::resource('filetypes', 'FileTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para SubEvent **/ 
- 
-Route::resource('subevents', 'SubEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para Event **/ 
- 
-Route::resource('events', 'EventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para Detention **/ 
- 
-Route::resource('detentions', 'DetentionController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para File **/ 
- 
-Route::resource('files', 'FileController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para DetentionEvent **/ 
- 
-Route::resource('detentionevents', 'DetentionEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para DetentionType **/ 
- 
-Route::resource('detentiontypes', 'DetentionTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
