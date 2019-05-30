@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
          $this->call(RequirementsCompanySeeder::class);
          $this->call(PersonTypeSeeder::class);
          $this->call(RequirementsPeopleSeeder::class);
-         $this->call(UserPersonSeeder::class);        
+         $this->call(UserPersonSeeder::class);
+         $this->call(ContractPositionSeeder::class);
       //   $this->call(PeopleCompanySeeder::class);
         // $this->call(AccessSeeder::class);
         // $this->call(AccessDetailsSeeder::class);
