@@ -58,6 +58,11 @@ Route::group([
             Route::get('/eecc', 'ChartController@eecc');
             Route::get('/ages', 'ChartController@ages');
         });
+        Route::group(['prefix' => 'type'], function () {
+            Route::resource('detention', 'DetentionTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+            Route::resource('file', 'FileTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+            Route::resource('person', 'PersonTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+        });
 
 /** routes para Company **/
 
@@ -66,7 +71,7 @@ Route::resource('companies', 'CompanyController', ['only' => ['index', 'store', 
 
 /** routes para PersonType **/ 
  
-Route::resource('persontypes', 'PersonTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
  
 /** routes para Person **/ 
  
@@ -118,7 +123,7 @@ Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index',
 
     /** routes para FileType **/
 
-    Route::resource('filetypes', 'FileTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
 
     /** routes para SubEvent **/
 
@@ -142,7 +147,6 @@ Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index',
 
     /** routes para DetentionType **/
 
-    Route::resource('detentiontypes', 'DetentionTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 });
  
 

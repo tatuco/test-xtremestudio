@@ -99,10 +99,10 @@ class TatucoService
     public function store(Request $request)
     {
         try{
-            DB::beginTransaction();
+            //DB::beginTransaction();
             Log::info('Guardado');
             if($this->object = $this->repository->store($request)){
-                DB::commit();
+              //  DB::commit();
                 return response()->json([
                     "status" => 201,
                     $this->name => $this->object],
@@ -110,7 +110,7 @@ class TatucoService
             }
 
         }catch (\Exception $e){
-            DB::rollBack();
+            //DB::rollBack();
             return $this->errorException($e);
         }
     }

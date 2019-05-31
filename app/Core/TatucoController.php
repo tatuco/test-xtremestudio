@@ -49,7 +49,9 @@ class TatucoController extends BaseController
     {
         $validator = Validator::make($request->all(), array_merge($this->validateStore, $this->validateDefault));
         if ($validator->fails()) {
-            return $validator->getMessageBag();
+            return response()->json([
+                $validator->getMessageBag(),
+            ], 422);
         }
         return $this->service->store($request);
     }

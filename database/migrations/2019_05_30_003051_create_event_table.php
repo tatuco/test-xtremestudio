@@ -23,6 +23,8 @@ class CreateEventTable extends Migration
             $table->boolean('is_pivote')->default(false);
             $table->boolean('check')->default(false);
             $table->boolean('deleted')->default(false);
+            $table->integer('detention_id');
+            $table->foreign('detention_id')->references('id')->on('detentions')->onDelete('cascade');
             $table->timestamps();
         });
     }
