@@ -12,14 +12,14 @@ class DetentionTypeSeeder extends Seeder
     public function run()
     {
         DB::table('detention_types')->insert([
-            'name' => 'Tipo Detencion Test 1',
+            'name' => 'Shutdown',
             'description' => '',
             'deleted' => false,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
         DB::table('detention_types')->insert([
-            'name' => 'Tipo Detencion Test 2',
+            'name' => 'PM',
             'description' => '',
             'deleted' => false,
             'created_at'=> new DateTime,

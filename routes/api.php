@@ -58,7 +58,7 @@ Route::group([
             Route::get('/eecc', 'ChartController@eecc');
             Route::get('/ages', 'ChartController@ages');
         });
-        
+
         Route::group(['prefix' => 'type'], function () {
             Route::resource('detention', 'DetentionTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
             Route::resource('file', 'FileTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);

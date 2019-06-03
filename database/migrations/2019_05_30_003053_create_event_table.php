@@ -23,8 +23,8 @@ class CreateEventTable extends Migration
             $table->foreign('event_id')->references('id')->on('event_types')->onDelete('cascade');
             $table->boolean('check')->default(false);
             $table->boolean('deleted')->default(false);
-            $table->integer('detention_id');
-            $table->foreign('detention_id')->references('id')->on('detentions')->onDelete('cascade');
+            $table->char('detention_id');
+            $table->char('detention_id')->references('id')->on('detentions')->onDelete('cascade');
             $table->timestamps();
         });
     }

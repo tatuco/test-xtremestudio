@@ -14,7 +14,7 @@ class CreateDetentionTable extends Migration
     public function up()
     {
         Schema::create('detentions', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->char('id')->primary();
             $table->string('name')->unique()->nullable();
             $table->string('description')->nullable();
             $table->boolean('deleted')->default(false);
