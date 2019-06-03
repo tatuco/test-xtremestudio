@@ -19,8 +19,8 @@ class CreateEventTable extends Migration
             $table->string('description')->nullable();
             $table->date('date');
             $table->boolean('out_of_time')->default(false);
-            $table->boolean('is_critical')->default(false);
-            $table->boolean('is_pivote')->default(false);
+            $table->integer('event_id');
+            $table->foreign('event_id')->references('id')->on('event_types')->onDelete('cascade');
             $table->boolean('check')->default(false);
             $table->boolean('deleted')->default(false);
             $table->integer('detention_id');

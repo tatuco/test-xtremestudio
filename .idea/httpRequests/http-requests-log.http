@@ -1,3 +1,26 @@
+GET http://localhost:8000/api/type/event
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk1ODA1MDksImV4cCI6MTg4MzU4MDUwOSwibmJmIjoxNTU5NTgwNTA5LCJqdGkiOiJLb2tzYjdzSEo5ZWdpazg0In0.6vdGxRWOja_nbftU3TQmPozbctemrSm8olonxGnk4eY
+
+{"email": "sysadmin@plazfer.cl", "password":  "123456"}
+
+<> 2019-06-03T123119.200.json
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "sysadmin@plazfer.cl", "password":  "123456"}
+
+<> 2019-06-03T114829.200.json
+
+###
+
 GET http://localhost:8000/api/type/detention
 Accept: */*
 Cache-Control: no-cache
@@ -561,28 +584,4 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6I
 {     "email": "sysadmin@plazfer.cl",     "password": "123456" }
 
 <> 2019-05-28T102854.200.json
-
-###
-
-GET http://localhost:8000/api/charts/eecc
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTkwODc5MjQsImV4cCI6MTg4MzA4NzkyNCwibmJmIjoxNTU5MDg3OTI0LCJqdGkiOiJGcTJLSmcwNUlBbnBGU05HIn0.SKn6oKm9uPhYhEkArQrmOvoIy_4GMizpgj-4suh_KI8
-
-{     "email": "sysadmin@plazfer.cl",     "password": "123456" }
-
-<> 2019-05-28T102813.200.json
-
-###
-
-GET http://localhost:8000/api/charts/eecc
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTkwODc5MjQsImV4cCI6MTg4MzA4NzkyNCwibmJmIjoxNTU5MDg3OTI0LCJqdGkiOiJGcTJLSmcwNUlBbnBGU05HIn0.SKn6oKm9uPhYhEkArQrmOvoIy_4GMizpgj-4suh_KI8
-
-{     "email": "sysadmin@plazfer.cl",     "password": "123456" }
-
-<> 2019-05-28T102803.200.json
 

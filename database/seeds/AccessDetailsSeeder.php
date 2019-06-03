@@ -84,4 +84,15 @@ class AccessDetailsSeeder extends Seeder
 
 
     }
+    /**
+     * Tipos de evento:
+     * normal
+     * critico
+     * propiedad:
+     * pivote
+     *
+     * fuera de plazo : validar si se esta creando fuera de plazo
+     *
+     * si la fecha del evento es menor a hoy el evento es fuera de plazo.
+     */
 }

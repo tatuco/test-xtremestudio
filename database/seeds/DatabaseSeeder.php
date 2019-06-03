@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
          $this->call(ContractPositionSeeder::class);
          $this->call(DetentionTypeSeeder::class);
          $this->call(FileTypeSeeder::class);
+         $this->call(EventTypeSeeder::class);
       //   $this->call(PeopleCompanySeeder::class);
         // $this->call(AccessSeeder::class);
         // $this->call(AccessDetailsSeeder::class);
