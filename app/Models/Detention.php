@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Core\Utils;
 use App\Http\Services\DateService;
 use App\Query\QueryBuilder;
 use Illuminate\Database\Eloquent\Model;
@@ -24,6 +25,9 @@ class Detention extends TatucoModel
             ->get();
         $resp = [];
         $date_pivote = '';
+        $percentage = 0;
+        $cont_sub_event_complits = 0;
+        $cont_events = 0;
         foreach ($list as $it) {
             if ($it->type_id == 1) {
                 $date_pivote = $it->date;
@@ -31,12 +35,23 @@ class Detention extends TatucoModel
             } elseif ($date_pivote != '') {
                 $it->week = DateService::getWeekEvent($date_pivote, $it->date);
             }
-            $it->sub_events = Event::subEvents($it->id);
+            $sub_events = Event::subEvents($it->id);
+            if ($it->check) {
+                $cont_events++;
+            }
+            foreach ($sub_events as $sb) {
+                if ($sb->check)
+                    $cont_sub_event_complits++;
+            }
+            $it->sub_events = $sub_events;
+            $it->percentage = Utils::calculatePorcentage($cont_sub_event_complits, count($sub_events));
             array_push($resp, $it);
         }
 
-        return $resp;
+        return ["events" => $resp, "percentage" => Utils::calculatePorcentage($cont_events, count($list))];
     }
+
+
 
 
 }

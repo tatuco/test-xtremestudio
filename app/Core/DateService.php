@@ -120,7 +120,7 @@ class DateService
     {
         $date_start = new DateTime($pivote_date);
         $date_end = new DateTime($date_event);
-        $signo = '+';
+        $signo = '-';
         $diff = 0;
         /*if ($date_start->getTimestamp() >= $date_end->getTimestamp())
         {
@@ -132,7 +132,7 @@ class DateService
 
         $diff = $date_start->format('W') - $date_end->format('W');
         if ($diff < 0)
-            $signo = "-";
+            $signo = "+";
         return "W${signo}".abs($diff);
     }
 

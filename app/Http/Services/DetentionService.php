@@ -54,9 +54,4 @@ class DetentionService extends TatucoService
         }
     }
 
-    public function update($id, Request $request)
-    {
-        return parent::update($id, $request);
-    }
-
 }

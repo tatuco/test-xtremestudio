@@ -40,7 +40,9 @@ class DetentionRepository extends TatucoRepository
         $resp = [];
         $date_pivote = '';
         foreach ($list as $it) {
-            $it->events = Detention::eventWithSubEvents($it->id);
+            $data = Detention::eventWithSubEvents($it->id);
+            $it->events = $data['events'];
+            $it->percentage = $data['percentage'];
             array_push($resp, $it);
         }
         return $resp;
