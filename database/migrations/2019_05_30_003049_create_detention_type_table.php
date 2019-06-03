@@ -15,7 +15,7 @@ class CreateDetentionTypeTable extends Migration
     {
         Schema::create('detention_types', function (Blueprint $table) {
             $table->integer('id', true);
-            $table->string('name')->unique()->nullable();
+            $table->string('name')->nullable();
             $table->string('description')->nullable();
             $table->boolean('deleted')->default(false);
             $table->timestamps();

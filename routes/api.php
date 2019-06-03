@@ -154,3 +154,7 @@ Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index',
 
 
  
+ 
+/** routes para StatusEvent **/ 
+ 
+Route::resource('statusevents', 'StatusEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);

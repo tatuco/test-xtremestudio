@@ -30,6 +30,7 @@ class DetentionService extends TatucoService
     {
         try {
             $detention = new Detention();
+            $detention->id = $request->id;
             $detention->name = $request->name;
             $detention->description = $request->has('description') ? $request->description : "";
             $detention->type_id = $request->type_id;
@@ -41,6 +42,8 @@ class DetentionService extends TatucoService
             $event->date = $request->event_date;
             $event->event_id = $request->event_id;
             $event->detention_id = $detention->id;
+            $event->type_id = 1;
+            $event->status_id = 3;
             $event->save();
             return response()->json([
                 "status" => 201,
@@ -49,6 +52,11 @@ class DetentionService extends TatucoService
         } catch (\Exception $e) {
             parent::errorException($e);
         }
+    }
+
+    public function update($id, Request $request)
+    {
+        return parent::update($id, $request);
     }
 
 }

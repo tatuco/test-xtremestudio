@@ -10,6 +10,7 @@ use App\Http\Services\DetentionService;
 class DetentionController extends TatucoController
 {
     protected $validateStore = [
+        'id' => 'required',
         'name' => 'required|string|max:20',
         'description' => 'string',
         'type_id' => 'required|integer',
