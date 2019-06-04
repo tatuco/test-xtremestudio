@@ -12,6 +12,10 @@ class Detention extends TatucoModel
 {
     protected $guarded = ['id'];
 
+    protected $casts = [
+      "id" => "char"
+    ];
+
     public function scopeEvents($query, $id)
     {
         return QueryBuilder::for(Event::class)

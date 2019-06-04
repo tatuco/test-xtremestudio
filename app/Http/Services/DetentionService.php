@@ -40,16 +40,17 @@ class DetentionService extends TatucoService
             $event->name = $request->event_name;
             $event->description = $request->has('event_description') ? $request->event_description : "";
             $event->date = $request->event_date;
-            $event->detention_id = $detention->id;
+            $event->detention_id = $request->id;
             $event->type_id = 1;
             $event->status_id = 3;
             $event->save();
             return response()->json([
                 "status" => 201,
-                $this->name => $this->object],
+                $this->name => [$detention,$event]],
                 201);
         } catch (\Exception $e) {
-            parent::errorException($e);
+            //echo $e;
+            return parent::errorException($e);
         }
     }
 
