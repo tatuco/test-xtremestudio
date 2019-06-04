@@ -8,6 +8,12 @@ use App\Http\Services\SubEventService;
 
 class SubEventController extends TatucoController
 {
+    protected $validateStore = [
+        'event_name' => 'required|string|min:5',
+        'event_description' => 'string'
+    ];
+    protected $validateUpdate = ['check' => 'required|boolean'];
+
     public function __construct()
     {
         parent::__construct(new SubEventService());
