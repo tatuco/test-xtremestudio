@@ -10,6 +10,12 @@ class SubEvent extends TatucoModel
 {
     protected $guarded = ['id'];
 
+    protected $fillable = [
+        'name',
+        'description',
+        'event_id'
+    ];
+
     protected $casts = [
         'check' => 'boolean',
     ];

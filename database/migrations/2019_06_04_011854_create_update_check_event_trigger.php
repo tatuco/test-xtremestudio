@@ -15,27 +15,19 @@ class CreateUpdateCheckEventTrigger extends Migration
     {
         DB::connection()->getPdo()->exec("
                 DELIMITER |
-                    CREATE TRIGGER check_update_event AFTER UPDATE ON sub_events
+                CREATE TRIGGER check_update_event AFTER UPDATE ON sub_events
                     FOR EACH ROW BEGIN
-                        cantidad_eventos = (SELECT COUNT(*) FROM sub_events WHERE event_id = NEW.event_id)
-                        enventos_completados = (SELECT COUNT(*) FROM sub_events WHERE event_id = NEW.event_id WHERE `check` = true)
+                        DECLARE cantidad_eventos INT;
+                        DECLARE eventos_completados INT;
+                        SET cantidad_eventos = (SELECT COUNT(*) FROM sub_events WHERE event_id = NEW.event_id);
+                        SET eventos_completados = (SELECT COUNT(*) FROM sub_events WHERE event_id = NEW.event_id AND `check` = 1);
+                        IF (cantidad_eventos = eventos_completados)  THEN
+                            UPDATE events SET `check` = 1 WHERE id = NEW.event_id;
+                        END IF;
                     END
-                |DELIMITER;
+                |
+                DELIMITER;
         ");
-
-        /**
-         * DELIMITER |
-
-        CREATE TRIGGER testref BEFORE INSERT ON test1
-        FOR EACH ROW BEGIN
-        INSERT INTO test2 SET a2 = NEW.a1;
-        DELETE FROM test3 WHERE a3 = NEW.a1;
-        UPDATE test4 SET b4 = b4 + 1 WHERE a4 = NEW.a1;
-        END
-        |
-
-        DELIMITER ;
-         */
     }
 
     /**
@@ -45,6 +37,6 @@ class CreateUpdateCheckEventTrigger extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('update_check_event_trigger');
+        DB::connection()->getPdo()->exec("drop trigger check_update_event;");
     }
 }

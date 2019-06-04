@@ -9,7 +9,13 @@ use App\Core\TatucoModel;
 class Event extends TatucoModel
 {
     protected $guarded = ['id'];
-
+    protected $fillable = [
+        "name",
+        "description",
+        "date",
+        "type_id",
+        "status_id"
+    ];
     protected $casts = [
         'check' => 'boolean'
     ];

@@ -12,6 +12,6 @@ class Utils
         if ($part > 0 && $total > 0)
             $resp = ($part / $total) * 100;
 
-        return $resp;
+        return round($resp, 0);
     }
 }
