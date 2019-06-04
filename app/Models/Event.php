@@ -14,7 +14,8 @@ class Event extends TatucoModel
         "description",
         "date",
         "type_id",
-        "status_id"
+        "status_id",
+        "detention_id"
     ];
     protected $casts = [
         'check' => 'boolean'

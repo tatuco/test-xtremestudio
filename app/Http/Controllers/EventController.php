@@ -12,7 +12,7 @@ class EventController extends TatucoController
                                 'name' => 'required|string|min:5',
                                 'description' => 'string',
                                 'date' => 'required|date_format:Y-m-d|after_or_equal:today',
-                                'detention_id' => 'required|integer'
+                                'detention_id' => 'required|string'
     ];
     protected $validateUpdate = ['check' => 'required|boolean'];
 
