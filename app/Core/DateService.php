@@ -136,7 +136,20 @@ class DateService
         return "W${signo}".abs($diff);
     }
 
+    /*
+     * funcion para validar que un evento se esta confirmando dentro o fuera del plazo
+     */
+    static function validateDateEvent($dt_string)
+    {
+        $today = date("Y-m-d H:i:s");
+        $_today = new DateTime($today);
+        $date = new DateTime($dt_string);
 
+        if ($_today->getTimestamp() <= $date->getTimestamp())
+            return true;
+        else
+            return false;
+    }
 
 /**
  * @param $day

@@ -38,7 +38,6 @@ class DetentionRepository extends TatucoRepository
         $list = $list->get();
 
         $resp = [];
-        $date_pivote = '';
         foreach ($list as $it) {
             $data = Detention::eventWithSubEvents($it->id);
             $it->events = $data['events'];
