@@ -113,7 +113,7 @@ class DateService
     static function getWeekToYear($string_date)
     {
         $date = new DateTime($string_date);
-        return $date->format('W');
+        return 'W-'.$date->format('W');
     }
 
     static function getWeekEvent($pivote_date, $date_event)
