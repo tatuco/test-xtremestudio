@@ -28,6 +28,28 @@ class EventService extends TatucoService
         parent::__construct(new EventRepository());
     }
 
+    public function store(Request $request)
+    {
+        $resp = parent::store($request);
+        $obj = $resp->content();
+        $obj = json_decode($obj, true);
+        if ($obj["status"] == 201) {
+            $it = $obj["event"];
+            $detention = Detention::find($it["detention_id"]);
+            Event::checkSubEvents($it["id"]);
+            $resp = Detention::eventWithSubEvents($it["detention_id"]);
+            foreach ($resp["events"] as &$it) {
+                    $it->active = false;
+            }
+            $detention->events = $resp["events"];
+            $detention->percentage = $resp["percentage"];
+            $detention->active = false;
+            return $detention;
+        } else {
+            return $resp;
+        }
+    }
+
     public function update($id, Request $request)
     {
         $event = Event::find($id);
