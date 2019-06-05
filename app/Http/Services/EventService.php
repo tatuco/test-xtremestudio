@@ -38,12 +38,16 @@ class EventService extends TatucoService
             $detention = Detention::find($it["detention_id"]);
             Event::checkSubEvents($it["id"]);
             $resp = Detention::eventWithSubEvents($it["detention_id"]);
-            foreach ($resp["events"] as &$it) {
-                    $it->active = false;
+           // echo 'id del evento creado => '.$it["id"];
+            foreach ($resp["events"] as &$_it) {
+                if ($_it->id == $it["id"])
+                    $_it->active = true;
+                else
+                    $_it->active = false;
             }
             $detention->events = $resp["events"];
             $detention->percentage = $resp["percentage"];
-            $detention->active = false;
+            $detention->active = true;
             return $detention;
         } else {
             return $resp;

@@ -27,6 +27,32 @@ class SubEventService extends TatucoService
         parent::__construct(new SubEventRepository());
     }
 
+    public function store(Request $request)
+    {
+        $resp = parent::store($request);
+        $obj = $resp->content();
+        $obj = json_decode($obj, true);
+        if ($obj["status"] == 201) {
+            $it = $obj["subevent"];
+            $event = SubEvent::event($it["event_id"]);
+            $detention = Detention::find($event->detention_id);
+            $resp = Detention::eventWithSubEvents($event->detention_id);
+            foreach ($resp["events"] as &$it) {
+                if ($it->id == $request->event_id)
+                    $it->active = true;
+                else
+                    $it->active = false;
+            }
+            $detention->events = $resp["events"];
+            $detention->percentage = $resp["percentage"];
+            $detention->active = true;
+            return $detention;
+        } else {
+            return $resp;
+        }
+    }
+
+
     public function update($id, Request $request)
     {
         $resp = parent::update($id, $request);
@@ -36,7 +62,7 @@ class SubEventService extends TatucoService
             $it = $obj["subevent"];
             $event = SubEvent::event($it["event_id"]);
             $detention = Detention::find($event->detention_id);
-            $resp = Detention::eventWithSubEvents($it["detention_id"]);
+            $resp = Detention::eventWithSubEvents($event->detention_id);
             foreach ($resp["events"] as &$it) {
                 if ($it->id == $id)
                     $it->active = true;

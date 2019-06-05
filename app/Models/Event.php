@@ -27,6 +27,7 @@ class Event extends TatucoModel
         return QueryBuilder::for(SubEvent::class)
             ->where('event_id', $id)
             ->where('deleted', false)
+            ->orderBy('created_at', 'desc')
             ->get();
     }
 

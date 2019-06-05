@@ -1,3 +1,122 @@
+POST http://localhost:8000/api/subevents
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
+{"event_id":18,"name":"laurita ultra tierni <3"}
+
+<> 2019-06-05T014305.200.json
+
+###
+
+POST http://localhost:8000/api/subevents
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
+{"event_id":18,"name":"laurita ultra tierni <3"}
+
+<> 2019-06-05T014115.500.html
+
+###
+
+POST http://localhost:8000/api/subevents
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
+{"event_id":18,"name":"laurita ultra tierni <3"}
+
+<> 2019-06-05T013945.500.html
+
+###
+
+POST http://localhost:8000/api/subevents
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
+{"event_id":18,"name":"laurita ultra tierni <3"}
+
+<> 2019-06-05T013926.201.json
+
+###
+
+POST http://localhost:8000/api/subevents
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
+{"event_id":18,"name":"laurita ultra tierni <3"}
+
+<> 2019-06-05T013803.201.json
+
+###
+
+POST http://localhost:8000/api/events
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
+{"detention_id":"323","name":"evento rebobisimo","type_id":3,"date":"2019-06-11"}
+
+<> 2019-06-05T011754.200.json
+
+###
+
+POST http://localhost:8000/api/events
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
+{"detention_id":"323","name":"evento rebobisimo","type_id":3,"date":"2019-06-11"}
+
+<> 2019-06-05T011532.500.html
+
+###
+
+POST http://localhost:8000/api/events
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
+{"detention_id":"323","name":"evento rebobisimo","type_id":3,"date":"2019-06-11"}
+
+<> 2019-06-05T011212.200.json
+
+###
+
+POST http://localhost:8000/api/events
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
+{"email":  "sysadmin@plazfer.cl", "password":  "123456"}
+
+<> 2019-06-05T011151.422.json
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":  "sysadmin@plazfer.cl", "password":  "123456"}
+
+<> 2019-06-05T010948.200.json
+
+###
+
 PUT http://localhost:8000/api/events/16
 Accept: */*
 Cache-Control: no-cache
@@ -475,123 +594,4 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6I
 {     "check": true }
 
 <> 2019-06-04T012811.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true }
-
-<> 2019-06-04T012604.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true }
-
-<> 2019-06-04T012258.200.json
-
-###
-
-POST http://localhost:8000/api/login
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{     "email": "sysadmin@plazfer.cl",     "password": "123456" }
-
-<> 2019-06-04T012128.200.json
-
-###
-
-POST http://localhost:8000/api/events
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2MTM1NDUsImV4cCI6MTg4MzYxMzU0NSwibmJmIjoxNTU5NjEzNTQ1LCJqdGkiOiJCdHdMWjR1Q2hTODJ3YkR0In0.ICk1-pGwHcVGy7ow8GxFt5cs75G1PR-6oDSDgR5wf9g
-
-{     "date": "2019-06-08" , "name": "test luis"}
-
-<> 2019-06-03T103629.422.json
-
-###
-
-POST http://localhost:8000/api/events
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2MTM1NDUsImV4cCI6MTg4MzYxMzU0NSwibmJmIjoxNTU5NjEzNTQ1LCJqdGkiOiJCdHdMWjR1Q2hTODJ3YkR0In0.ICk1-pGwHcVGy7ow8GxFt5cs75G1PR-6oDSDgR5wf9g
-
-{     "date": "2019-06-08" , "name": "test luis"}
-
-<> 2019-06-03T103451.500.json
-
-###
-
-POST http://localhost:8000/api/events
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2MTM1NDUsImV4cCI6MTg4MzYxMzU0NSwibmJmIjoxNTU5NjEzNTQ1LCJqdGkiOiJCdHdMWjR1Q2hTODJ3YkR0In0.ICk1-pGwHcVGy7ow8GxFt5cs75G1PR-6oDSDgR5wf9g
-
-{     "date": "2019-06-08" , "name": "test luis"}
-
-<> 2019-06-03T103352.500.json
-
-###
-
-POST http://localhost:8000/api/events
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2MTM1NDUsImV4cCI6MTg4MzYxMzU0NSwibmJmIjoxNTU5NjEzNTQ1LCJqdGkiOiJCdHdMWjR1Q2hTODJ3YkR0In0.ICk1-pGwHcVGy7ow8GxFt5cs75G1PR-6oDSDgR5wf9g
-
-{     "date": "2019-06-08" , "name": "test luis"}
-
-<> 2019-06-03T103330.500.json
-
-###
-
-POST http://localhost:8000/api/events
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2MTM1NDUsImV4cCI6MTg4MzYxMzU0NSwibmJmIjoxNTU5NjEzNTQ1LCJqdGkiOiJCdHdMWjR1Q2hTODJ3YkR0In0.ICk1-pGwHcVGy7ow8GxFt5cs75G1PR-6oDSDgR5wf9g
-
-{     "date": "2019-06-08" , "name": "test luis"}
-
-<> 2019-06-03T103139.500.json
-
-###
-
-POST http://localhost:8000/api/events
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2MTM1NDUsImV4cCI6MTg4MzYxMzU0NSwibmJmIjoxNTU5NjEzNTQ1LCJqdGkiOiJCdHdMWjR1Q2hTODJ3YkR0In0.ICk1-pGwHcVGy7ow8GxFt5cs75G1PR-6oDSDgR5wf9g
-
-{     "date": "2019-06-08" }
-
-<> 2019-06-03T102819.422.json
-
-###
-
-POST http://localhost:8000/api/events
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2MTM1NDUsImV4cCI6MTg4MzYxMzU0NSwibmJmIjoxNTU5NjEzNTQ1LCJqdGkiOiJCdHdMWjR1Q2hTODJ3YkR0In0.ICk1-pGwHcVGy7ow8GxFt5cs75G1PR-6oDSDgR5wf9g
-
-{"id":"D-006","name":"D-006","type_id":1,"description":"detencionasjdaksjd","event_name":"pivote","event_description":"parada de planta","event_date":"2019-06-13","event_id":1}
-
-<> 2019-06-03T102658.422.json
 

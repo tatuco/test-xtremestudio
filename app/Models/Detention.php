@@ -29,6 +29,7 @@ class Detention extends TatucoModel
         $list = QueryBuilder::for(Event::class)
             ->where('detention_id', $id)
             ->where('deleted', false)
+            ->orderBy('created_at', 'desc')
             ->get();
         $resp = [];
         $date_pivote = '';
