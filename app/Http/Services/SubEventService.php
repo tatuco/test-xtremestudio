@@ -78,4 +78,32 @@ class SubEventService extends TatucoService
         }
     }
 
+    public function destroy($id, $request)
+    {
+        $resp = parent::destroy($id, $request);
+        $obj = $resp->content();
+        $obj = json_decode($obj, true);
+        $i = 0;
+        if ($obj["status"] == 206) {
+            $it = $obj["subevent"];
+            $event = SubEvent::event($it["event_id"]);
+            $detention = Detention::find($event->detention_id);
+            $resp = Detention::eventWithSubEvents($event->detention_id);
+            foreach ($resp["events"] as &$it) {
+                if ($i == 0) {
+                    $it->active = true;
+                    $i++;
+                }
+                else
+                    $it->active = false;
+            }
+            $detention->events = $resp["events"];
+            $detention->percentage = $resp["percentage"];
+            $detention->active = true;
+            return $detention;
+        } else {
+            return $resp;
+        }
+    }
+
 }

@@ -172,7 +172,8 @@ class TatucoService
             $this->object->update();
             return response()->json([
                 'status' => 206,
-                'message' => $this->name . ' Eliminado'
+                'message' => $this->name . ' Eliminado',
+                $this->name => $this->object
             ], 206);
 
         }catch (\Exception $e){
