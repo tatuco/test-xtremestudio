@@ -2786,7 +2786,7 @@
       <OnDelete>cascade</OnDelete>
     </foreign-key>
     <trigger id="599" parent="270" name="check_update_event">
-      <SourceTextLength>572</SourceTextLength>
+      <SourceTextLength>727</SourceTextLength>
       <Definer>root@localhost</Definer>
       <Turn>after-row</Turn>
       <Events>U</Events>

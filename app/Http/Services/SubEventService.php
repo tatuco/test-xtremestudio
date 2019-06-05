@@ -63,11 +63,11 @@ class SubEventService extends TatucoService
             $event = SubEvent::event($it["event_id"]);
             $detention = Detention::find($event->detention_id);
             $resp = Detention::eventWithSubEvents($event->detention_id);
-            foreach ($resp["events"] as &$it) {
-                if ($it->id == $id)
-                    $it->active = true;
+            foreach ($resp["events"] as &$_it) {
+                if ($_it->id == $it["event_id"])
+                    $_it->active = true;
                 else
-                    $it->active = false;
+                    $_it->active = false;
             }
             $detention->events = $resp["events"];
             $detention->percentage = $resp["percentage"];
