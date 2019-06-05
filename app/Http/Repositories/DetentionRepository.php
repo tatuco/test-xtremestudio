@@ -35,7 +35,7 @@ class DetentionRepository extends TatucoRepository
 
         }
 
-        $list = $list->get();
+        $list = $list->orderBy("created_at", "desc")->get();
 
         $resp = [];
         foreach ($list as $it) {
