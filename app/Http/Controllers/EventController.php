@@ -12,6 +12,8 @@ class EventController extends TatucoController
                                 'name' => 'required|string|min:5',
                                 'description' => 'string',
                                 'date' => 'required|date_format:Y-m-d|after_or_equal:today',
+                                'type_id' => 'required|integer',
+                                'status_id' => 'required|integer',
                                 'detention_id' => 'required|string'
     ];
     protected $validateUpdate = ['check' => 'required|boolean'];
@@ -23,7 +25,7 @@ class EventController extends TatucoController
 
     public function store(Request $request)
     {
-        $request->merge(["type_id" => 3, "status_id" => 3]);
+        $request->merge(["status_id" => 3]);
         return parent::store($request);
     }
 }

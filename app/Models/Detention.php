@@ -23,9 +23,12 @@ class Detention extends TatucoModel
             ->get();
     }
 
+
     public function scopeEventWithSubEvents($query, $id ) {
+
         $list = QueryBuilder::for(Event::class)
             ->where('detention_id', $id)
+            ->where('deleted', false)
             ->get();
         $resp = [];
         $date_pivote = '';
@@ -49,6 +52,7 @@ class Detention extends TatucoModel
             }
             $it->sub_events = $sub_events;
             $it->percentage = Utils::calculatePorcentage($cont_sub_event_complits, count($sub_events));
+            $cont_sub_event_complits = 0;
             array_push($resp, $it);
         }
 

@@ -15,7 +15,8 @@ class Event extends TatucoModel
         "date",
         "type_id",
         "status_id",
-        "detention_id"
+        "detention_id",
+        "check"
     ];
     protected $casts = [
         'check' => 'boolean'
@@ -25,6 +26,19 @@ class Event extends TatucoModel
     {
         return QueryBuilder::for(SubEvent::class)
             ->where('event_id', $id)
+            ->where('deleted', false)
             ->get();
+    }
+
+    public function scopeCheckSubEvents($query, $id)
+    {
+        $var = QueryBuilder::for(SubEvent::class)
+            ->where('event_id', $id)
+            ->update(["check" => 1]);
+        if ($var)
+            return true;
+        else
+            return false;
+
     }
 }

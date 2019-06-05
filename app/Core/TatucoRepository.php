@@ -77,12 +77,13 @@ class TatucoRepository
         if (count($this->data) == 0) {
             $this->data = $data->all();
         }
-        $object->fill($this->data);
-        $object->push();
-        if($object)
+       // echo $id;
+        //print_r($this->data);
+      //  $object->push();
+        if($object->update($this->data))
             return $object;
         else
-            return null;
+            return false;
 
     }
 

@@ -61,7 +61,9 @@ class TatucoController extends BaseController
     {
         $validator = Validator::make($request->all(), array_merge($this->validateUpdate, $this->validateDefault));
         if ($validator->fails()) {
-            return $validator->getMessageBag();
+            return response()->json([
+                $validator->getMessageBag(),
+            ], 422);
         }
         return $this->service->update($id, $request);
     }
@@ -75,16 +77,4 @@ class TatucoController extends BaseController
     {
         return $this->service->select($request, $this->select);
     }
-
-    public function test_()
-    {
-        return SendNotification::send(["hola"=>"gay"]);
-    }
-
-    public function testXls()
-    {
-        return ReportService::testXls();
-    }
-
-
 }

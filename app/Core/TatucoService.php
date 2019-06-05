@@ -44,14 +44,14 @@ class TatucoService
 
                 $query = $this->repository->index($request);
                // Log::info("{$query}");
-                if(!$query)
+                /*if(!$query)
                 {
                     return response()->json([
                         "status" => 200,
+                        "message"=> "no hay registros",
 
-                        "message"=> "no hay registros"
                     ], 200);
-                }
+                }*/
 
                 return $query;
 
@@ -137,14 +137,13 @@ class TatucoService
 
             if (!$this->repository->update($id, $request)){
                 return response()->json([
-                    'message'=>'No se pudo Modificar',
-                    $this->name => $this->object
+                        $this->object
                 ], 200);
             }
             return response()->json([
                 'status' => 200,
                 'message'=>$this->name. ' Modificado',
-                $this->name=> $this->object
+                $this->name => $this->object
             ], 200)->setStatusCode(200, "Registro Actualizado");
 
         }catch(\Exception $e){

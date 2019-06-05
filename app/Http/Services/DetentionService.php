@@ -44,10 +44,15 @@ class DetentionService extends TatucoService
             $event->type_id = 1;
             $event->status_id = 3;
             $event->save();
-            return response()->json([
-                "status" => 201,
-                $this->name => [$detention,$event]],
-                201);
+
+            $resp = Detention::eventWithSubEvents($request->id);
+            foreach ($resp["events"] as &$it) {
+                    $it->active = false;
+            }
+            $detention->events = $resp["events"];
+            $detention->percentage = $resp["percentage"];
+            $detention->active = false;
+            return $detention;
         } catch (\Exception $e) {
             //echo $e;
             return parent::errorException($e);

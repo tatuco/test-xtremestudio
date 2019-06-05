@@ -13,9 +13,11 @@ class CreateUpdateCheckEventTrigger extends Migration
      */
     public function up()
     {
-        DB::connection()->getPdo()->exec("
-                DELIMITER |
-                CREATE TRIGGER check_update_event AFTER UPDATE ON sub_events
+        DB::connection()
+            ->getPdo()
+            ->exec("
+               
+                CREATE TRIGGER check_update_event AFTER UPDATE ON `sub_events`
                     FOR EACH ROW BEGIN
                         DECLARE cantidad_eventos INT;
                         DECLARE eventos_completados INT;
@@ -25,9 +27,7 @@ class CreateUpdateCheckEventTrigger extends Migration
                             UPDATE events SET `check` = 1 WHERE id = NEW.event_id;
                         END IF;
                     END
-                |
-                DELIMITER;
-        ");
+               ");
     }
 
     /**

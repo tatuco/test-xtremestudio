@@ -13,7 +13,8 @@ class SubEvent extends TatucoModel
     protected $fillable = [
         'name',
         'description',
-        'event_id'
+        'event_id',
+        'check'
     ];
 
     protected $casts = [
