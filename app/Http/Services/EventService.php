@@ -44,7 +44,6 @@ class EventService extends TatucoService
         if ($obj["status"] == 200) {
             $it = $obj["event"];
             $detention = Detention::find($it["detention_id"]);
-            //if ($it["check"] == 1 )
             Event::checkSubEvents($id);
             $resp = Detention::eventWithSubEvents($it["detention_id"]);
             foreach ($resp["events"] as &$it) {

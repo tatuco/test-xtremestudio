@@ -20,4 +20,12 @@ class SubEvent extends TatucoModel
     protected $casts = [
         'check' => 'boolean',
     ];
+
+    public function scopeEvent($query, $id)
+    {
+        return QueryBuilder::for(Event::class)
+            ->where('id', $id)
+            ->where('deleted', false)
+            ->first();
+    }
 }
