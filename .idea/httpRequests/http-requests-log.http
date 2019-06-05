@@ -4,6 +4,30 @@ Cache-Control: no-cache
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
 
+{"event_id":22,"name":"laurita ultra tierni <3"}
+
+<> 2019-06-05T030906.500.html
+
+###
+
+POST http://localhost:8000/api/subevents
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
+{"event_id":22,"name":"laurita ultra tierni <3"}
+
+<> 2019-06-05T030554.500.html
+
+###
+
+POST http://localhost:8000/api/subevents
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk3NTgxODgsImV4cCI6MTg4Mzc1ODE4OCwibmJmIjoxNTU5NzU4MTg4LCJqdGkiOiJsTloyV2pQdndzRjdoS0pLIn0.8w0ZW2TrGCdm-K4OKGl36vSC6aG7NPY-DZb9hrqHbm8
+
 {"event_id":18,"name":"laurita ultra tierni <3"}
 
 <> 2019-06-05T014305.200.json
@@ -570,28 +594,4 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6I
 {     "check": true }
 
 <> 2019-06-04T013450.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true }
-
-<> 2019-06-04T013040.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true }
-
-<> 2019-06-04T012811.200.json
 
