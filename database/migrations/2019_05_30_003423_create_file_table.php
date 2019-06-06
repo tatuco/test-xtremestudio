@@ -15,11 +15,13 @@ class CreateFileTable extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->integer('id', true);
-            $table->string('name')->unique()->nullable();
-            $table->string('description')->nullable();
+            $table->string('name')->unique();
+            $table->string('directory');
             $table->boolean('deleted')->default(false);
             $table->integer('type_id');
             $table->foreign('type_id')->references('id')->on('file_types')->onDelete('cascade');
+            $table->char('detention_id');
+            $table->foreign('detention_id')->references('id')->on('detentions')->onDelete('cascade');
             $table->timestamps();
         });
     }
