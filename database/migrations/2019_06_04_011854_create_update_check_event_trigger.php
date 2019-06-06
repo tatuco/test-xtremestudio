@@ -20,6 +20,7 @@ class CreateUpdateCheckEventTrigger extends Migration
                 CREATE TRIGGER check_update_event AFTER UPDATE ON `sub_events`
                     FOR EACH ROW BEGIN
                         DECLARE eventos_completados INT;
+                        DECLARE cantidad_eventos INT;
                         DECLARE fecha DATE;
                         DECLARE hoy DATE;
                         SET cantidad_eventos = (SELECT COUNT(*) FROM sub_events WHERE event_id = NEW.event_id);

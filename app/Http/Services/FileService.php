@@ -11,6 +11,8 @@ namespace App\Http\Services;
 
 use App\Core\TatucoService;
 use App\Http\Repositories\FileRepository;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class FileService extends TatucoService
 {
@@ -21,6 +23,17 @@ class FileService extends TatucoService
     public function __construct()
     {
         parent::__construct(new FileRepository());
+    }
+
+    public function store(Request $request)
+    {
+        $uploadedFile = $request->file('file');
+        Storage::disk('local')->putFileAs(
+            $request->directory,
+            $uploadedFile,
+            $request->name
+        );
+        return parent::store($request);
     }
 
 }

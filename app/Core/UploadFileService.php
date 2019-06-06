@@ -7,18 +7,20 @@ namespace App\Core;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class FileService
+class UploadService
 {
-    public function upload(Request $request)
+    public function upload(Request $request, $dir = 'files')
     {
         $uploadedFile = $request->file('file');
         $filename = time().$uploadedFile->getClientOriginalName();
-
+        // 192.168.1.219
         Storage::disk('local')->putFileAs(
-            'files/'.$filename,
+            $dir.'/'.$filename,
             $uploadedFile,
             $filename
         );
+
+
 
         $upload = new Upload;
         $upload->filename = $filename;
@@ -31,5 +33,5 @@ class FileService
             'id' => $upload->id
         ]);
     }
-}
+
 }
