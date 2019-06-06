@@ -49,6 +49,7 @@ class DetentionService extends TatucoService
             foreach ($resp["events"] as &$it) {
                     $it->active = false;
             }
+            $detention->id = $request->id;
             $detention->events = $resp["events"];
             $detention->percentage = $resp["percentage"];
             $detention->active = false;

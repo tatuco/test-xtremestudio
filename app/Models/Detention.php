@@ -40,7 +40,8 @@ class Detention extends TatucoModel
             if ($it->type_id == 1) {
                 $date_pivote = $it->date;
                 $it->week = DateService::getWeekToYear($it->date);
-            } elseif ($date_pivote != '') {
+            } elseif ($it->type_id != 1) {
+               // echo 2;
                 $it->week = DateService::getWeekEvent($date_pivote, $it->date);
             }
             $sub_events = Event::subEvents($it->id);
@@ -54,6 +55,7 @@ class Detention extends TatucoModel
             $it->sub_events = $sub_events;
             $it->percentage = Utils::calculatePorcentage($cont_sub_event_complits, count($sub_events));
             $cont_sub_event_complits = 0;
+            $date_pivote = '';
             array_push($resp, $it);
         }
 
