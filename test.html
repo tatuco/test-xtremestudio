@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <form action="http://localhost:8000/api/files" method="post" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+            <input type="file" class="form-control-file" name="file" id="file" aria-describedby="fileHelp"><br>
+            <input type="text" class="form-control-file" name="type_id" id="type_id" aria-describedby="fileHelp"><br>
+            <input type="text" class="form-control-file" name="detention_id" id="detention_id" aria-describedby="fileHelp"><br>
+            <br><br>
+            <small id="fileHelp" class="form-text text-muted">Please upload a valid image file. Size of image should not be more than 2MB.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</head>
+<body>
+
+</body>
+</html>

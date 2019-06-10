@@ -29,7 +29,7 @@ class FileService extends TatucoService
     {
         $uploadedFile = $request->file('file');
         Storage::disk('local')->putFileAs(
-            $request->directory,
+            $request->route,
             $uploadedFile,
             $request->name
         );

@@ -141,7 +141,6 @@ Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index',
 
     /** routes para File **/
 
-    Route::resource('files', 'FileController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 
     /** routes para DetentionEvent **/
 
@@ -150,7 +149,8 @@ Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index',
     /** routes para DetentionType **/
 
 });
- 
+
+Route::resource('files', 'FileController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 
 
  
