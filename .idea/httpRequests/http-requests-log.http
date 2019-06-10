@@ -1,3 +1,92 @@
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{     "email": "sysadmin@plazfer.cl",      "password": "123456" }
+
+<> 2019-06-10T044438.200.json
+
+###
+
+POST https://api.yoplanifico.cl/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{     "email": "sysadmin@plazfer.cl",      "password": "123456" }
+
+<> 2019-06-10T044232.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{     "email": "sysadmin@plazfer.cl",      "password": "123456" }
+
+<> 2019-06-10T044045.200.json
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{     "email": "sysadmin@plazfer.cl",      "password": "123456" }
+
+<> 2019-06-10T043921.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{     "email": "sysadmin@plazfer.cl",      "password": "123456" }
+
+<> 2019-06-10T043807.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{     "email": "sysadmin@plazfer.cl",      "password": "123456" }
+
+<> 2019-06-10T043555.500.html
+
+###
+
+POST http://localhost:8000/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{     "email": "sysadmin@plazfer.cl",      "password": "123456" }
+
+<> 2019-06-10T043506.500.html
+
+###
+
+GET http://localhost:8000/api/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NjAxODg0MjQsImV4cCI6MTg4NDE4ODQyNCwibmJmIjoxNTYwMTg4NDI0LCJqdGkiOiI4YzAyU0V0eVhFSmFNaldQIn0.HNZRQ5jQlteGAwwVdMwWi9PvawgjPu4IsOcsLJC4Nsg
+
+{     "email": "sysadmin@plazfer.cl",      "password": "123456" }
+
+<> 2019-06-10T043431.500.html
+
+###
+
 GET http://localhost:8000/api/users
 Accept: */*
 Cache-Control: no-cache
@@ -512,100 +601,4 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6I
 {     "check": false, "dsd":1 }
 
 <> 2019-06-04T063503.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true, "dsd":1 }
-
-<> 2019-06-04T032037.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true, "dsd":1 }
-
-<> 2019-06-04T031956.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true, "dsd":1 }
-
-<> 2019-06-04T031825.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true, "dsd":1 }
-
-<> 2019-06-04T025314.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true, "dsd":1 }
-
-<> 2019-06-04T024856.500.html
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true, "dsd":1 }
-
-<> 2019-06-04T024835.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true, "dsd":1 }
-
-<> 2019-06-04T024207.200.json
-
-###
-
-PUT http://localhost:8000/api/events/3
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NTk2NzI0ODcsImV4cCI6MTg4MzY3MjQ4NywibmJmIjoxNTU5NjcyNDg3LCJqdGkiOiJKN3FaTm05TEM4eTdxYmRGIn0.X4tsqn6ryZbLvHaslBff9bSGutcd174hrrR3sDEi7Rs
-
-{     "check": true, "dsd":1 }
-
-<> 2019-06-04T024010.200.json
 
