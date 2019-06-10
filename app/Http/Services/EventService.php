@@ -47,6 +47,9 @@ class EventService extends TatucoService
             }
             $detention->events = $resp["events"];
             $detention->percentage = $resp["percentage"];
+            $detention->percentage_effecty =  $resp['percentage_effecty'];
+            $detention->count_events_effecty = $resp['count_events_effecty'];
+            $detention->count_events = $resp['count_events'];
             $detention->active = true;
             return $detention;
         } else {
@@ -80,6 +83,9 @@ class EventService extends TatucoService
             }
             $detention->events = $resp["events"];
             $detention->percentage = $resp["percentage"];
+            $detention->percentage_effecty =  $resp['percentage_effecty'];
+            $detention->count_events_effecty = $resp['count_events_effecty'];
+            $detention->count_events = $resp['count_events'];
             $detention->active = true;
             return $detention;
         } else {
@@ -109,6 +115,9 @@ class EventService extends TatucoService
             }
             $detention->events = $resp["events"];
             $detention->percentage = $resp["percentage"];
+            $detention->percentage_effecty =  $resp['percentage_effecty'];
+            $detention->count_events_effecty = $resp['count_events_effecty'];
+            $detention->count_events = $resp['count_events'];
             $detention->active = true;
             return $detention;
         } else {

@@ -9,6 +9,7 @@
 namespace App\Http\Repositories;
 
 use App\Core\TatucoRepository;
+use App\Core\Utils;
 use App\Http\Services\DateService;
 use App\Models\Detention;
 use App\Query\QueryBuilder;
@@ -42,6 +43,9 @@ class DetentionRepository extends TatucoRepository
             $data = Detention::eventWithSubEvents($it->id);
             $it->events = $data['events'];
             $it->percentage = $data['percentage'];
+            $it->percentage_effecty =  $data['percentage_effecty'];
+            $it->count_events_effecty = $data['count_events_effecty'];
+            $it->count_events = $data['count_events'];
             array_push($resp, $it);
         }
         return $resp;
