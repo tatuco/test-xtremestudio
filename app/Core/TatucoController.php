@@ -8,6 +8,7 @@
 
 namespace App\Core;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Validator;
@@ -75,6 +76,14 @@ class TatucoController extends BaseController
 
     public function select(Request $request)
     {
+        $where = [
+            ["op" => "eq", "field" => "deleted", "value" => "false"],
+            ["op" => "gte", "field" => "created_at", "value" => Carbon::today()->format('Y-m-d')]
+        ];
+        $request->merge([
+            "where" => $where,
+            "select" => $this->select
+        ]);
         return $this->service->select($request, $this->select);
     }
 }

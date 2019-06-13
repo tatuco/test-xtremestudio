@@ -27,7 +27,8 @@
         "nesbot/carbon": "^1.22",
         "nordsoftware/lumen-cors": "^2.2",
         "tibonilab/pdf-lumen-bundle": "^2.0",
-        "tymon/jwt-auth": "^0.5.12"
+        "tymon/jwt-auth": "^0.5.12",
+        "ext-json": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

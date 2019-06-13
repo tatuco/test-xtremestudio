@@ -107,8 +107,9 @@ class TatucoRepository
 
    public function select($request, $select)
    {
-       $query = $this->model::select($select);
-
+       $query = $this->model::select($select)
+       ->where('deleted', false);
+    //    $query = $this->model::doWhere($request);
        return $query;
       // return $this->model::doWhere($request)->get();
    }

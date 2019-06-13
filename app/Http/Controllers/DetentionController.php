@@ -20,6 +20,12 @@ class DetentionController extends TatucoController
        // 'event_id' => 'required|integer'
     ];
 
+    protected $select = [
+        'id',
+        'name'
+    ];
+
+
     public function __construct()
     {
         parent::__construct(new DetentionService());

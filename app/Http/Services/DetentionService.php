@@ -52,6 +52,9 @@ class DetentionService extends TatucoService
             $detention->id = $request->id;
             $detention->events = $resp["events"];
             $detention->percentage = $resp["percentage"];
+            $detention->percentage_effecty =  $resp['percentage_effecty'];
+            $detention->count_events_effecty = $resp['count_events_effecty'];
+            $detention->count_events = $resp['count_events'];
             $detention->active = false;
             return $detention;
         } catch (\Exception $e) {

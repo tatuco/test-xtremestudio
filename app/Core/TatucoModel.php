@@ -32,7 +32,6 @@ class TatucoModel extends Model
 
     public function scopeDoWhere($query, $request) {
 
-
         $list = QueryBuilder::for(static::class)
             ->select($this->getColumns($request))
             ->doJoin($this->getJoins($request))

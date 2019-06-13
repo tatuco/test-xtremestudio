@@ -51,6 +51,7 @@ Route::group([
         Route::group(['prefix' => 'select'], function () {
             Route::get('/companies', 'CompanyController@select');
             Route::get('/contracts', 'ContractsController@select');
+            Route::get('/detentions', 'DetentionController@select');
         });
 
         Route::group(['prefix' => 'charts'], function () {

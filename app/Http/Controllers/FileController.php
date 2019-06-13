@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Core\Utils;
 use Illuminate\Http\Request;
 use App\Core\TatucoController;
 use App\Http\Services\FileService;
@@ -10,11 +11,11 @@ use Illuminate\Support\Facades\Validator;
 class FileController extends TatucoController
 {
     protected $validateStore = [
-        'file' => 'required',
+        //'file' => 'required',
      /*   'name' => 'required|string|min:5',
         'directory' => 'required|string|min:10',
         'type_id' => 'required|integer|min:1',*/
-        'detention_id' => 'required|string|min:1'
+       // 'detention_id' => 'required|string|min:1'
     ];
 
     public function __construct()
@@ -24,24 +25,37 @@ class FileController extends TatucoController
 
     public function store(Request $request)
     {
-        $files = $request->files;
+        $files = $request->file;
         $result = [];
-        $countfiles = count($_FILES);
-      //  return response()->json(["count" => $countfiles, "FILE"=> $_FILES]);
-        foreach ($_FILES as $file) {
-            $uploadedFile = $file;
-            $filename = time().'_'.$uploadedFile['name'];
-            $directory = storage_path().'\\app\\detentions\\'.$request->detention_id.'\\'.$filename;
+       /* $archivo = base64_decode($request->base64textString);
+        $name =  time().'_'.$request->nombreArchivo;
+        $directory = storage_path().'\\app\\detentions\\'.$name;
+        $obj = [
+            'name' => $name,
+            'directory' => $directory ,
+            'route' => "\\detentions\\",
+            'file' => $archivo
+        ];*/
+        //  return response()->json(["count" => $countfiles, "FILE"=> $_FILES]);
+        foreach ($files as $file) {
+           // return response()->json(["tipo" => "data:".$file["tipo"].";base64,"]);
+            $base_clean = str_replace("data:".$file["tipo"].";base64,", "", $file["base64textString"]);
+
+            $_file = base64_decode($base_clean);
+            $name =  time().'_'.$file["nombreArchivo"];
+            $directory = storage_path().'\\app\\detentions\\'.$name;
 
             $obj = [
-                'name' => $filename,
+                'name' => $name,
                 'directory' => $directory ,
-                'route' => "\\detentions\\"
+                'file' => $_file,
+                'detention_id' => $request->detention_id,
+                "type_id" => $file["type_id"]
             ];
 
             array_push($result, $obj);
         }
-        return response()->json(["laurita-tierni"=> $result, "cantidad_archivos" => $countfiles]);
+        //return response()->json(["laurita-tierni"=> $result, "cantidad_archivos" => $countfiles]);
        /* $uploadedFile = $request->file('files');
         $filename = time().'_'.$uploadedFile->getClientOriginalName();
         $directory = storage_path().'\\app\\detentions\\'.$request->detention_id.'\\'.$filename;
@@ -50,7 +64,8 @@ class FileController extends TatucoController
             'directory' => $directory,
             'route' => "\\detentions\\"
         ]);*/
-       $request->merge(['file' => $result[0]]);
+      // return response()->json(["res" => Utils::convert_from_latin1_to_utf8_recursively($result)]);
+       $request->merge(["archivos" => $result ]);
         $validator = Validator::make($request->all(), array_merge($this->validateStore, $this->validateDefault));
         if ($validator->fails()) {
             return response()->json([
