@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\ValidateWhereRequest;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -20,6 +21,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\TrustProxies::class,
         \Barryvdh\Cors\HandleCors::class,
+        ValidateWhereRequest::class
     ];
 
     /**
@@ -42,6 +44,7 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
             \Barryvdh\Cors\HandleCors::class,
+            ValidateWhereRequest::class
         ],
     ];
 

@@ -34,9 +34,10 @@ class Utils
     }
 
     static function charactersSpecials($string) {
-        $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
+        $permitidos = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-""_[]{}:,=';
         for ($i=0; $i<strlen($string); $i++){
             if (strpos($permitidos, substr($string,$i,1))===false){
+                echo substr($string, $i, 1);
                 return false;
             }
         }

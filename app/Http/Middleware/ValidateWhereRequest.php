@@ -2,7 +2,9 @@
 
 namespace App\Http\Middleware;
 
+use App\Core\Utils;
 use Closure;
+use Hamcrest\Util;
 
 class ValidateWhereRequest
 {
@@ -15,6 +17,11 @@ class ValidateWhereRequest
      */
     public function handle($request, Closure $next)
     {
+        if (!Utils::charactersSpecials($request->where)) {
+            return response()->json([
+               "message" => "Caracteres Especiales en el request"
+            ], 422);
+        }
         return $next($request);
     }
 }
