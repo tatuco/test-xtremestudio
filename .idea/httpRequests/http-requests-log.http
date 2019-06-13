@@ -6,6 +6,18 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6I
 
 {     "email": "sysadmin@plazfer.cl",     "password": "123456" }
 
+<> 2019-06-13T020041.200.json
+
+###
+
+GET http://localhost:8000/api/detentions?where=[["op":"eq","field":"id","value":1]]
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvbG9naW4iLCJpYXQiOjE1NjA0NDM1MjMsImV4cCI6MTg4NDQ0MzUyMywibmJmIjoxNTYwNDQzNTIzLCJqdGkiOiJIQW1remR1b1p2Mkczcmp2In0.YQYCkHsCCYPjYykTz1sTIlLJA5aGxrQxWMuOTtK7HW8
+
+{     "email": "sysadmin@plazfer.cl",     "password": "123456" }
+
 <> 2019-06-13T015724.200.json
 
 ###
@@ -586,15 +598,4 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUsImlzcyI6I
 {     "email": "sysadmin@plazfer.cl",     "password": "123456" }
 
 <> 2019-06-06T022630.200.json
-
-###
-
-POST http://localhost:8000/api/login
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{     "email": "sysadmin@plazfer.cl",     "password": "123456" }
-
-<> 2019-06-06T022457.200.json
 

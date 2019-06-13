@@ -17,7 +17,14 @@ class ValidateWhereRequest
      */
     public function handle($request, Closure $next)
     {
-        if (!Utils::charactersSpecials($request->where)) {
+        if (!Utils::charactersSpecials($request->where)
+            || !Utils::charactersSpecials($request->select)
+            || !Utils::charactersSpecials($request->columns)
+            || !Utils::charactersSpecials($request->limit)
+            || !Utils::charactersSpecials($request->count)
+            || !Utils::charactersSpecials($request->group)
+            || !Utils::charactersSpecials($request->join)
+            || !Utils::charactersSpecials($request->sort)) {
             return response()->json([
                "message" => "Caracteres Especiales en el request"
             ], 422);
