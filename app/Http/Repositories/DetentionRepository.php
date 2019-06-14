@@ -13,6 +13,7 @@ use App\Core\Utils;
 use App\Http\Services\DateService;
 use App\Models\Detention;
 use App\Query\QueryBuilder;
+use Nexmo\Message\Query;
 
 class DetentionRepository extends TatucoRepository
 {
@@ -49,6 +50,12 @@ class DetentionRepository extends TatucoRepository
             array_push($resp, $it);
         }
         return $resp;
+    }
+
+    public function show($id)
+    {
+        $item = Detention::files($id);
+        return $item;
     }
 
 }

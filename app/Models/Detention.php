@@ -23,6 +23,13 @@ class Detention extends TatucoModel
             ->get();
     }
 
+    public function scopeFiles($query, $id)
+    {
+        return QueryBuilder::for(File::class)
+            ->where('detention_id', $id)
+            ->get();
+    }
+
 
     public function scopeEventWithSubEvents($query, $id ) {
 

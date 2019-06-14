@@ -44,12 +44,13 @@ class FileController extends TatucoController
             $_file = base64_decode($base_clean);
             $name =  time().'_'.$file["nombreArchivo"];
             $directory = storage_path().'\\app\\detentions\\'.$name;
-
+            $dir_amazon = "http://s3.us-west-2.amazonaws.com/yoplanifico/detenciones/";
             $obj = [
                 'name' => $name,
                 'directory' => $directory ,
                 'file' => $_file,
                 'detention_id' => $request->detention_id,
+                'aws' => $dir_amazon,
                 "type_id" => $file["type_id"]
             ];
 
@@ -74,5 +75,10 @@ class FileController extends TatucoController
         }
 
         return parent::store($request);
+    }
+
+
+    public function download(Request $request) {
+        return $this->service->download($request);
     }
 }

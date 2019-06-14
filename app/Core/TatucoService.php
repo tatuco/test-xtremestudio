@@ -82,9 +82,7 @@ class TatucoService
 
             Log::info('Encontrado');
 
-            return response()->json([
-                $this->name => $this->data,
-            ], 200);
+            return response()->json($this->data, 200);
 
         }catch (\Exception $e){
             return $this->errorException($e);

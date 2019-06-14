@@ -67,95 +67,29 @@ Route::group([
             Route::resource('event', 'EventTypeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
         });
 
-/** routes para Company **/
+        Route::get('file/download', 'FileController@download');
+
 
 Route::resource('companies', 'CompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-
-
-/** routes para PersonType **/ 
- 
-
- 
-/** routes para Person **/ 
- 
 Route::resource('people', 'PersonController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para Employee **/ 
- 
 Route::resource('employees', 'EmployeeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para Access **/ 
- 
 Route::resource('accesses', 'AccessController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para Contracts **/ 
- 
 Route::resource('contracts', 'ContractsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para AdmContracts **/ 
- 
 Route::resource('admcontracts', 'AdmContractsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para PeopleCompany **/ 
- 
 Route::resource('peoplecompanies', 'PeopleCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para PositionCompany **/ 
- 
 Route::resource('positioncompanies', 'PositionCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para Turn **/ 
- 
 Route::resource('turns', 'TurnController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para RequirementsCompany **/ 
- 
 Route::resource('requirementscompanies', 'RequirementsCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para RequirementsPeople **/ 
- 
 Route::resource('requirementspeoples', 'RequirementsPeopleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-/** routes para AccessDetails **/ 
- 
 Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
- 
-    /** routes para Employe **/
- 
-    Route::resource('employes', 'EmployeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('employes', 'EmployeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('subevents', 'SubEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('events', 'EventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('detentions', 'DetentionController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('detentionevents', 'DetentionEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('files', 'FileController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('statusevents', 'StatusEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 
-    /** routes para FileType **/
-
-
-
-    /** routes para SubEvent **/
-
-    Route::resource('subevents', 'SubEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-
-    /** routes para Event **/
-
-    Route::resource('events', 'EventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-
-    /** routes para Detention **/
-
-    Route::resource('detentions', 'DetentionController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-
-    /** routes para File **/
-
-
-    /** routes para DetentionEvent **/
-
-    Route::resource('detentionevents', 'DetentionEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-
-    /** routes para DetentionType **/
 
 });
 
-Route::resource('files', 'FileController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-
-
- 
- 
-/** routes para StatusEvent **/ 
- 
-Route::resource('statusevents', 'StatusEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);

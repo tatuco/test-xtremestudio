@@ -16,6 +16,7 @@ use App\Models\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use SplFileInfo;
 
 class FileService extends TatucoService
 {
@@ -30,7 +31,7 @@ class FileService extends TatucoService
 
     public function store(Request $request)
     {
-       // $uploadedFile = $request->file('file');
+        // $uploadedFile = $request->file('file');
         /*Storage::disk('local')->putFileAs(
             $request->route,
             $request->file,
@@ -42,20 +43,40 @@ class FileService extends TatucoService
         $archivos = $request->archivos;
         foreach ($archivos as $file) {
 
-            $f =  new File();
+            $f = new File();
             $f->name = $file["name"];
-            $f->directory = $file["directory"];
+            $f->directory = 'http://192.168.1.219/yoplanifico-api/storage/app/detentions/' . $file["name"];
             $f->type_id = $file["type_id"];
             $f->detention_id = $file["detention_id"];
             $f->save();
+            file_put_contents($file["directory"], $file["file"]);
+            $instance_file = $file = new UploadedFile($file["directory"], $file["name"]);
+            /* Storage::disk('local')->putFileAs(
+                 '',
+                 $instance_file,
+                 $f->name
+             );*/
 
-               // $instance_file =  $file = new UploadedFile($file->directory, $file->file);
-               // $storagePath = Storage::disk('s3')->put("detenciones", $file->file, 'public');
-                file_put_contents($file["directory"], $file["file"]);
-                array_push($resp_array, $f);
+            // $storagePath = Storage::disk('s3')->put("detenciones", $instance_file, 'public');
+            // echo $storagePath;
+            //  file_put_contents($file["directory"], $file["file"]);
+            array_push($resp_array, $f);
 
         }
         return Utils::convert_from_latin1_to_utf8_recursively($resp_array);
     }
 
+    public function download($request)
+    {
+        $info = new SplFileInfo("1560356770_ENTREGA DE SISTEMAS.docx");
+        //    var_dump($info->getExtension());
+        /*return response()->download("http://192.168.1.219/yoplanifico-api/storage/app/detentions/1560356770_ENTREGA DE SISTEMAS.docx", "1560493226_diagrama cargo.PNG", [
+            "Content-Type" => "application/" . $info->getExtension()
+        ]);*/
+        return response()->streamDownload(function () {
+            file_get_contents("http://192.168.1.219/yoplanifico-api/storage/app/detentions/1560356770_ENTREGA DE SISTEMAS.docx");
+        }, '1560356770_ENTREGA DE SISTEMAS.docx');
+
+
+    }
 }
