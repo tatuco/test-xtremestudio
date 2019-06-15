@@ -12,6 +12,7 @@ namespace App\Http\Services;
 use App\Core\TatucoService;
 use App\Core\Utils;
 use App\Http\Repositories\FileRepository;
+use App\Models\Detention;
 use App\Models\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
@@ -57,13 +58,15 @@ class FileService extends TatucoService
                  $f->name
              );*/
 
-            // $storagePath = Storage::disk('s3')->put("detenciones", $instance_file, 'public');
-            // echo $storagePath;
-            //  file_put_contents($file["directory"], $file["file"]);
+            /* $storagePath = Storage::disk('s3')->put("detenciones", $instance_file, 'public');
+             echo $storagePath;
+              file_put_contents($file["directory"], $file["file"]);*/
             array_push($resp_array, $f);
 
         }
-        return Utils::convert_from_latin1_to_utf8_recursively($resp_array);
+        //return Utils::convert_from_latin1_to_utf8_recursively($resp_array);
+        $item = Detention::files($request->detention_id);
+        return $item;
     }
 
     public function download($request)
