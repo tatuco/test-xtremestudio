@@ -46,7 +46,8 @@ class FileService extends TatucoService
 
             $f = new File();
             $f->name = $file["name"];
-            $f->directory = 'http://192.168.1.219/yoplanifico-api/storage/app/detentions/' . $file["name"];
+            //$f->directory = 'http://192.168.1.219/yoplanifico-api/storage/app/detentions/' . $file["name"];
+            $f->directory = 'http://yoplanifico.s3-us-west-2.amazonaws.com/detenciones/' . $file["name"];
             $f->type_id = $file["type_id"];
             $f->detention_id = $file["detention_id"];
             $f->save();
@@ -57,10 +58,19 @@ class FileService extends TatucoService
                  $instance_file,
                  $f->name
              );*/
+            /**
+             * $s3 = AWS::createClient('s3');
+            $s3->putObject(array(
+            'ACL' => 'public-read',
+            'Bucket' => $bucket_url,
+            'Key' => $saveas,
+            'SourceFile' => $path
+            ));
+             */
 
-            /* $storagePath = Storage::disk('s3')->put("detenciones", $instance_file, 'public');
-             echo $storagePath;
-              file_put_contents($file["directory"], $file["file"]);*/
+             $storagePath = Storage::disk('s3')->put("detenciones", $instance_file, 'public');
+             //echo $storagePath;
+              //file_put_contents($file["directory"], $file["file"]);*
             array_push($resp_array, $f);
 
         }
