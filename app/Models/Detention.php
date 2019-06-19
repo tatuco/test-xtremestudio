@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Core\Hstore;
 use App\Core\Utils;
 use App\Http\Services\DateService;
 use App\Query\QueryBuilder;
@@ -34,24 +35,31 @@ class Detention extends TatucoModel
     public function scopeEventWithSubEvents($query, $id ) {
 
         $list = QueryBuilder::for(Event::class)
+            ->selectRaw(" CONCAT('W', (WEEK(date)-(select WEEK(date) from `events` where detention_id = ".$id." and type_id = 1))) AS week, id, name, description, date, out_of_time, type_id, status_id, `check`, deleted, detention_id")
+           // ->select('*')
             ->where('detention_id', $id)
             ->where('deleted', false)
-            ->orderBy('date', 'desc')
+            ->orderBy('date')
             ->get();
+        /*
+         *  (WEEK(date)-(select WEEK(date) from `events` where detention_id = ID_DETENCION and type_id = 1))
+         */
         $resp = [];
+       // $event_pivote = Hstore::find($list, 'type_id', 1);
+       // echo $event_pivote;
         $date_pivote = '';
         $percentage = 0;
         $cont_sub_event_complits = 0;
         $cont_events = 0;
         $events_efecty = 0;
         foreach ($list as $it) {
-            if ($it->type_id == 1) {
-                $date_pivote = $it->date;
-                $it->week = DateService::getWeekToYear($it->date);
-            } elseif ($it->type_id != 1) {
+         //   if ($it->type_id == 1) {
+           //     $date_pivote = $it->date;
+           //     $it->week = DateService::getWeekToYear($event_pivote['date']);
+           // } elseif ($it->type_id != 1) {
                // echo 2;
-                $it->week = DateService::getWeekEvent($date_pivote, $it->date);
-            }
+             //   $it->week = DateService::getWeekEvent($event_pivote['date'], $it->date);
+           // }
             if ($it->status_id == 1) {
                 $events_efecty++;
             }
@@ -66,7 +74,7 @@ class Detention extends TatucoModel
             $it->sub_events = $sub_events;
             $it->percentage = Utils::calculatePorcentage($cont_sub_event_complits, count($sub_events));
             $cont_sub_event_complits = 0;
-            $date_pivote = '';
+           // $date_pivote = '';
             array_push($resp, $it);
         }
         $total_events = count($list);

@@ -160,4 +160,16 @@ class Hstore
         return $newArray;
 
     }
+
+    public static function find($array, $field, $value) {
+      //  print_r($array[0]);
+        foreach ($array as $it) {
+           // echo $it;
+            if ($it[$field] == $value) {
+                return $it;
+            } else
+                return null;
+        }
+    }
 }
+
