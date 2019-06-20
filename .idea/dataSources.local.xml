@@ -20,5 +20,10 @@
       <secret-storage>master_key</secret-storage>
       <user-name>fg86u4x7ucktz6iq</user-name>
     </data-source>
+    <data-source name="PostgreSQL - jdbc:postgresql://ec2-50-19-221-38.compute-1.amazonaws.com :5432/dd8615gllrvcp0" uuid="8909dfe9-bf89-4f23-ad4c-4568423126ab">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>fmbvhtvsoybwrh</user-name>
+    </data-source>
   </component>
 </project>
