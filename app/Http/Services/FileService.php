@@ -44,15 +44,19 @@ class FileService extends TatucoService
         $archivos = $request->archivos;
         foreach ($archivos as $file) {
 
+            file_put_contents($file["directory"], $file["file"]);
+            $instance_file =  new UploadedFile($file["directory"], $file["name"]);
+            $storagePath = Storage::disk('s3')->put("detenciones/".$file["detention_id"], $instance_file, 'public');
+            echo $storagePath;
+
             $f = new File();
             $f->name = $file["name"];
             //$f->directory = 'http://192.168.1.219/yoplanifico-api/storage/app/detentions/' . $file["name"];
-            $f->directory = 'http://yoplanifico.s3-us-west-2.amazonaws.com/detenciones/' . $file["name"];
+            $f->directory = env('AWS_URL', 'http://192.168.1.219/yoplanifico-api/storage/app/detentions').'/'.$storagePath;
             $f->type_id = $file["type_id"];
             $f->detention_id = $file["detention_id"];
             $f->save();
-            file_put_contents($file["directory"], $file["file"]);
-            $instance_file = $file = new UploadedFile($file["directory"], $file["name"]);
+
             /* Storage::disk('local')->putFileAs(
                  '',
                  $instance_file,
@@ -68,8 +72,7 @@ class FileService extends TatucoService
             ));
              */
 
-             $storagePath = Storage::disk('s3')->put("detenciones", $instance_file, 'public');
-             //echo $storagePath;
+
               //file_put_contents($file["directory"], $file["file"]);*
             array_push($resp_array, $f);
 
@@ -79,17 +82,31 @@ class FileService extends TatucoService
         return $item;
     }
 
-    public function download($request)
-    {
-        $info = new SplFileInfo("1560356770_ENTREGA DE SISTEMAS.docx");
-        //    var_dump($info->getExtension());
-        /*return response()->download("http://192.168.1.219/yoplanifico-api/storage/app/detentions/1560356770_ENTREGA DE SISTEMAS.docx", "1560493226_diagrama cargo.PNG", [
-            "Content-Type" => "application/" . $info->getExtension()
-        ]);*/
-        return response()->streamDownload(function () {
-            file_get_contents("http://192.168.1.219/yoplanifico-api/storage/app/detentions/1560356770_ENTREGA DE SISTEMAS.docx");
-        }, '1560356770_ENTREGA DE SISTEMAS.docx');
+   public function destroy($id, $request)
+   {
+       //return parent::destroy($id, $request);
+       try {
 
+           $this->object = $this->repository->show($id);
 
-    }
+           if (!$this->object) {
+               return response()->json([
+                   'status' => 404,
+                   'message' => $this->name . ' no existe'
+               ], 404);
+           }
+           $storagePath = Storage::disk('s3')->delete(str_replace(env('AWS_URL').'/', '', $this->object->directory));
+
+           $this->object->deleted = true;
+           $this->object->update();
+           return response()->json([
+               'status' => 206,
+               'message' => $this->name . ' Eliminado',
+               $this->name => $this->object
+           ], 206);
+
+       }catch (\Exception $e){
+           return $this->errorException($e);
+       }
+   }
 }
