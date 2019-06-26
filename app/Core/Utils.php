@@ -43,4 +43,57 @@ class Utils
         }
         return true;
     }
+
+    static function  getIcon() {
+        return env('AWS_URL').'/imagenes-plazfer-workpack/logoplazfer (1).png';
+    }
+
+    static function imageFile($file) {
+        $ext = pathinfo($file, PATHINFO_EXTENSION);
+        $s3 =  env('AWS_URL');
+        switch ($ext) {
+            case 'png':
+                return $s3.'/imagenes-plazfer-workpack/img.png';
+                break;
+            case 'jpg':
+                return $s3.'/imagenes-plazfer-workpack/img.png';
+                break;
+            case 'jpeg':
+                return $s3.'/imagenes-plazfer-workpack/img.png';
+                break;
+            case 'doc':
+                return $s3.'/imagenes-plazfer-workpack/doc.png';
+                break;
+            case 'docx':
+                return $s3.'/imagenes-plazfer-workpack/doc.png';
+                break;
+            case 'pdf':
+                return $s3.'/imagenes-plazfer-workpack/pdf.png';
+                break;
+            case 'xls':
+                return $s3.'/imagenes-plazfer-workpack/xls.png';
+                break;
+            case 'xlsx':
+                return $s3.'/imagenes-plazfer-workpack/xls.png';
+                break;
+            case 'ppt':
+                return $s3.'/imagenes-plazfer-workpack/ppt.png';
+                break;
+            case 'pptm':
+                return $s3.'/imagenes-plazfer-workpack/ppt.png';
+                break;
+            case 'pptx':
+                return $s3.'/imagenes-plazfer-workpack/ppt.png';
+                break;
+            case 'txt':
+                return $s3.'/imagenes-plazfer-workpack/txt.png';
+                break;
+            case 'rar':
+                return $s3.'/imagenes-plazfer-workpack/rar.png';
+                break;
+            default:
+                return $s3.'/imagenes-plazfer-workpack/doc.png';
+                break;
+        }
+    }
 }

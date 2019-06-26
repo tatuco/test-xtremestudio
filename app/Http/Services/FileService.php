@@ -32,52 +32,25 @@ class FileService extends TatucoService
 
     public function store(Request $request)
     {
-        // $uploadedFile = $request->file('file');
-        /*Storage::disk('local')->putFileAs(
-            $request->route,
-            $request->file,
-            $request->name
-        );*/
         $resp_array = [];
-
-        //return response()->json(["algo" => $request->archivos]);
         $archivos = $request->archivos;
         foreach ($archivos as $file) {
 
             file_put_contents($file["directory"], $file["file"]);
             $instance_file =  new UploadedFile($file["directory"], $file["name"]);
-            $storagePath = Storage::disk('s3')->put("detenciones/".$file["detention_id"], $instance_file, 'public');
+            $storagePath = Storage::disk('s3')->put("detenciones/".$request->detention_id, $instance_file, 'public');
             echo $storagePath;
 
             $f = new File();
             $f->name = $file["name"];
             //$f->directory = 'http://192.168.1.219/yoplanifico-api/storage/app/detentions/' . $file["name"];
             $f->directory = env('AWS_URL', 'http://192.168.1.219/yoplanifico-api/storage/app/detentions').'/'.$storagePath;
-            $f->type_id = $file["type_id"];
+            $f->type_id = $request->type_id;
             $f->detention_id = $file["detention_id"];
             $f->save();
-
-            /* Storage::disk('local')->putFileAs(
-                 '',
-                 $instance_file,
-                 $f->name
-             );*/
-            /**
-             * $s3 = AWS::createClient('s3');
-            $s3->putObject(array(
-            'ACL' => 'public-read',
-            'Bucket' => $bucket_url,
-            'Key' => $saveas,
-            'SourceFile' => $path
-            ));
-             */
-
-
-              //file_put_contents($file["directory"], $file["file"]);*
             array_push($resp_array, $f);
 
         }
-        //return Utils::convert_from_latin1_to_utf8_recursively($resp_array);
         $item = Detention::files($request->detention_id);
         return $item;
     }
@@ -105,7 +78,7 @@ class FileService extends TatucoService
                $this->name => $this->object
            ], 206);
 
-       }catch (\Exception $e){
+       } catch (\Exception $e){
            return $this->errorException($e);
        }
    }

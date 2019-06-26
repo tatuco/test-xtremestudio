@@ -28,6 +28,7 @@ class Detention extends TatucoModel
     {
         return QueryBuilder::for(File::class)
             ->where('detention_id', $id)
+            ->orderBy('type_id', 'asc')
             ->get();
     }
 

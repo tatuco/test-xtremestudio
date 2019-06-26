@@ -12,8 +12,10 @@ use App\Core\TatucoRepository;
 use App\Core\Utils;
 use App\Http\Services\DateService;
 use App\Models\Detention;
+use App\Models\FileType;
 use App\Query\QueryBuilder;
 use Nexmo\Message\Query;
+use stdClass;
 
 class DetentionRepository extends TatucoRepository
 {
@@ -54,8 +56,51 @@ class DetentionRepository extends TatucoRepository
 
     public function show($id)
     {
-        $item = Detention::files($id);
-        return $item;
+
+        $files = Detention::files($id);
+        $types = FileType::all();//FileType::where('deleted', false)->orderBy('id', 'asc');
+        $resp = [];
+        //return $types[0];
+        /**
+         * SELECT ft.id, ft.name,f.id, f.name, f.directory, f.detention_id, f.type_id,
+        CASE
+        WHEN (f.id IS NULL) THEN 'false'
+        ELSE 'true'
+        END AS upload
+        FROM file_types AS ft
+        LEFT OUTER JOIN files f on ft.id = f.type_id;
+         */
+       /* $list = QueryBuilder::for(FileType::class)
+            ->select('file_types.id', 'file_types.name', 'f.id', 'f.name', 'f.directory', 'f.detention_id', 'f.type_id')
+            ->selectRaw('CASE WHEN (f.id IS NULL) THEN \'false\' ELSE \'true\' END AS upload')
+            ->leftJoin('files as f', 'file_types.id', 'f.id')
+            ->get();
+        return $list;*/
+       // print_r($types);
+        foreach ($types as $it) {
+            $obj = new stdClass();
+          //  $obj->type_id = $it->created_at;
+            $obj->type_name = $it->name;
+            $obj->file_name = '';
+            $obj->file_directory = '';
+            $obj->detention_id = '';
+            $obj->type_id = $it->id;
+            $obj->upload = false;
+            foreach ($files as $file) {
+                if ($it->id == $file->type_id) {
+            //        $obj->type_id = $it->id;
+                    $obj->type_name = $it->name;
+                    $obj->file_name = $file->name;
+                    $obj->file_directory = $file->directory;
+                    $obj->detention_id = $file->detention_id;
+                    $obj->type_id = $file->type_id;
+                    $obj->upload = true;
+                    array_push($resp, $obj);
+                }
+            }
+            array_push($resp, $obj);
+        }
+        return $resp;
     }
 
 }

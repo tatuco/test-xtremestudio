@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Core\EmailService;
 use App\Core\Utils;
+use App\Models\Detention;
 use Illuminate\Http\Request;
 use App\Core\TatucoController;
 use App\Http\Services\FileService;
@@ -27,20 +29,8 @@ class FileController extends TatucoController
     {
         $files = $request->file;
         $result = [];
-       /* $archivo = base64_decode($request->base64textString);
-        $name =  time().'_'.$request->nombreArchivo;
-        $directory = storage_path().'\\app\\detentions\\'.$name;
-        $obj = [
-            'name' => $name,
-            'directory' => $directory ,
-            'route' => "\\detentions\\",
-            'file' => $archivo
-        ];*/
-        //  return response()->json(["count" => $countfiles, "FILE"=> $_FILES]);
         foreach ($files as $file) {
-           // return response()->json(["tipo" => "data:".$file["tipo"].";base64,"]);
             $base_clean = str_replace("data:".$file["tipo"].";base64,", "", $file["base64textString"]);
-
             $_file = base64_decode($base_clean);
             $name =  time().'_'.$file["nombreArchivo"];
             $directory = storage_path().'\\app\\detentions\\'.$name;
@@ -51,7 +41,7 @@ class FileController extends TatucoController
                 'file' => $_file,
                 'detention_id' => $request->detention_id,
                 'aws' => $dir_amazon,
-                "type_id" => $file["type_id"]
+                "type_id" => $request->type_id
             ];
 
             array_push($result, $obj);
@@ -77,6 +67,17 @@ class FileController extends TatucoController
         return parent::store($request);
     }
 
+    public function email(Request $request) {
+        $detention = Detention::find($request->detention_id);
+        $files = Detention::files($request->detention_id)->toArray();
+        $data = [
+          'detention_id' => $detention->id,
+          'detention_name' => $detention->name,
+          'detention_description' => $detention->description,
+          'files' => $files
+        ];
+        return EmailService::send($data, 'luisjrm936@gmail.com', $request->emails,'emails.workpack');
+    }
 
     public function download(Request $request) {
         return $this->service->download($request);

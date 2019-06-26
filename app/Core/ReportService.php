@@ -94,6 +94,11 @@ class ReportService
         #footer .page:after { content: counter(page, upper-roman); }
         #table {text-align: center;}
         #logo {width: 10%; height: 40%; float: left; margin-top: 3%;}
+        #main-header {
+            background: #333;
+            color: white;
+            height: 80px;
+        }
         table {
             border-collapse: collapse;
             width: 100%;

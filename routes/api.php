@@ -34,7 +34,7 @@ Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthContr
 Route::group([
     'middleware' => ['jwt.auth']
     ], function (){
-
+        Route::post('email', 'FileController@email');
         Route::resource('users', 'Acl\UserController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
         Route::resource('params', 'Acl\ParamController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
         Route::resource('roles', 'Acl\RoleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
