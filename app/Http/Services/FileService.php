@@ -86,4 +86,8 @@ class FileService extends TatucoService
            return $this->errorException($e);
        }
    }
+
+   public function download($id) {
+
+   }
 }

@@ -12,7 +12,7 @@ class EmailService
     public static function send($data, $from, $to, $view, $title = 'Plazfer', $subject = 'Mensaje Informativo. Plazfer')
     {
         try {
-            Mail::send($view, $data, function ($message) use ($from, $title, $to, $subject) {
+            Mail::send($view, $data, function ($message) use ($from, $title, $to, $subject, $data) {
                 $message->from($from, $title);
                 $message->to($to)->subject($subject);
             });

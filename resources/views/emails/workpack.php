@@ -47,14 +47,14 @@
         <div>
             <img src="<?php echo \App\Core\Utils::getIcon() ?>" alt="P" border="0" />
         </div>
-        <div class="titulo">Yo Planifico - Workpack</div>
+        <div class="titulo">Yo Planifico - Workpack de la Detencion <?php echo $detention_id; ?> Enviado por: <?php echo $user_name; ?></div>
     </div>
     <div>
         <div class="cuerpo">
             <?php foreach ($files as  $file) { ?>
             <div class="item">
                 <div>
-                    <a href="<?php echo $file['directory']; ?>" ><img src="<?php echo \App\Core\Utils::imageFile($file['directory']) ?>"</a>
+                    <a href="<?php echo $file['directory']; ?>"  download><img src="<?php echo \App\Core\Utils::imageFile($file['directory']) ?>"</a>
                 </div>
                 <div>
                     <strong><?php echo $file['file_type_name']; ?></strong>
@@ -62,7 +62,7 @@
             </div>
             <?php } ?>
         </div>
-        <div class="footer" style="width: 100%">
+        <div class="footer">
             <div style="width: 100%;text-align: center;">
                 <strong>Nº Detencion: <?php echo $detention_id; ?></strong>
             </div>
