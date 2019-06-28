@@ -14,6 +14,7 @@ use App\Http\Repositories\DetentionRepository;
 use App\Models\Detention;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Tymon\JWTAuth\JWTAuth;
 
 class DetentionService extends TatucoService
@@ -35,7 +36,7 @@ class DetentionService extends TatucoService
             $detention->name = $request->name;
             $detention->description = $request->has('description') ? $request->description : "";
             $detention->type_id = $request->type_id;
-            $detention->user_create = $user = JWTAuth::toUser();
+            $detention->user_create = Auth::id();
             $detention->save();
 
             $event = new Event();

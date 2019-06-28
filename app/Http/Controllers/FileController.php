@@ -46,6 +46,7 @@ class FileController extends TatucoController
 
             array_push($result, $obj);
         }
+
         //return response()->json(["laurita-tierni"=> $result, "cantidad_archivos" => $countfiles]);
        /* $uploadedFile = $request->file('files');
         $filename = time().'_'.$uploadedFile->getClientOriginalName();
@@ -63,13 +64,13 @@ class FileController extends TatucoController
                 $validator->getMessageBag(),
             ], 422);
         }
-
         return parent::store($request);
     }
 
     public function email(Request $request) {
         $detention = Detention::find($request->detention_id);
-        $files = Detention::files($request->detention_id)->toArray();
+        //$files = Detention::files($request->detention_id)->toArray();
+        $files = Detention::filesWithType($request->detention_id)->toArray();
         $data = [
           'detention_id' => $detention->id,
           'detention_name' => $detention->name,

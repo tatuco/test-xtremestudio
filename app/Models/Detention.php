@@ -28,6 +28,18 @@ class Detention extends TatucoModel
     {
         return QueryBuilder::for(File::class)
             ->where('detention_id', $id)
+            ->where('deleted', false)
+            ->orderBy('type_id', 'asc')
+            ->get();
+    }
+
+    public function scopeFilesWithType($query, $id)
+    {
+        return QueryBuilder::for(FileType::class)
+            ->select('file_types.id as file_type_id', 'file_types.name as file_type_name', 'f.*')
+            ->join('files as f', 'f.type_id', 'file_types.id')
+            ->where('detention_id', $id)
+            ->where('f.deleted', false)
             ->orderBy('type_id', 'asc')
             ->get();
     }
