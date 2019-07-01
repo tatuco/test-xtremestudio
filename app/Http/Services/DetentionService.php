@@ -36,7 +36,7 @@ class DetentionService extends TatucoService
             $detention->name = $request->name;
             $detention->description = $request->has('description') ? $request->description : "";
             $detention->type_id = $request->type_id;
-            $detention->user_create = Auth::id();
+           // $detention->user_create = Auth::id();
             $detention->save();
 
             $event = new Event();
