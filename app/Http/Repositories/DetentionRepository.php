@@ -87,6 +87,7 @@ class DetentionRepository extends TatucoRepository
             $obj->type_id = $it->id;
             $obj->upload = false;
             $obj->file_id = '';
+            $obj->created_at = '';
             foreach ($files as $file) {
                 if ($it->id == $file->type_id) {
             //        $obj->type_id = $it->id;
@@ -97,6 +98,7 @@ class DetentionRepository extends TatucoRepository
                     $obj->type_id = $file->type_id;
                     $obj->upload = true;
                     $obj->file_id = $file->id;
+                    $obj->created_at = $file->created_at;
                   //  array_push($resp, $obj);
                 }
             }
