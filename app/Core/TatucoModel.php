@@ -123,7 +123,6 @@ class TatucoModel extends Model
         $where = null;
         if(isset($_GET['where']))
         {
-
             $where = $request->where;
         }
 

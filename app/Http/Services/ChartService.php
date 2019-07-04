@@ -187,4 +187,13 @@ class ChartService extends TatucoService
         }
         return $temp;
     }
+
+    public function access12Hours($request) {
+        try {
+            $resp = $this->repository->access12Hours($request)->get();
+            return ["accesses" => count($resp)];
+        } catch (\Exception $e) {
+            return parent::errorException($e);
+        }
+    }
 }

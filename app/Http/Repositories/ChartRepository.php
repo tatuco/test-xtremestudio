@@ -82,4 +82,18 @@ class ChartRepository extends TatucoRepository
         }
         return $query;
     }
+
+    public function access12Hours($request) {
+        $query = QueryBuilder::for(Access::class)
+            ->leftJoin('employes as e', 'accesses.employe_id', 'e.id')
+            ->leftJoin('people as p', 'e.people_id', 'p.id')
+            ->leftJoin('contracts as c', 'e.contract_id', 'c.cod_contract')
+            ->select('accesses.id', 'accesses.date_input')
+            ->whereRaw('accesses.date_input > DATE_SUB(NOW(), INTERVAL 12 HOUR)');
+        if ($request->contract_id)
+        {
+            $query->where('c.cod_contract', $request->contract_id);
+        }
+        return $query;
+    }
 }

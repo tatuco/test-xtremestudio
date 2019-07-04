@@ -28,4 +28,9 @@ class ChartController extends TatucoController
     {
         return $this->service->ages($request);
     }
+
+    public function access12Hours(Request $request)
+    {
+        return$this->service->access12Hours($request);
+    }
 }

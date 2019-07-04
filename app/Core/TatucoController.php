@@ -76,12 +76,15 @@ class TatucoController extends BaseController
 
     public function select(Request $request)
     {
-        $where = [
-            ["op" => "eq", "field" => "deleted", "value" => "false"],
-            ["op" => "gte", "field" => "created_at", "value" => Carbon::today()->format('Y-m-d')]
-        ];
+        if (!$request->has('where')) {
+            $where = [
+                ["op" => "eq", "field" => "deleted", "value" => "false"],
+                ["op" => "gte", "field" => "created_at", "value" => Carbon::today()->format('Y-m-d')]
+            ];
+            $request->merge(['where' => $where]);
+        }
+
         $request->merge([
-            "where" => $where,
             "select" => $this->select
         ]);
         return $this->service->select($request, $this->select);

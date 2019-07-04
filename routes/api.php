@@ -59,6 +59,7 @@ Route::group([
             Route::get('/fte', 'ChartController@fte');
             Route::get('/eecc', 'ChartController@eecc');
             Route::get('/ages', 'ChartController@ages');
+            Route::get('/ultimates', 'ChartController@access12Hours');
         });
 
         Route::group(['prefix' => 'type'], function () {
