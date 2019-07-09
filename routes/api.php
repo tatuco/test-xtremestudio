@@ -23,13 +23,10 @@ Route::get('/', function (){
        "time" => \Carbon\Carbon::now()
    ]);
 });
-Route::post('/prueba', function(){
-   return response()->json(['respiesta' => 'soy la api'], 200);
-});
 Route::post('/login', ['uses' => 'Auth\AuthController@login', 'as' => 'login']);
 Route::post('/logout', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@logout', 'as' => 'logout']);
 Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@validate', 'as' => 'validate']);
-
+Route::get('/notices', 'NoticeController@index');
 
 Route::group([
     'middleware' => ['jwt.auth']
@@ -91,7 +88,7 @@ Route::resource('detentions', 'DetentionController', ['only' => ['index', 'store
 Route::resource('detentionevents', 'DetentionEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('files', 'FileController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('statusevents', 'StatusEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-
+Route::resource('notices', 'NoticeController', ['only' => ['store', 'update', 'destroy']]);
 
 });
 

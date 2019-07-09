@@ -14,7 +14,7 @@ class CreateMigrateAddColumnUserDetentionsTable extends Migration
      */
     public function up()
     {
-        DB::connection()->getPdo()->exec("alter table detentions add user_create int not null;");
+       // DB::connection()->getPdo()->exec("alter table detentions add user_create int not null;");
     }
 
     /**

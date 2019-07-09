@@ -4,6 +4,8 @@
 namespace App\Core;
 
 
+use Illuminate\Support\Facades\Auth;
+
 class Utils
 {
     static function parseWhere($where)
@@ -120,5 +122,9 @@ class Utils
                 return $s3 . '/imagenes-plazfer-workpack/doc.png';
                 break;
         }
+    }
+
+    static function currentUser() {
+        return Auth::user();
     }
 }
