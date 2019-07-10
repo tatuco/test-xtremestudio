@@ -16,7 +16,7 @@ class CreatenoticeTable extends Migration
         Schema::create('notices', function (Blueprint $table) {
             $table->integer('id', true);
             $table->string('name');
-            $table->string('description');
+            $table->text('description');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->boolean('deleted')->default(false);
