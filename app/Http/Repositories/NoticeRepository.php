@@ -30,6 +30,7 @@ class NoticeRepository extends TatucoRepository
                 ->select('notices.*', 'u.name as user_name')
                 ->join('users as u', 'notices.user_id', 'u.id')
                 ->limit(15)
+                ->where('notices.deleted', false)
                 ->orderBy('notices.created_at', 'desc')
                 ->doWhere($request)
                 ->paginate($_GET['paginate']);
@@ -38,6 +39,7 @@ class NoticeRepository extends TatucoRepository
                 ->select('notices.*', 'u.name as user_name')
                 ->join('users as u', 'notices.user_id', 'u.id')
                 ->limit(15)
+                ->where('notices.deleted', false)
                 ->orderBy('notices.created_at', 'desc')
                 ->doWhere($request)
                 ->get();
