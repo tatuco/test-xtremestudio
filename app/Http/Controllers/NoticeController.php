@@ -10,7 +10,8 @@ class NoticeController extends TatucoController
 {
     protected $validateStore = [
         'name' => 'required|string|min:5',
-        'description' => 'required|string|min:10'
+        'description' => 'required|string|min:10',
+        'image' => 'required|array'
     ];
 
     public function __construct()

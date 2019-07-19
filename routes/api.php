@@ -26,6 +26,8 @@ Route::get('/', function (){
 Route::post('/login', ['uses' => 'Auth\AuthController@login', 'as' => 'login']);
 Route::post('/logout', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@logout', 'as' => 'logout']);
 Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@validate', 'as' => 'validate']);
+Route::post('/password/email', 'Auth\ResetPasswordController@postEmail');
+
 Route::get('/notices', 'NoticeController@index');
 
 Route::group([

@@ -17,6 +17,7 @@ class CreatenoticeTable extends Migration
             $table->integer('id', true);
             $table->string('name');
             $table->text('description');
+            $table->string('image');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->boolean('deleted')->default(false);

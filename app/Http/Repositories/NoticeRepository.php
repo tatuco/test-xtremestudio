@@ -58,9 +58,9 @@ class NoticeRepository extends TatucoRepository
         $notice->name = $data->name;
         $notice->description = $data->description;
         $notice->user_id = Auth::id();
+        $notice->image = $data->image;
         $notice->save();
         return $notice;
-
     }
 
 }

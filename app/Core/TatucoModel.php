@@ -20,15 +20,15 @@ class TatucoModel extends Model
     protected $modelo;
     protected $fillable = ['*'];
 
-    public function setImageAttribute($value)
+ /*   public function setImageAttribute($value)
     {
         $img = "";
         if (isset($value)){
-            $imageService = new ImageService();
-            $img = $imageService->image($value);
+           // $imageService = new ImageService();
+            $img = ImageService::image($value);
         }
         $this->attributes['image'] = $img;
-    }
+    }*/
 
     public function scopeDoWhere($query, $request) {
 
@@ -140,7 +140,7 @@ class TatucoModel extends Model
         return static::class;
     }
 
-    public function setImagesAttribute($value)
+   /* public function setImagesAttribute($value)
     {
         $i=0;
         $img = "[";
@@ -148,7 +148,7 @@ class TatucoModel extends Model
         if (isset($value)) {
             foreach ($value as $v) {
                 $i++;
-                $img .= $this->imageService->image($v);
+                $img .= ImageService::image($v);
                 if($cont != $i ){
                     $img .= ",";
                 }
@@ -156,11 +156,11 @@ class TatucoModel extends Model
             $img .= "]";
         }
         $this->attributes['image'] = $img;
-    }
+    }*/
 
     public function imageService()
     {
-        return new ImageService();
+      //  return new ImageService();
     }
 
     public function getCreatedAtAttribute($value)

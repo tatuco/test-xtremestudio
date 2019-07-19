@@ -14,7 +14,8 @@ class Notice extends TatucoModel
     protected $fillable = [
         'name',
         'description',
-        'deleted'
+        'deleted',
+        'image'
         ];
 
     public function setUserIdAttribute($value)
