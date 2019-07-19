@@ -78,16 +78,22 @@ class Detention extends TatucoModel
             }
             $sub_events = Event::subEvents($it->id);
             if ($it->check) {
+                if (count($sub_events) == 0) {
+                    $it->percentage = 100;
+                }
                 $cont_events++;
             }
             foreach ($sub_events as $sb) {
                 if ($sb->check)
                     $cont_sub_event_complits++;
             }
+
+            if (count($sub_events) > 0) {
+                $it->percentage = Utils::calculatePorcentage($cont_sub_event_complits, count($sub_events));
+            }
+
             $it->sub_events = $sub_events;
-            $it->percentage = Utils::calculatePorcentage($cont_sub_event_complits, count($sub_events));
             $cont_sub_event_complits = 0;
-           // $date_pivote = '';
             array_push($resp, $it);
         }
         $total_events = count($list);
