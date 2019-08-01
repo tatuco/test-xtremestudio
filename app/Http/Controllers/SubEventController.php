@@ -10,7 +10,7 @@ class SubEventController extends TatucoController
 {
     protected $validateStore = [
         'name' => 'required|string|min:5',
-        'description' => 'string',
+       // 'description' => 'string',
         'event_id' => 'required|integer'
     ];
     protected $validateUpdate = ['check' => 'required|boolean'];

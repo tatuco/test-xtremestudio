@@ -67,7 +67,7 @@ class Detention extends TatucoModel
         $cont_events = 0;
         $events_efecty = 0;
         foreach ($list as $it) {
-            $cont_events++;
+
          //   if ($it->type_id == 1) {
            //     $date_pivote = $it->date;
            //     $it->week = DateService::getWeekToYear($event_pivote['date']);
@@ -83,7 +83,7 @@ class Detention extends TatucoModel
                 if (count($sub_events) == 0) {
                     $it->percentage = 100;
                 }
-
+                $cont_events++;
             }
             foreach ($sub_events as $sb) {
                 if ($sb->check)
@@ -104,7 +104,7 @@ class Detention extends TatucoModel
                     "percentage" => Utils::calculatePorcentage($cont_events, $total_events),
                     "percentage_effecty" =>  Utils::calculatePorcentage($events_efecty, $cont_events),
                     "count_events_effecty" => $events_efecty,
-                    "count_events" => $cont_events
+                    "count_events" => $total_events
                 ];
     }
 

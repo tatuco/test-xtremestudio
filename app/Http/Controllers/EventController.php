@@ -10,7 +10,7 @@ class EventController extends TatucoController
 {
     protected $validateStore = [
                                 'name' => 'required|string|min:5',
-                                'description' => 'string',
+                                //'description' => 'string',
                                 'date' => 'required|date_format:Y-m-d|after_or_equal:today',
                                 'type_id' => 'required|integer',
                                 'status_id' => 'required|integer',

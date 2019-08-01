@@ -62,6 +62,12 @@ class DetentionService extends TatucoService
             return $detention;
         } catch (\Exception $e) {
             //echo $e;
+            if ($e->getCode() == "23000") {
+                return response()->json([
+                    "status"=> 500,
+                    "message" => "El ID: ".$request->id." de la detencion ya existe."
+                ], 500);
+            }
             return parent::errorException($e);
         }
     }
