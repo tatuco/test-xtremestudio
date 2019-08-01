@@ -75,7 +75,7 @@ class Detention extends TatucoModel
                // echo 2;
              //   $it->week = DateService::getWeekEvent($event_pivote['date'], $it->date);
            // }
-            $cont_events++;
+            
 
             if ($it->status_id == 1) {
                 $events_efecty++;
@@ -85,6 +85,7 @@ class Detention extends TatucoModel
                 if (count($sub_events) == 0) {
                     $it->percentage = 100;
                 }
+                $cont_events++;
             }
             foreach ($sub_events as $sb) {
                 if ($sb->check)
