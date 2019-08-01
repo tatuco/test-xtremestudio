@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateDetentionRequest;
+use App\Models\Detention;
+use App\Models\Event;
+use App\Query\QueryBuilder;
 use Illuminate\Http\Request;
 use App\Core\TatucoController;
 use App\Http\Services\DetentionService;
@@ -30,4 +33,12 @@ class DetentionController extends TatucoController
     {
         parent::__construct(new DetentionService());
     }
+/*
+    public function list(Request $request) {
+        return QueryBuilder::for(Detention::class)
+            ->select('detentions.id', 'detentions.name')
+            ->where('detentions.deleted', false)
+            ->orderBy("detentions.created_at", "desc")
+            ->get();
+    }*/
 }

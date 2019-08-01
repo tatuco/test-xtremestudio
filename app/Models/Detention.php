@@ -48,12 +48,13 @@ class Detention extends TatucoModel
     public function scopeEventWithSubEvents($query, $id ) {
 
         $list = QueryBuilder::for(Event::class)
-            ->selectRaw(" CONCAT('W', (WEEK(date)-(select WEEK(date) from `events` where detention_id = ".$id." and type_id = 1))) AS week, id, name, description, date, out_of_time, type_id, status_id, `check`, deleted, detention_id")
+            ->selectRaw(" CONCAT('W', (WEEK(date)-(select WEEK(date) from `events` where detention_id = '".$id."' and type_id = 1))) AS week, id, name, description, date, out_of_time, type_id, status_id, `check`, deleted, detention_id")
            // ->select('*')
             ->where('detention_id', $id)
             ->where('deleted', false)
             ->orderBy('date')
             ->get();
+      //  echo $list;
         /*
          *  (WEEK(date)-(select WEEK(date) from `events` where detention_id = ID_DETENCION and type_id = 1))
          */
@@ -66,6 +67,7 @@ class Detention extends TatucoModel
         $cont_events = 0;
         $events_efecty = 0;
         foreach ($list as $it) {
+            $cont_events++;
          //   if ($it->type_id == 1) {
            //     $date_pivote = $it->date;
            //     $it->week = DateService::getWeekToYear($event_pivote['date']);
@@ -81,7 +83,7 @@ class Detention extends TatucoModel
                 if (count($sub_events) == 0) {
                     $it->percentage = 100;
                 }
-                $cont_events++;
+
             }
             foreach ($sub_events as $sb) {
                 if ($sb->check)

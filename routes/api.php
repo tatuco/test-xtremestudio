@@ -45,8 +45,8 @@ Route::group([
         Route::post('roles/permission', 'Acl\RoleController@assignedPermission');
         Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
         Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
-
-
+        Route::get('detentions/list', 'DetentionController@list');
+        
 
         Route::group(['prefix' => 'select'], function () {
             Route::get('/companies', 'CompanyController@select');
