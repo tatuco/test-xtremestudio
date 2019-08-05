@@ -18,6 +18,8 @@ class CreateFileTable extends Migration
             $table->string('name')->unique();
             $table->string('directory');
             $table->boolean('deleted')->default(false);
+            $table->boolean('file_event')->default(false);
+            $table->boolean('confirmed')->default(false);
             $table->integer('type_id');
             $table->foreign('type_id')->references('id')->on('file_types')->onDelete('cascade');
             $table->char('detention_id');

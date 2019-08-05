@@ -113,4 +113,9 @@ class FileController extends TatucoController
         }
         return $value;
     }
+
+    function fileDestroy($id, Request $request)
+    {
+        return $this->service->fileDestroy($id, $request);
+    }
 }

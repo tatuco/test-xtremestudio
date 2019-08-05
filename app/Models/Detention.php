@@ -29,6 +29,7 @@ class Detention extends TatucoModel
         return QueryBuilder::for(File::class)
             ->where('detention_id', $id)
             ->where('deleted', false)
+            ->where('file_event', false)
             ->orderBy('type_id', 'asc')
             ->get();
     }
@@ -81,6 +82,7 @@ class Detention extends TatucoModel
                 $events_efecty++;
             }
             $sub_events = Event::subEvents($it->id);
+            $files = Event::files($it->id);
             if ($it->check) {
                 if (count($sub_events) == 0) {
                     $it->percentage = 100;
@@ -97,6 +99,7 @@ class Detention extends TatucoModel
             }
 
             $it->sub_events = $sub_events;
+            $it->files = $files;
             $cont_sub_event_complits = 0;
             array_push($resp, $it);
         }
@@ -109,8 +112,5 @@ class Detention extends TatucoModel
                     "count_events" => $total_events
                 ];
     }
-
-
-
 
 }

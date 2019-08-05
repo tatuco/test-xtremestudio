@@ -14,6 +14,7 @@ use App\Core\Utils;
 use App\Http\Repositories\DetentionRepository;
 use App\Http\Repositories\FileRepository;
 use App\Models\Detention;
+use App\Models\Event;
 use App\Models\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
@@ -86,6 +87,45 @@ class FileService extends TatucoService
            return $this->errorException($e);
        }
    }
+
+    public function fileDestroy($id, $request)
+    {
+        //return parent::destroy($id, $request);
+        try {
+
+            $this->object = $this->repository->show($id);
+
+            if (!$this->object) {
+                return response()->json([
+                    'status' => 404,
+                    'message' => $this->name . ' no existe'
+                ], 404);
+            }
+            $storagePath = Storage::disk('s3')->delete(str_replace(env('AWS_URL').'/', '', $this->object->directory));
+
+            $this->object->deleted = true;
+            $this->object->update();
+            $detention = Detention::find($this->object->detention_id);
+            Event::checkSubEvents($this->object->detention_id);
+            $resp = Detention::eventWithSubEvents($this->object->detention_id);
+            // echo 'id del evento creado => '.$it["id"];
+            foreach ($resp["events"] as &$_it) {
+                if ($_it->id == $it["id"])
+                    $_it->active = true;
+                else
+                    $_it->active = false;
+            }
+            $detention->events = $resp["events"];
+            $detention->percentage = $resp["percentage"];
+            $detention->percentage_effecty =  $resp['percentage_effecty'];
+            $detention->count_events_effecty = $resp['count_events_effecty'];
+            $detention->count_events = $resp['count_events'];
+            $detention->active = true;
+            return $detention;
+        } catch (\Exception $e){
+            return $this->errorException($e);
+        }
+    }
 
    public function download($id) {
 

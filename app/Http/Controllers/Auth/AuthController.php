@@ -39,8 +39,14 @@ class AuthController extends BaseController
         return response()->json([
             'status' => true,
             'token' => $token,
+            'type' => 'Bearer',
             'user' => $user
         ], 200);
+    }
+
+    public function refresh()
+    {
+        return $this->respondWithToken(auth()->refresh());
     }
 
     public function logout()

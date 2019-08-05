@@ -28,4 +28,29 @@ class EventController extends TatucoController
         $request->merge(["status_id" => 3]);
         return parent::store($request);
     }
+
+    public function assignFileEvent(Request $request)
+    {
+        /*
+         * event_id, detention_id,
+         */
+
+        $file = $request->file[0];
+
+        $base_clean = '';//str_replace("data:" . $file["tipo"] . ";base64,", "", $file["base64textString"]);
+        $_file = base64_decode($base_clean);
+        $name = time() . '_' . $file["nombreArchivo"];
+        $directory = storage_path() . '\\app\\eventos\\' . $name;
+        $dir_amazon = "http://s3.us-west-2.amazonaws.com/yoplanifico/eventos/";
+        $obj = [
+            'name' => $name,
+            'directory' => $directory,
+            'file' => $_file,
+            'detention_id' => $request->detention_id,
+            'aws' => $dir_amazon,
+            "type_id" => $request->type_id
+        ];
+        $request->merge(['file_' => $obj]);
+        return $this->service->assignFileEvent($request);
+    }
 }

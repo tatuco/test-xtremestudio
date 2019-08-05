@@ -90,7 +90,6 @@ class DetentionRepository extends TatucoRepository
             $obj->created_at = '';
             foreach ($files as $file) {
                 if ($it->id == $file->type_id) {
-            //        $obj->type_id = $it->id;
                     $obj->type_name = $it->name;
                     $obj->file_name = $file->name;
                     $obj->file_directory = $file->directory;

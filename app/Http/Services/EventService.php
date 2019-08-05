@@ -9,12 +9,17 @@
 namespace App\Http\Services;
 
 
+use App\Core\ImageService;
 use App\Core\TatucoService;
 use App\Core\Utils;
+use App\FileEvent;
 use App\Http\Repositories\EventRepository;
 use App\Models\Detention;
 use App\Models\Event;
+use App\Models\File;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use function MongoDB\BSON\toJSON;
 
 class EventService extends TatucoService
@@ -123,6 +128,37 @@ class EventService extends TatucoService
         } else {
             return $resp;
         }
+    }
+
+    public function assignFileEvent($request)
+    {
+        $file = $request->file_;
+
+       /* return response()->json([
+            'name' => $file["name"],
+            'directory' => env('AWS_URL').'/',
+            'type_id' => $request->type_id,
+            'detention_id' => $request->detention_id,
+            'file_event' => true,
+        ]);*/
+        file_put_contents($file["directory"], $file["file"]);
+        $instance_file =  new UploadedFile($file["directory"], $file["name"]);
+        $storagePath = Storage::disk('s3')->put("eventos/".$request->detention_id, $instance_file, 'public');
+
+        $f = new File();
+        $f->name = $file["name"];
+        $f->directory = env('AWS_URL').'/'.$storagePath;
+        $f->type_id = 1;
+        $f->detention_id = $request->detention_id;
+        $f->file_event = true;
+        $f->save();
+
+        $fe = new FileEvent();
+        $fe->event_id = $request->event_id;
+        $fe->file_id = $f->id;
+        $fe->save();
+
+        return $f;
     }
 
 }

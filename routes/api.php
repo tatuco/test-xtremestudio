@@ -69,7 +69,8 @@ Route::group([
         });
 
         Route::get('file/download', 'FileController@download');
-
+        Route::post('event/file', 'EventController@assignFileEvent');
+        Route::delete('file/destroy/{id}', 'FileController@fileDestroy');
 
 Route::resource('companies', 'CompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('people', 'PersonController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
