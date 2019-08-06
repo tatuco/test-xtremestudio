@@ -29,12 +29,10 @@ class DetentionRepository extends TatucoRepository
     {
         $list = QueryBuilder::for(Detention::class);
 
-        if(isset($_GET['where']))
-        {
+        if (isset($_GET['where'])) {
             $list = $list->doWhere($request->where);
         }
-        if(isset($_GET['paginate']))
-        {
+        if (isset($_GET['paginate'])) {
             $list = $list->paginate($_GET['paginate']);
 
         }
@@ -46,7 +44,7 @@ class DetentionRepository extends TatucoRepository
             $data = Detention::eventWithSubEvents($it->id);
             $it->events = $data['events'];
             $it->percentage = $data['percentage'];
-            $it->percentage_effecty =  $data['percentage_effecty'];
+            $it->percentage_effecty = $data['percentage_effecty'];
             $it->count_events_effecty = $data['count_events_effecty'];
             $it->count_events = $data['count_events'];
             array_push($resp, $it);
@@ -59,27 +57,26 @@ class DetentionRepository extends TatucoRepository
 
         $files = Detention::files($id);
         $types = FileType::all();//FileType::where('deleted', false)->orderBy('id', 'asc');
+        $emails = Detention::emails($id);
         $resp = [];
         //return $types[0];
         /**
          * SELECT ft.id, ft.name,f.id, f.name, f.directory, f.detention_id, f.type_id,
-        CASE
-        WHEN (f.id IS NULL) THEN 'false'
-        ELSE 'true'
-        END AS upload
-        FROM file_types AS ft
-        LEFT OUTER JOIN files f on ft.id = f.type_id;
+         * CASE
+         * WHEN (f.id IS NULL) THEN 'false'
+         * ELSE 'true'
+         * END AS upload
+         * FROM file_types AS ft
+         * LEFT OUTER JOIN files f on ft.id = f.type_id;
          */
-       /* $list = QueryBuilder::for(FileType::class)
-            ->select('file_types.id', 'file_types.name', 'f.id', 'f.name', 'f.directory', 'f.detention_id', 'f.type_id')
-            ->selectRaw('CASE WHEN (f.id IS NULL) THEN \'false\' ELSE \'true\' END AS upload')
-            ->leftJoin('files as f', 'file_types.id', 'f.id')
-            ->get();
-        return $list;*/
-       // print_r($types);
+        /* $list = QueryBuilder::for(FileType::class)
+             ->select('file_types.id', 'file_types.name', 'f.id', 'f.name', 'f.directory', 'f.detention_id', 'f.type_id')
+             ->selectRaw('CASE WHEN (f.id IS NULL) THEN \'false\' ELSE \'true\' END AS upload')
+             ->leftJoin('files as f', 'file_types.id', 'f.id')
+             ->get();
+         return $list;*/
         foreach ($types as $it) {
             $obj = new stdClass();
-          //  $obj->type_id = $it->created_at;
             $obj->type_name = $it->name;
             $obj->file_name = '';
             $obj->file_directory = '';
@@ -88,6 +85,7 @@ class DetentionRepository extends TatucoRepository
             $obj->upload = false;
             $obj->file_id = '';
             $obj->created_at = '';
+
             foreach ($files as $file) {
                 if ($it->id == $file->type_id) {
                     $obj->type_name = $it->name;
@@ -98,12 +96,11 @@ class DetentionRepository extends TatucoRepository
                     $obj->upload = true;
                     $obj->file_id = $file->id;
                     $obj->created_at = $file->created_at;
-                  //  array_push($resp, $obj);
                 }
             }
             array_push($resp, $obj);
         }
-        return $resp;
+        return ["files" => $resp, "emails" => $emails];
     }
 
 }

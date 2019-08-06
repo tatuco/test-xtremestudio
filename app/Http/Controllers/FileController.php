@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Core\EmailService;
 use App\Core\Utils;
 use App\Models\Detention;
+use App\Models\Email;
 use App\Models\File;
 use Illuminate\Http\Request;
 use App\Core\TatucoController;
@@ -84,7 +85,18 @@ class FileController extends TatucoController
             'files' => $files,
             'user_name' => $user->name
         ];
-        return EmailService::send(["url" => 'http://localhost:8000/api/detentions?token='.$token], env('MAIL_USERNAME'), $request->emails, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $request->detention_id);
+        $resp = EmailService::send(["url" => 'http://localhost:8000/api/detentions?token='.$token], env('MAIL_USERNAME'), $request->emails, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $request->detention_id);
+        $obj = $resp->content();
+        $obj = json_decode($obj, true);
+        if ($obj["status"] == 200) {
+            foreach ($request->emails as $it) {
+                $email =  new Email();
+                $email->name = $it;
+                $email->detention_id = $request->detention_id;
+                $email->save();
+            }
+        }
+        return $resp;
     }
 
     public function viewWorkPack($id, Request $request)

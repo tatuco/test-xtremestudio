@@ -104,4 +104,14 @@ class Detention extends TatucoModel
                 ];
     }
 
+    public function scopeEmails($query, $id)
+    {
+        return QueryBuilder::for(Email::class)
+            ->select('emails.name', 'emails.confirmed')
+            ->join('detentions as d', 'emails.detention_id', 'd.id')
+            ->where('d.id', $id)
+            ->where('emails.deleted', false)
+            ->get();
+    }
+
 }

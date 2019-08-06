@@ -27,6 +27,5 @@ class EmailService
                 'file' => $e->getFile()
             ], 500);
         }
-
     }
 }
