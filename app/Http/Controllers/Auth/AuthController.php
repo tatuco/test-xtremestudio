@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Acl\Src\Models\Role;
 use App\Models\User;
+use App\Notifications\ConfirmedWorkPack;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -24,7 +25,6 @@ class AuthController extends BaseController
                 return response()->json([
                     'message' => 'Datos Incorrectos. '
                 ], 401);
-
             }
             Log::info("Token Creado");
         }catch (JWTException $e){
@@ -93,5 +93,16 @@ class AuthController extends BaseController
         ], 200);
     }
 
+    public function confirmedWorkPack(Request $request)
+    {
+        $request->validate([
+            'user_id'      => 'required|integer',
+            'detention_id'     => 'required|integer'
+        ]);
+        $user = User::find($request->user_id);
+        $user->detention_id = $request->detention_id;
+        $user->notify(new ConfirmedWorkPack($user));
 
+        return response()->json(['message' => 'Usuario creado existosamente!'], 201);
+    }
 }

@@ -37,6 +37,7 @@ class Event extends TatucoModel
             ->select('f.*')
             ->join('files as f', 'f.id', 'pivot_files_events.file_id')
             ->where('event_id', $id)
+            ->where('deleted', false)
             ->get();
     }
 

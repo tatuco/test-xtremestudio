@@ -60,7 +60,20 @@
                     <strong><?php echo $file['file_type_name']; ?></strong>
                 </div>
             </div>
-            <?php } ?>
+            <?php }
+            if (count($files) === 0) {
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
+                echo "<strong>No se han cargado Archivos en el WorckPack</strong>";
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
+            }
+            ?>
+
         </div>
         <div class="footer">
             <div style="width: 100%;text-align: center;">

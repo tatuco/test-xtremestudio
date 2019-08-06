@@ -51,7 +51,7 @@ class UserService extends TatucoService
 
     public function store(Request $request){
         try {
-            DB::beginTransaction();
+           // DB::beginTransaction();
             $pass = bcrypt($request->json(['password']));
             $request->merge(['password' => $pass]);
 
@@ -61,10 +61,10 @@ class UserService extends TatucoService
                 $this->assignedRole($user->id, $request->json(['role']));
             }
             $user->roles = $user->getRoles();
-            DB::commit();
+            //DB::commit();
             return $user;
         } catch (\Exception $e) {
-            DB::rollBack();
+            //DB::rollBack();
             return parent::errorException($e);
         }
 
@@ -91,10 +91,7 @@ class UserService extends TatucoService
             foreach ($roles as $role) {
                 $user->revokeRole($role->id);
             }
-
-
             $user->assignRole($idRole);
-
             $user=User::find($idUser);
             $rolesAsigned=$user->getRoles();
 

@@ -24,6 +24,8 @@ Route::get('/', function (){
    ]);
 });
 Route::post('/login', ['uses' => 'Auth\AuthController@login', 'as' => 'login']);
+Route::post('/confirmer/workpack', ['uses' => 'Auth\AuthController@confirmedWorkPack', 'as' => 'confirmedWorkPack']);
+Route::get('/confirmer/workpack/{id}', 'FileController@viewWorkPack');
 Route::post('/logout', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@logout', 'as' => 'logout']);
 Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@validate', 'as' => 'validate']);
 Route::post('/password/email', 'Auth\ResetPasswordController@postEmail');
@@ -70,7 +72,7 @@ Route::group([
 
         Route::get('file/download', 'FileController@download');
         Route::post('event/file', 'EventController@assignFileEvent');
-        Route::delete('file/destroy/{id}', 'FileController@fileDestroy');
+        Route::delete('file/destroy/{id}/{event}', 'FileController@fileDestroy');
 
 Route::resource('companies', 'CompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('people', 'PersonController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);

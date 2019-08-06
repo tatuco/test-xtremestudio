@@ -74,9 +74,9 @@ class FileController extends TatucoController
     public function email(Request $request)
     {
         $detention = Detention::find($request->detention_id);
-        //$files = Detention::files($request->detention_id)->toArray();
         $files = Detention::filesWithType($request->detention_id)->toArray();
         $user = Auth::user();
+        $token = \JWTAuth::getToken();
         $data = [
             'detention_id' => $detention->id,
             'detention_name' => $detention->name,
@@ -84,7 +84,34 @@ class FileController extends TatucoController
             'files' => $files,
             'user_name' => $user->name
         ];
-        return EmailService::send($data, env('MAIL_USERNAME'), $request->emails, 'emails.workpack', 'Plazfer', 'WorkPack ' . $request->detention_id);
+        return EmailService::send(["url" => 'http://localhost:8000/api/detentions?token='.$token], env('MAIL_USERNAME'), $request->emails, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $request->detention_id);
+    }
+
+    public function viewWorkPack($id, Request $request)
+    {
+        $detention = Detention::find($id);
+        if (!$detention) {
+            $data = [
+                'detention_id' => '',
+                'detention_name' => '',
+                'detention_description' => '',
+                'files' => [],
+                'user_name' => 'Luis'
+            ];
+        } else {
+            //$files = Detention::files($request->detention_id)->toArray();
+            $files = Detention::filesWithType($id)->toArray();
+            $user = Auth::user();
+            $data = [
+                'detention_id' => $detention->id,
+                'detention_name' => $detention->name,
+                'detention_description' => $detention->description,
+                'files' => $files,
+                'user_name' => 'Luis'
+            ];
+        }
+
+        return view('emails.workpack', $data);
     }
 
     public function download($id)
@@ -114,8 +141,8 @@ class FileController extends TatucoController
         return $value;
     }
 
-    function fileDestroy($id, Request $request)
+    function fileDestroy($id, $event, Request $request)
     {
-        return $this->service->fileDestroy($id, $request);
+        return $this->service->fileDestroy($id, $event, $request);
     }
 }

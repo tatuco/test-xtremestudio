@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Acl\Src\Traits\ShinobiTrait;
 use App\Core\TatucoModel as Tatuco;
+use Illuminate\Notifications\Notifiable;
 
 
 class User extends Tatuco

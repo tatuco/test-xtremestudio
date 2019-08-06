@@ -16,6 +16,7 @@ use App\Http\Repositories\FileRepository;
 use App\Models\Detention;
 use App\Models\Event;
 use App\Models\File;
+use App\Models\PivotEventFile;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Log;
@@ -88,7 +89,7 @@ class FileService extends TatucoService
        }
    }
 
-    public function fileDestroy($id, $request)
+    public function fileDestroy($id, $event, $request)
     {
         //return parent::destroy($id, $request);
         try {
@@ -108,9 +109,9 @@ class FileService extends TatucoService
             $detention = Detention::find($this->object->detention_id);
             Event::checkSubEvents($this->object->detention_id);
             $resp = Detention::eventWithSubEvents($this->object->detention_id);
-            // echo 'id del evento creado => '.$it["id"];
+
             foreach ($resp["events"] as &$_it) {
-                if ($_it->id == $it["id"])
+                if ($_it->id == $event)
                     $_it->active = true;
                 else
                     $_it->active = false;

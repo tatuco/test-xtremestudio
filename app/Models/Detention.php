@@ -69,15 +69,6 @@ class Detention extends TatucoModel
         $events_efecty = 0;
         foreach ($list as $it) {
 
-         //   if ($it->type_id == 1) {
-           //     $date_pivote = $it->date;
-           //     $it->week = DateService::getWeekToYear($event_pivote['date']);
-           // } elseif ($it->type_id != 1) {
-               // echo 2;
-             //   $it->week = DateService::getWeekEvent($event_pivote['date'], $it->date);
-           // }
-            
-
             if ($it->status_id == 1) {
                 $events_efecty++;
             }
