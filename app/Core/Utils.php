@@ -127,4 +127,28 @@ class Utils
     static function currentUser() {
         return Auth::user();
     }
+
+    static function groupArray($arr, $group, $preserveGroupKey = false, $preserveSubArrays = false) {
+        $temp = array();
+        foreach($arr as $key => $value) {
+            $date = new Carbon($value->$group);
+            $groupValue = $date->format('Y-m-d');
+
+            /* if(!$preserveGroupKey)
+             {
+                 unset($arr[$key]->$group);
+             }*/
+            if(!array_key_exists($groupValue, $temp)) {
+                $temp[$groupValue] = array();
+            }
+
+            /*  if(!$preserveSubArrays){
+                  $data = count($arr[$key]) == 1? array_pop($arr[$key]) : $arr[$key];
+              } else {*/
+            $data = $arr[$key];
+            /* }*/
+            $temp[$groupValue][] = $data;
+        }
+        return $temp;
+    }
 }

@@ -8,6 +8,7 @@ use App\Http\Services\DateService;
 use App\Query\QueryBuilder;
 use Illuminate\Database\Eloquent\Model;
 use App\Core\TatucoModel;
+use stdClass;
 
 class Detention extends TatucoModel
 {
@@ -53,6 +54,7 @@ class Detention extends TatucoModel
            // ->select('*')
             ->where('detention_id', $id)
             ->where('deleted', false)
+            ->orderBy('clasification_id')
             ->orderBy('date')
             ->get();
       //  echo $list;
@@ -67,6 +69,10 @@ class Detention extends TatucoModel
         $cont_sub_event_complits = 0;
         $cont_events = 0;
         $events_efecty = 0;
+        $list_clasifi = Clasification::select('id','name')->get();
+        $array_clasifi = [];
+
+        $clasification_aux = 0;
         foreach ($list as $it) {
 
             if ($it->status_id == 1) {
@@ -92,11 +98,28 @@ class Detention extends TatucoModel
             $it->sub_events = $sub_events;
             $it->files = $files;
             $cont_sub_event_complits = 0;
+
+            /**
+             * agrupacion por clasificacion
+             */
+
             array_push($resp, $it);
+        }
+        $group_events = Utils::groupArray($resp, 'clasification_id');
+        $final = [];
+        foreach ($list_clasifi as $it) {
+            $obj = new StdClass();
+            $obj->id = $it->id;
+            $obj->name = $it->name;
+            $obj->events = $group_events[$it->id];
+
+            array_push($final, $obj);
         }
         $total_events = count($list);
         return [
                     "events" => $resp,
+                    "group" => $group_events,
+                    "final" => $final,
                     "percentage" => Utils::calculatePorcentage($cont_events, $total_events),
                     "percentage_effecty" =>  Utils::calculatePorcentage($events_efecty, $cont_events),
                     "count_events_effecty" => $events_efecty,
