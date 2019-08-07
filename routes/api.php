@@ -94,6 +94,6 @@ Route::resource('detentionevents', 'DetentionEventController', ['only' => ['inde
 Route::resource('files', 'FileController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('statusevents', 'StatusEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('notices', 'NoticeController', ['only' => ['store', 'update', 'destroy']]);
+Route::resource('clasifications', 'ClasificationController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 
 });
-

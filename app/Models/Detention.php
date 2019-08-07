@@ -49,7 +49,7 @@ class Detention extends TatucoModel
     public function scopeEventWithSubEvents($query, $id ) {
 
         $list = QueryBuilder::for(Event::class)
-            ->selectRaw(" CONCAT('W', (WEEK(date)-(select WEEK(date) from `events` where detention_id = '".$id."' and type_id = 1))) AS week, id, name, description, date, out_of_time, type_id, status_id, `check`, deleted, detention_id")
+            ->selectRaw(" CONCAT('W', (WEEK(date)-(select WEEK(date) from `events` where detention_id = '".$id."' and type_id = 1))) AS week, id, name, description, date, out_of_time, type_id, status_id, `check`, deleted, detention_id, clasification_id")
            // ->select('*')
             ->where('detention_id', $id)
             ->where('deleted', false)
