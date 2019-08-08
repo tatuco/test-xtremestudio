@@ -116,6 +116,33 @@ class FileController extends TatucoController
            return response()->json(["data" => $data], 200);
     }
 
+    public function confirmedWorkpack(Request $request)
+    {
+        $validator = Validator::make($request->all(), ["email"=>"required|string", "detention_id"=>"required"]);
+        if ($validator->fails()) {
+            return response()->json([
+                $validator->getMessageBag(),
+            ], 422);
+        }
+
+       $email = Email::where('detention_id', $request->detention_id)->where('name', $request->name)->first();
+
+        if (!$email) {
+            return response()->json([
+                'status' => 404,
+                'message' => 'La Detencion no existe'
+            ], 404);
+        }
+
+        $email->confirmed = true;
+        $email->update();
+
+        return response()->json([
+           "status" => true,
+            "message" => "Workpack Confirmado."
+        ], 200);
+    }
+
     public function viewWorkPack($id, Request $request)
     {
         $detention = Detention::find($id);
