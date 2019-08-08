@@ -36,6 +36,7 @@ Route::group([
     'middleware' => ['jwt.auth']
     ], function (){
         Route::post('email', 'FileController@email');
+        Route::get('email/{id}/{user}', 'FileController@detentionEmail');
         Route::get('download/{file}', 'FileController@download');
         Route::resource('users', 'Acl\UserController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
         Route::resource('params', 'Acl\ParamController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
@@ -54,6 +55,7 @@ Route::group([
             Route::get('/companies', 'CompanyController@select');
             Route::get('/contracts', 'ContractsController@select');
             Route::get('/detentions', 'DetentionController@select');
+            Route::get('/clasifications', 'ClasificationController@select');
         });
 
         Route::group(['prefix' => 'charts'], function () {

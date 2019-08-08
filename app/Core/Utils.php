@@ -5,7 +5,7 @@ namespace App\Core;
 
 
 use Illuminate\Support\Facades\Auth;
-
+use Carbon\Carbon;
 class Utils
 {
     static function parseWhere($where)
@@ -128,11 +128,16 @@ class Utils
         return Auth::user();
     }
 
-    static function groupArray($arr, $group, $preserveGroupKey = false, $preserveSubArrays = false) {
+    static function groupArray($arr, $group, $date_ = false,$preserveGroupKey = false, $preserveSubArrays = false) {
         $temp = array();
         foreach($arr as $key => $value) {
-            $date = new Carbon($value->$group);
-            $groupValue = $date->format('Y-m-d');
+            if ($date_) {
+                $date = new Carbon($value->$group);
+                $groupValue = $date->format('Y-m-d');
+            } else {
+                $groupValue = $value->$group;
+            }
+
 
             /* if(!$preserveGroupKey)
              {

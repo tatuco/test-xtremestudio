@@ -51,7 +51,6 @@ class Detention extends TatucoModel
 
         $list = QueryBuilder::for(Event::class)
             ->selectRaw(" CONCAT('W', (WEEK(date)-(select WEEK(date) from `events` where detention_id = '".$id."' and type_id = 1))) AS week, id, name, description, date, out_of_time, type_id, status_id, `check`, deleted, detention_id, clasification_id")
-           // ->select('*')
             ->where('detention_id', $id)
             ->where('deleted', false)
             ->orderBy('clasification_id')
@@ -69,10 +68,10 @@ class Detention extends TatucoModel
         $cont_sub_event_complits = 0;
         $cont_events = 0;
         $events_efecty = 0;
-        $list_clasifi = Clasification::select('id','name')->get();
-        $array_clasifi = [];
+        $list_clasifications = Clasification::select('id','name')->get();
+      //  $array_clasifi = [];
 
-        $clasification_aux = 0;
+       // $clasification_aux = 0;
         foreach ($list as $it) {
 
             if ($it->status_id == 1) {
@@ -105,20 +104,44 @@ class Detention extends TatucoModel
 
             array_push($resp, $it);
         }
+        $total_events = count($list);
         $group_events = Utils::groupArray($resp, 'clasification_id');
+        $result = [];
+        $cont_cla = 0;
+       // print_r($group_events);
+        foreach ($list_clasifications as $it) {
+            foreach ($group_events as $key => $value) {
+                if ($it->id == $key) {
+                    $cont_cla++;
+                    $obj = new StdClass();
+                    $obj->id = $it->id;
+                    $obj->name = $it->name;
+                    $obj->events = $value;
+                    $obj->count = $cont_cla;
+                    $obj->percentage = Utils::calculatePorcentage($cont_cla, $total_events);
+                } else {
+                    $cont_cla = 0;
+                    $obj = new StdClass();
+                    $obj->id = $it->id;
+                    $obj->name = $it->name;
+                    $obj->events = [];
+                    $obj->percentage = Utils::calculatePorcentage($cont_cla, $total_events);
+                }
+                array_push($result, $obj);
+            }
+        }
         $final = [];
-        foreach ($list_clasifi as $it) {
+     /*   foreach ($list_clasifi as $it) {
             $obj = new StdClass();
             $obj->id = $it->id;
             $obj->name = $it->name;
             $obj->events = $group_events[$it->id];
 
             array_push($final, $obj);
-        }
-        $total_events = count($list);
+        }*/
         return [
                     "events" => $resp,
-                    "group" => $group_events,
+                    "group" => $result,
                     "final" => $final,
                     "percentage" => Utils::calculatePorcentage($cont_events, $total_events),
                     "percentage_effecty" =>  Utils::calculatePorcentage($events_efecty, $cont_events),

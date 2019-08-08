@@ -47,6 +47,7 @@ class DetentionRepository extends TatucoRepository
             $it->percentage_effecty = $data['percentage_effecty'];
             $it->count_events_effecty = $data['count_events_effecty'];
             $it->count_events = $data['count_events'];
+            $it->clasifications = $data['group'];
             array_push($resp, $it);
         }
         return $resp;

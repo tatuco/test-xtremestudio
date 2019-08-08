@@ -12,4 +12,9 @@ class ClasificationController extends TatucoController
     {
         parent::__construct(new ClasificationService());
     }
+
+    protected $select = [
+        'id',
+        'name'
+    ];
 }

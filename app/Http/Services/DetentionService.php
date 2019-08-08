@@ -44,6 +44,7 @@ class DetentionService extends TatucoService
             $event->description = $request->has('event_description') ? $request->event_description : "";
             $event->date = $request->event_date;
             $event->detention_id = $request->id;
+            $event->clasification_id = $request->clasification_id;
             $event->type_id = 1;
             $event->status_id = 3;
             $event->save();

@@ -7,6 +7,7 @@ use App\Core\Utils;
 use App\Models\Detention;
 use App\Models\Email;
 use App\Models\File;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Core\TatucoController;
 use App\Http\Services\FileService;
@@ -74,7 +75,7 @@ class FileController extends TatucoController
 
     public function email(Request $request)
     {
-        $detention = Detention::find($request->detention_id);
+       // $detention = Detention::find($request->detention_id);
        // $files = Detention::filesWithType($request->detention_id)->toArray();
         $user = Auth::user();
         $token = \JWTAuth::getToken();
@@ -85,18 +86,34 @@ class FileController extends TatucoController
             'files' => $files,
             'user_name' => $user->name
         ];*/
-        $resp = EmailService::send(["url" => 'http://localhost:8000/api/detentions?token='.$token], env('MAIL_USERNAME'), $request->emails, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $request->detention_id);
-        $obj = $resp->content();
-        $obj = json_decode($obj, true);
-        if ($obj["status"] == 200) {
+     echo 'http://localhost:4200/admin/workpack-invited?token='.$token.'&id='.$request->detention_id.'&user='.$user->id;
+       // $resp = EmailService::send(["url" => 'http://localhost:4200/workpack-invited?token='.$token.'&id='.$detention->id], env('MAIL_USERNAME'), $request->emails, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $request->detention_id);
+       // $obj = $resp->content();
+       // $obj = json_decode($obj, true);
+       // if ($obj["status"] == 200) {
             foreach ($request->emails as $it) {
                 $email = new Email();
                 $email->name = $it;
                 $email->detention_id = $request->detention_id;
                 $email->save();
             }
-        }
-        return $resp;
+        //}
+        return $request->detention_id;
+    }
+
+    public function detentionEmail($id, $user, Request $request)
+    {
+        $detention = Detention::find($id);
+        $files = Detention::filesWithType($id)->toArray();
+        $user = User::find($user);
+           $data = [
+               'detention_id' => $detention->id,
+               'detention_name' => $detention->name,
+               'detention_description' => $detention->description,
+               'files' => $files,
+               'user_name' => $user->name
+           ];
+           return response()->json(["data" => $data], 200);
     }
 
     public function viewWorkPack($id, Request $request)
