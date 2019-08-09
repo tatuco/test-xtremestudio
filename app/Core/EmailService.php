@@ -17,11 +17,13 @@ class EmailService
                 $message->to($to)->subject($subject);
             });
             return response()->json([
+                'status' => 200,
                 'Correo enviado' => 'from: '.$from
             ], 200);
 
         } catch (Exception $e) {
             return response()->json([
+                'status' => 500,
                 'Error' => $e->getMessage(),
                 'linea' => $e->getLine(),
                 'file' => $e->getFile()

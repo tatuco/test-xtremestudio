@@ -24,7 +24,7 @@ Route::get('/', function (){
    ]);
 });
 Route::post('/login', ['uses' => 'Auth\AuthController@login', 'as' => 'login']);
-Route::post('/confirmer/workpack', ['uses' => 'Auth\AuthController@confirmedWorkPack', 'as' => 'confirmedWorkPack']);
+Route::post('/confirm/workpack', 'FileController@confirmdwedWorkPack');
 Route::get('/confirmer/workpack/{id}', 'FileController@viewWorkPack');
 Route::post('/logout', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@logout', 'as' => 'logout']);
 Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@validate', 'as' => 'validate']);
@@ -50,7 +50,7 @@ Route::group([
         Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
         Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
         Route::get('detentions/list', 'DetentionController@list');
-        
+
 
         Route::group(['prefix' => 'select'], function () {
             Route::get('/companies', 'CompanyController@select');

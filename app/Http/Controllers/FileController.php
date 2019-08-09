@@ -8,6 +8,7 @@ use App\Models\Detention;
 use App\Models\Email;
 use App\Models\File;
 use App\Models\User;
+use App\Query\QueryBuilder;
 use Illuminate\Http\Request;
 use App\Core\TatucoController;
 use App\Http\Services\FileService;
@@ -86,19 +87,21 @@ class FileController extends TatucoController
             'files' => $files,
             'user_name' => $user->name
         ];*/
-     echo 'http://localhost:4200/admin/workpack-invited?token='.$token.'&id='.$request->detention_id.'&user='.$user->id;
-       // $resp = EmailService::send(["url" => 'http://localhost:4200/workpack-invited?token='.$token.'&id='.$detention->id], env('MAIL_USERNAME'), $request->emails, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $request->detention_id);
-       // $obj = $resp->content();
-       // $obj = json_decode($obj, true);
-       // if ($obj["status"] == 200) {
+     //echo 'http://localhost:4200/admin/workpack-invited?token='.$token.'&id='.$request->detention_id.'&user='.$user->id;
+
+
             foreach ($request->emails as $it) {
+                $resp = EmailService::send(["url" => 'https://yoplanifico-cli.herokuapp.com/workpack-invited?token='.$token.'&id='.$request->detention_id.'&user='.$user->id.'&email='.$it], env('MAIL_USERNAME'), $it, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $request->detention_id);
+                $obj = $resp->content();
+                $obj = json_decode($obj, true);
+                if ($obj["status"] == 200) {
                 $email = new Email();
                 $email->name = $it;
                 $email->detention_id = $request->detention_id;
                 $email->save();
             }
-        //}
-        return $request->detention_id;
+        }
+        return $resp;
     }
 
     public function detentionEmail($id, $user, Request $request)
@@ -113,7 +116,7 @@ class FileController extends TatucoController
                'files' => $files,
                'user_name' => $user->name
            ];
-           return response()->json(["data" => $data], 200);
+           return response()->json( $data, 200);
     }
 
     public function confirmedWorkpack(Request $request)
@@ -125,7 +128,11 @@ class FileController extends TatucoController
             ], 422);
         }
 
-       $email = Email::where('detention_id', $request->detention_id)->where('name', $request->name)->first();
+       $email = QueryBuilder::for(Email::class)
+           ->where('detention_id', $request->detention_id)
+           ->where('name', $request->email)
+           ->first();
+
 
         if (!$email) {
             return response()->json([
