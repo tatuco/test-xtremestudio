@@ -47,7 +47,7 @@ class DetentionRepository extends TatucoRepository
             $it->percentage_effecty = $data['percentage_effecty'];
             $it->count_events_effecty = $data['count_events_effecty'];
             $it->count_events = $data['count_events'];
-            $it->clasifications = $data['group'];
+         //   $it->clasifications = $data['group'];
             array_push($resp, $it);
         }
         return $resp;
@@ -102,6 +102,37 @@ class DetentionRepository extends TatucoRepository
             array_push($resp, $obj);
         }
         return ["files" => $resp, "emails" => $emails];
+    }
+
+    public function clasifications($request = null)
+    {
+        $list = QueryBuilder::for(Detention::class);
+
+        if (isset($_GET['where'])) {
+            $list = $list->doWhere($request->where);
+        }
+        if (isset($_GET['paginate'])) {
+            $list = $list->paginate($_GET['paginate']);
+
+        }
+
+        $list = $list->orderBy("created_at", "desc")->get();
+
+        $resp = [];
+        foreach ($list as $it) {
+            $pivot = Detention::eventPivot($it->id);
+            $data = Detention::eventWithClasifications($it->id);
+            $it->percentage = $data['percentage'];
+            $it->percentage_effecty = $data['percentage_effecty'];
+            $it->count_events_effecty = $data['count_events_effecty'];
+            $it->count_events = $data['count_events'];
+            $it->clasifications = $data['group'];
+            $it->name_pivote = $pivot->name;
+            $it->date_pivote = $pivot->date;
+
+            array_push($resp, $it);
+        }
+        return $resp;
     }
 
 }

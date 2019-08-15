@@ -6,6 +6,7 @@ namespace App\Core;
 
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+
 class Utils
 {
     static function parseWhere($where)
@@ -23,7 +24,6 @@ class Utils
             } else {
                 return [];
             }
-
 
 
         }
@@ -124,13 +124,15 @@ class Utils
         }
     }
 
-    static function currentUser() {
+    static function currentUser()
+    {
         return Auth::user();
     }
 
-    static function groupArray($arr, $group, $date_ = false,$preserveGroupKey = false, $preserveSubArrays = false) {
+    static function groupArray($arr, $group, $date_ = false, $preserveGroupKey = false, $preserveSubArrays = false)
+    {
         $temp = array();
-        foreach($arr as $key => $value) {
+        foreach ($arr as $key => $value) {
             if ($date_) {
                 $date = new Carbon($value->$group);
                 $groupValue = $date->format('Y-m-d');
@@ -143,7 +145,7 @@ class Utils
              {
                  unset($arr[$key]->$group);
              }*/
-            if(!array_key_exists($groupValue, $temp)) {
+            if (!array_key_exists($groupValue, $temp)) {
                 $temp[$groupValue] = array();
             }
 
@@ -156,4 +158,47 @@ class Utils
         }
         return $temp;
     }
+
+    static function searchArray($array, $key, $value, $position = true)
+    {
+        $c = 0;
+        foreach ($array as $it) {
+
+            if ($it->$key == $value) {
+                //echo 'aqui'.$it->$key. ' = '.$value.' true \\n';
+                if ($position)
+                    return $c;
+                else
+                    return $it;
+            }
+            $c++;
+        }
+    }
+
+    static function search_service($array = [], $key, $value)
+    {
+        for ($i = 0; $i < count($array); $i++) {
+            if ($array[$i][$key] === $value) {
+                //echo "si $value ==> {$array[$i][$key]}";
+                return true;
+            }
+        }
+    }
+
+
+    static function itemInArray($array, $key, $value)
+    {
+        foreach ($array as $it) {
+            if ($it->$key == $value) {
+                // echo 'aqui'.$it->$key. ' = '.$value.' true \\n';
+
+                return true;
+            } else {
+                // echo 'aqui'.$it->$key. ' = '.$value.' false \\n';
+
+                return false;
+            }
+        }
+    }
+
 }

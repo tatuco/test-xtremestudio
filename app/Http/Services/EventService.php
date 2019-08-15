@@ -17,6 +17,7 @@ use App\Http\Repositories\EventRepository;
 use App\Models\Detention;
 use App\Models\Event;
 use App\Models\File;
+use App\Models\PivotEventFile;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
@@ -153,7 +154,7 @@ class EventService extends TatucoService
         $f->file_event = true;
         $f->save();
 
-        $fe = new FileEvent();
+        $fe = new PivotEventFile();
         $fe->event_id = $request->event_id;
         $fe->file_id = $f->id;
         $fe->save();

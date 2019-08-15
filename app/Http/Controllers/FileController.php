@@ -16,6 +16,7 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use stdClass;
 
 class FileController extends TatucoController
 {
@@ -89,19 +90,34 @@ class FileController extends TatucoController
         ];*/
      //echo 'http://localhost:4200/admin/workpack-invited?token='.$token.'&id='.$request->detention_id.'&user='.$user->id;
 
-
+            $resp_emails = [];
+            $emails_error_send = [];
+            $emails_fine_send = [];
             foreach ($request->emails as $it) {
+
                 $resp = EmailService::send(["url" => 'https://yoplanifico-cli.herokuapp.com/workpack-invited?token='.$token.'&id='.$request->detention_id.'&user='.$user->id.'&email='.$it], env('MAIL_USERNAME'), $it, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $request->detention_id);
                 $obj = $resp->content();
                 $obj = json_decode($obj, true);
                 if ($obj["status"] == 200) {
-                $email = new Email();
+                    $object = new StdClass();
+                    $object->name = $it;
+                    $object->confirmed = false;
+
+                    $email = new Email();
                 $email->name = $it;
                 $email->detention_id = $request->detention_id;
                 $email->save();
+                    array_push($emails_fine_send, $obj);
+                    array_push($resp_emails, $object);
+
+
+                } else {
+                array_push($emails_error_send, $it);
             }
         }
-        return $resp;
+
+        return response()->json(["emails" => $resp_emails, "error_sends" => $emails_error_send], 200);
+
     }
 
     public function detentionEmail($id, $user, Request $request)

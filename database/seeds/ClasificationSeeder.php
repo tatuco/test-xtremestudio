@@ -12,7 +12,7 @@ class ClasificationSeeder extends Seeder
     public function run()
     {
         DB::table('clasifications')->insert([
-            'name' => 'Materiales y Repuestos (M&R).',
+            'name' => 'Materiales y Repuestos (M&R)',
             'description' => '',
             'deleted' => false,
             'created_at'=> new DateTime,
@@ -20,7 +20,7 @@ class ClasificationSeeder extends Seeder
         ]);
 
         DB::table('clasifications')->insert([
-            'name' => 'Servicios.',
+            'name' => 'Servicios',
             'description' => '',
             'deleted' => false,
             'created_at'=> new DateTime,
@@ -29,7 +29,7 @@ class ClasificationSeeder extends Seeder
 
 
         DB::table('clasifications')->insert([
-            'name' => 'Reuniones.',
+            'name' => 'Reuniones',
             'description' => '',
             'deleted' => false,
             'created_at'=> new DateTime,
