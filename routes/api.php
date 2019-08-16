@@ -24,7 +24,7 @@ Route::get('/', function (){
    ]);
 });
 Route::post('/login', ['uses' => 'Auth\AuthController@login', 'as' => 'login']);
-Route::post('/confirm/workpack', 'FileController@confirmdwedWorkPack');
+Route::post('/confirm/workpack', 'FileController@confirmedWorkPack');
 Route::get('/confirmer/workpack/{id}', 'FileController@viewWorkPack');
 Route::post('/logout', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@logout', 'as' => 'logout']);
 Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@validate', 'as' => 'validate']);
