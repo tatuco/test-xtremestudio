@@ -93,9 +93,10 @@ class FileController extends TatucoController
             $resp_emails = [];
             $emails_error_send = [];
             $emails_fine_send = [];
+            $d = Detention::find($request->detention_id);
             foreach ($request->emails as $it) {
 
-                $resp = EmailService::send(["url" => 'https://yoplanifico-cli.herokuapp.com/workpack-invited?token='.$token.'&id='.$request->detention_id.'&user='.$user->id.'&email='.$it], env('MAIL_USERNAME'), $it, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $request->detention_id);
+                $resp = EmailService::send(["url" => 'https://yoplanifico-cli.herokuapp.com/workpack-invited?token='.$token.'&id='.$request->detention_id.'&user='.$user->id.'&email='.$it], env('MAIL_USERNAME'), $it, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $d->name);
                 $obj = $resp->content();
                 $obj = json_decode($obj, true);
                 if ($obj["status"] == 200) {
