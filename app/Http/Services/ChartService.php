@@ -190,8 +190,10 @@ class ChartService extends TatucoService
 
     public function access12Hours($request) {
         try {
-            $resp = $this->repository->access12Hours($request)->get();
-            return ["accesses" => count($resp)];
+            $day = $this->repository->access12Hours($request)->get();
+            $week = $this->repository->accessWeek($request)->get();
+            $month = $this->repository->accessMonth($request)->get();
+            return ["day" => count($day), "week" => count($week), "month" => count($month)];
         } catch (\Exception $e) {
             return parent::errorException($e);
         }

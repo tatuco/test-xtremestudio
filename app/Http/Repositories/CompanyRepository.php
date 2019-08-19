@@ -10,6 +10,7 @@ namespace App\Http\Repositories;
 
 use App\Core\TatucoRepository;
 use App\Models\Company;
+use Illuminate\Support\Facades\Cache;
 
 class CompanyRepository extends TatucoRepository
 {
@@ -18,5 +19,4 @@ class CompanyRepository extends TatucoRepository
     {
         parent::__construct(new Company());
     }
-
 }

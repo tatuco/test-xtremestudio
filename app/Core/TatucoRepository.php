@@ -11,6 +11,7 @@ namespace App\Core;
 
 use App\Models\Space;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 
 class TatucoRepository
