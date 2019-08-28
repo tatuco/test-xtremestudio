@@ -94,10 +94,12 @@ class FileController extends TatucoController
             $emails_error_send = [];
             $emails_fine_send = [];
             $d = Detention::find($request->detention_id);
+            $arr_resp = [];
             foreach ($request->emails as $it) {
 
                 $resp = EmailService::send(["url" => 'https://yoplanifico-cli.herokuapp.com/workpack-invited?token='.$token.'&id='.$request->detention_id.'&user='.$user->id.'&email='.$it], env('MAIL_USERNAME'), $it, 'emails.click_workpack', 'Plazfer', 'WorkPack ' . $d->name);
                 $obj = $resp->content();
+                array_push($arr_resp, $resp);
                 $obj = json_decode($obj, true);
                 if ($obj["status"] == 200) {
                     $object = new StdClass();
@@ -105,19 +107,18 @@ class FileController extends TatucoController
                     $object->confirmed = false;
 
                     $email = new Email();
-                $email->name = $it;
-                $email->detention_id = $request->detention_id;
-                $email->save();
+                    $email->name = $it;
+                    $email->detention_id = $request->detention_id;
+                    $email->save();
                     array_push($emails_fine_send, $obj);
                     array_push($resp_emails, $object);
 
-
                 } else {
-                array_push($emails_error_send, $it);
-            }
+                    array_push($emails_error_send, $it);
+                }
         }
 
-        return response()->json(["emails" => $resp_emails, "error_sends" => $emails_error_send], 200);
+        return response()->json(["emails" => $resp_emails, "error_sends" => $emails_error_send, "res" => $arr_resp], 200);
 
     }
 

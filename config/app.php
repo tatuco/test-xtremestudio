@@ -180,7 +180,9 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         App\Reports\src\ServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class
+        Intervention\Image\ImageServiceProvider::class,
+        Sichikawa\LaravelSendgridDriver\SendgridTransportServiceProvider::class
+
     ],
 
     /*

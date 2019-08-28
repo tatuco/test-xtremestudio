@@ -4,6 +4,7 @@
 namespace App\Core;
 
 
+use App\Mail\WorkPackMail;
 use Exception;
 use Illuminate\Support\Facades\Mail;
 
@@ -16,11 +17,11 @@ class EmailService
                 $message->from($from, $title);
                 $message->to($to)->subject($subject);
             });
+            //Mail::send(new WorkPackMail($data, $from, $to, $view, $title, $subject));
             return response()->json([
                 'status' => 200,
                 'Correo enviado' => 'from: '.$from
             ], 200);
-
         } catch (Exception $e) {
             return response()->json([
                 'status' => 500,

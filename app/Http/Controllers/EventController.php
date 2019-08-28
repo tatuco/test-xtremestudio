@@ -38,7 +38,7 @@ class EventController extends TatucoController
 
         $file = $request->file[0];
 
-        $base_clean = '';//str_replace("data:" . $file["tipo"] . ";base64,", "", $file["base64textString"]);
+        $base_clean = str_replace("data:" . $file["tipo"] . ";base64,", "", $file["base64textString"]);
         $_file = base64_decode($base_clean);
         $name = time() . '_' . $file["nombreArchivo"];
         $directory = storage_path() . '\\app\\eventos\\' . $name;
