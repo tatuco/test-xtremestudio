@@ -3,6 +3,7 @@ namespace App\Http\Services\Acl;
 
 use App\Acl\Src\Models\Role;
 use App\Core\TatucoService;
+use App\Core\Utils;
 use App\Http\Repositories\Acl\UserRepository;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -52,7 +53,8 @@ class UserService extends TatucoService
     public function store(Request $request){
         try {
            // DB::beginTransaction();
-            $pass = bcrypt($request->json(['password']));
+            $decrypted = Utils::cryptoJsAesDecrypt("prumplunch", $request->password);
+            $pass = bcrypt($decrypted);
             $request->merge(['password' => $pass]);
 
             $user = User::create($request->all());
@@ -63,6 +65,7 @@ class UserService extends TatucoService
             $user->roles = $user->getRoles();
             //DB::commit();
             return $user;
+          //return $decrypted;
         } catch (\Exception $e) {
             //DB::rollBack();
             return parent::errorException($e);
@@ -111,7 +114,7 @@ class UserService extends TatucoService
             "file" => $e->getFile(),
             "line" => $e->getLine(),
             "code" => $e->getCode()
-            ], 500); 
+            ], 500);
         }
     }
 
@@ -140,8 +143,8 @@ class UserService extends TatucoService
             "file" => $e->getFile(),
             "line" => $e->getLine(),
             "code" => $e->getCode()
-            ], 500); 
+            ], 500);
         }
     }
-   
+
 }

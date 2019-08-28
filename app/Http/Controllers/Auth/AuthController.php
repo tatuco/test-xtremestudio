@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 
 use App\Acl\Src\Models\Role;
+use App\Core\Utils;
 use App\Models\User;
 use App\Notifications\ConfirmedWorkPack;
 use Illuminate\Http\Request;
@@ -18,8 +19,11 @@ class AuthController extends BaseController
 {
     public function login(Request $request)
     {
-        $credenciales = $request->only('email','password');
-
+       // $_credenciales = $request->only('email','password');
+        $credenciales = [
+            "email" => $request->email,
+            "password" => Utils::cryptoJsAesDecrypt("prumplunch", $request->password)
+        ];
         try {
            if(!$token = \JWTAuth::attempt($credenciales)){
                 return response()->json([

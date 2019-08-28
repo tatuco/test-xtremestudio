@@ -29,7 +29,8 @@
         "nordsoftware/lumen-cors": "^2.2",
         "s-ichikawa/laravel-sendgrid-driver": "^2.0",
         "tibonilab/pdf-lumen-bundle": "^2.0",
-        "tymon/jwt-auth": "^0.5.12"
+        "tymon/jwt-auth": "^0.5.12",
+        "ext-openssl": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
