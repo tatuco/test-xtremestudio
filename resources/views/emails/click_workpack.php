@@ -14,7 +14,8 @@
 
         }
         .logo-text {
-            align-self: center;
+            /*align-self: center;*/
+            padding-top: 1.5rem;
             font-size: 17px;
             font-weight: bolder;
         }
@@ -30,6 +31,9 @@
             color: #fff;
             cursor: pointer;
         }
+        .decorador {
+            text-decoration: none;
+        }
 
     </style>
 </head>
@@ -43,7 +47,7 @@
             Yo Planifico
         </div>
     </div>
-    <a href="<?php echo $url; ?>">
+    <a class="decorador" href="<?php echo $url; ?>">
         <div class="contenedor-secundario">
             <span class="boton">
                 Ir al Workpack
