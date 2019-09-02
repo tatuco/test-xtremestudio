@@ -13,6 +13,13 @@ DB_DATABASE=ywpamjhaakbvmxdj
 DB_USERNAME=fg86u4x7ucktz6iq
 DB_PASSWORD=xxttf6x55cpzru97
 
+DB_CONNECTION=mysql
+DB_HOST=yoplanifico.cz6jwagb0kpq.sa-east-1.rds.amazonaws.com
+DB_PORT=3306
+DB_DATABASE=ywpamjhaakbvmxdj
+DB_USERNAME=adminjavier
+DB_PASSWORD=WW9wbGFuaWZpY28yMDE5UkRT
+
 
 
 BROADCAST_DRIVER=log
