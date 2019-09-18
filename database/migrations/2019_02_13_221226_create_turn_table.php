@@ -19,10 +19,10 @@ class CreateturnTable extends Migration
             $table->integer('working_days')->nullable();
             $table->integer('break_days')->nullable();
             $table->enum('shift', ['diurnal', 'night']);
-            $table->char('company_id', 25);
-            $table->foreign('company_id')->references('id')->on('companies');  
+            $table->integer('company_id');
+            $table->foreign('company_id')->references('id')->on('companies');
             $table->char('contract_id', 25);
-            $table->foreign('contract_id')->references('cod_contract')->on('contracts');         
+            $table->foreign('contract_id')->references('cod_contract')->on('contracts');
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });

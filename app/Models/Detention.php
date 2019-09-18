@@ -44,6 +44,7 @@ class Detention extends TatucoModel
             ->join('files as f', 'f.type_id', 'file_types.id')
             ->where('detention_id', $id)
             ->where('f.deleted', false)
+            ->where('f.file_event', 0)
             ->orderBy('type_id', 'asc')
             ->get();
     }
@@ -311,7 +312,7 @@ class Detention extends TatucoModel
     public function scopeEmails($query, $id)
     {
         return QueryBuilder::for(Email::class)
-            ->select('emails.name', 'emails.confirmed')
+            ->select('emails.name', 'emails.confirmed', 'emails.created_at')
             ->join('detentions as d', 'emails.detention_id', 'd.id')
             ->where('d.id', $id)
             ->where('emails.deleted', false)

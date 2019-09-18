@@ -17,7 +17,7 @@ class CreatepeoplecompanyTable extends Migration
             $table->integer('id', true);
             $table->char('people_id', 25);
             $table->foreign('people_id')->references('id')->on('people');
-            $table->char('company_id', 25);
+            $table->integer('company_id');
             $table->foreign('company_id')->references('id')->on('companies');
             $table->char('position_company', 255);
             //$table->foreign('position_id')->references('id')->on('position_companies');

@@ -24,12 +24,12 @@ class PeopleCompanySeeder extends Seeder
         ]);
     */
     // NEW *****************************************************
-            
+         /*
     DB::table('people_companies')->insert([
         'people_id' => '159113930',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -38,7 +38,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '138671151',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -47,7 +47,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '156946664',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -56,7 +56,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '184048264',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -65,7 +65,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '156919802',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -74,7 +74,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '184214954',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -83,7 +83,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '174326657',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -92,7 +92,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '016348109K',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -101,7 +101,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '131362617',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -110,7 +110,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '161359858',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -119,7 +119,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '017094299K',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -128,7 +128,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '143797090',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -137,7 +137,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '129430435',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -146,7 +146,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '84022012',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -155,7 +155,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '160860316',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -164,7 +164,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '125763774',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -173,7 +173,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '183173006',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -182,7 +182,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '175537031',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -191,7 +191,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '168055854',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -200,7 +200,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '155144173',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -209,7 +209,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '132193320',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -218,7 +218,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '119046750',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -227,7 +227,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '166875331',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -236,7 +236,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '119019397',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -245,7 +245,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '105310013',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -254,7 +254,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '156925683',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -794,7 +794,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '012691151-3',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -803,7 +803,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '017387633-5',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -866,7 +866,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '007367179-5',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -875,7 +875,7 @@ class PeopleCompanySeeder extends Seeder
         'people_id' => '000000000-0',
         'company_id' => '772762801',
         'position_company' => 'Por definir',
-        'contract_id' => '4540002892',
+        'contract_id' => 'MA1020035916/10',
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
@@ -897,7 +897,7 @@ class PeopleCompanySeeder extends Seeder
         'deleted'=> false,
         'created_at'=> new DateTime,
         'updated_at'=> new DateTime
-        ]);        
-        
+        ]);   */
+
     }
 }

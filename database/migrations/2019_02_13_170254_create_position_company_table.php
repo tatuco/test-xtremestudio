@@ -16,7 +16,7 @@ class CreatepositioncompanyTable extends Migration
         Schema::create('position_companies', function (Blueprint $table) {
             $table->integer('id', true);
             $table->string('name')->nullable();
-            $table->char('company_id', 25);
+            $table->integer('company_id');
             $table->foreign('company_id')->references('id')->on('companies');
             $table->char('contract_id', 25);
             $table->foreign('contract_id')->references('cod_contract')->on('contracts');

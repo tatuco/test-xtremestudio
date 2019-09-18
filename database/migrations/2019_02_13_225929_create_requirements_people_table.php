@@ -18,7 +18,7 @@ class CreaterequirementspeopleTable extends Migration
             $table->string('description')->nullable();
             $table->char('people_id', 25);
             $table->foreign('people_id')->references('id')->on('people');
-            $table->char('company_id', 25);
+            $table->integer('company_id');
             $table->foreign('company_id')->references('id')->on('companies');
             $table->char('contract_id', 25);
             $table->foreign('contract_id')->references('cod_contract')->on('contracts');

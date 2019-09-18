@@ -7,11 +7,11 @@ use App\Core\TatucoModel;
 
 class Company extends TatucoModel
 {
-    protected $guarded = ['id'];
+  //  protected $guarded = ['id'];
     protected $fillable = ['id', 'logo', 'slogan', 'name', 'description', 'deleted'];
-    protected $cast = [
+  /*  protected $cast = [
         'id' => 'string'
-    ];
+    ];*/
 
     public function getIdAttribute($value)
     {

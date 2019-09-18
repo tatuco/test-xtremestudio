@@ -11,7 +11,7 @@ class PersonSeeder extends Seeder
      */
     public function run()
     {
-        
+      /*
          DB::table('people')->insert([
         'id' => '159113930',
         'name' => 'Flavio',
@@ -813,24 +813,8 @@ class PersonSeeder extends Seeder
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
             ]);
-             DB::table('people')->insert([
-            'id' => '013426315-6',
-            'name' => 'Gonzalo',
-            'last_name_p' => 'Lago',
-            'last_name_m' => 'Perez',
-            'deleted'=> false,
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-            ]);
-             DB::table('people')->insert([
-            'id' => '016051322-5',
-            'name' => 'Lixy Jaqueline',
-            'last_name_p' => 'Ortiz',
-            'last_name_m' => 'Chavez',
-            'deleted'=> false,
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-            ]);
+
+
             DB::table('people')->insert([
                 'id' => '000000000-0',
                 'name' => '--',
@@ -840,9 +824,48 @@ class PersonSeeder extends Seeder
                 'created_at'=> new DateTime,
                 'updated_at'=> new DateTime
                 ]);
-        
-        
-        
+
+
+
+*/
+        DB::table('people')->insert([
+            'id' => '012691151-3',
+            'name' => 'Fernando andres',
+            'last_name_p' => 'Melo',
+            'last_name_m' => 'miranda',
+            'deleted'=> false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+        DB::table('people')->insert([
+            'id' => '017387633-5',
+            'name' => 'Carlos',
+            'last_name_p' => 'Gomez',
+            'last_name_m' => 'galdames',
+            'deleted'=> false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+        DB::table('people')->insert([
+            'id' => '013426315-6',
+            'name' => 'Gonzalo',
+            'last_name_p' => 'Lago',
+            'last_name_m' => 'Perez',
+            'deleted'=> false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+        DB::table('people')->insert([
+            'id' => '016051322-5',
+            'name' => 'Lixy Jaqueline',
+            'last_name_p' => 'Ortiz',
+            'last_name_m' => 'Chavez',
+            'deleted'=> false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
 
     }
+
+
 }

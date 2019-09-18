@@ -20,7 +20,7 @@ class CreatecontractsTable extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->integer('endowment');
-            $table->char('company_id', 25);
+            $table->integer('company_id');
             $table->foreign('company_id')->references('id')->on('companies');
             $table->char('user_id', 25);
             $table->foreign('user_id')->references('id')->on('people')->onDelete('cascade');
