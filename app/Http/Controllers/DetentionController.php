@@ -20,6 +20,7 @@ class DetentionController extends TatucoController
         'event_name' => 'required|string|min:5',
        // 'event_description' => 'string',
         'event_date' => 'required|date_format:Y-m-d|after_or_equal:today',
+        'event_responsable' => 'required'
        // 'event_id' => 'required|integer'
     ];
 

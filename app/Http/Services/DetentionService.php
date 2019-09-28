@@ -47,6 +47,7 @@ class DetentionService extends TatucoService
             $event->clasification_id = $request->clasification_id;
             $event->type_id = 1;
             $event->status_id = 3;
+            $event->responsable = $request->responsable;
             $event->save();
 
             $resp = Detention::eventWithSubEvents($request->id);
