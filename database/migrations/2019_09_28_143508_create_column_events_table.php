@@ -24,6 +24,6 @@ class CreateColumnEventsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('column_events');
+       // Schema::dropIfExists('column_events');
     }
 }

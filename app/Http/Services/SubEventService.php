@@ -32,8 +32,10 @@ class SubEventService extends TatucoService
         $resp = parent::store($request);
         $obj = $resp->content();
         $obj = json_decode($obj, true);
+      //  return $obj["subevent"];
         if ($obj["status"] == 201) {
             $it = $obj["subevent"];
+
             $event = SubEvent::event($it["event_id"]);
             $detention = Detention::find($event->detention_id);
             $resp = Detention::eventWithSubEvents($event->detention_id);
@@ -58,6 +60,7 @@ class SubEventService extends TatucoService
 
     public function update($id, Request $request)
     {
+        $request->merge(["status_id" => DateService::validateDateEvent($request->date) ? 1 : 2]);
         $resp = parent::update($id, $request);
         $obj = $resp->content();
         $obj = json_decode($obj, true);

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Services\DateService;
 use App\Query\QueryBuilder;
 use Illuminate\Database\Eloquent\Model;
 use App\Core\TatucoModel;
@@ -18,7 +19,8 @@ class Event extends TatucoModel
         "detention_id",
         "check",
         "clasification_id",
-        "responsable"
+        "responsable",
+        "event_type"
     ];
     protected $casts = [
         'check' => 'boolean'
@@ -47,7 +49,16 @@ class Event extends TatucoModel
     {
         $var = QueryBuilder::for(SubEvent::class)
             ->where('event_id', $id)
-            ->update(["check" => 1]);
+            ->where('check', 0)
+            ->get();
+
+        foreach ($var as $it) {
+            $it->status_id =  DateService::validateDateEvent($it->date) ? 1 : 2;
+            $it->check = 1;
+            $it->update();
+        }
+
+            //update(["check" => 1, 'status_id' => DateService::validateDateEvent($date) ? 1 : 2]);
         if ($var)
             return true;
         else

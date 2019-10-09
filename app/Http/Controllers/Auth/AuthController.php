@@ -22,7 +22,7 @@ class AuthController extends BaseController
        // $_credenciales = $request->only('email','password');
         $credenciales = [
             "email" => $request->email,
-            "password" => Utils::cryptoJsAesDecrypt("prumplunch", $request->password)
+            "password" => $request->password//Utils::cryptoJsAesDecrypt("prumplunch", $request->password)
         ];
         try {
            if(!$token = \JWTAuth::attempt($credenciales)){
