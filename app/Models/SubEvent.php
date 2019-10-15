@@ -17,7 +17,8 @@ class SubEvent extends TatucoModel
         'check',
         'responsable',
         'date',
-        'status_id'
+        'status_id',
+        'date_check'
     ];
 
     protected $casts = [

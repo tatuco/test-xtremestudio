@@ -54,7 +54,7 @@ class Detention extends TatucoModel
     {
 
         $list = QueryBuilder::for(Event::class)
-            ->selectRaw(" CONCAT('W', (WEEK(date)-(select WEEK(date) from `events` where detention_id = '" . $id . "' and type_id = 1))) AS week, events.id, events.name, events.responsable, events.description, date, out_of_time, type_id, status_id, `check`, events.deleted, detention_id, clasification_id, c.name as clasification_name")
+            ->selectRaw(" CONCAT('W', (WEEK(date)-(select WEEK(date) from `events` where detention_id = '" . $id . "' and type_id = 1))) AS week, events.id, events.name, events.responsable, events.description, date, out_of_time, type_id, status_id, `check`, events.deleted, detention_id, clasification_id, c.name as clasification_name, events.date_check")
             ->join("clasifications as c", "events.clasification_id", "c.id")
             ->where('detention_id', $id)
             ->where('events.deleted', false)
@@ -161,7 +161,7 @@ class Detention extends TatucoModel
     {
         try {
             $list = QueryBuilder::for(Event::class)
-                ->selectRaw(" CONCAT('W', (WEEK(date)-(select WEEK(date) from `events` where detention_id = '" . $id . "' and type_id = 1))) AS week, events.id, events.name, events.description, date, out_of_time, type_id, status_id, `check`, events.deleted, detention_id, clasification_id, c.name as clasification_name, events.date_check")
+                ->selectRaw(" CONCAT('W', (WEEK(date)-(select WEEK(date) from `events` where detention_id = '" . $id . "' and type_id = 1))) AS week, events.id, events.name, events.description, date, out_of_time, type_id, status_id, `check`, events.deleted, detention_id, clasification_id, c.name as clasification_name")
                 ->join("clasifications as c", "events.clasification_id", "c.id")
                 ->where('detention_id', $id)
                 ->where('events.deleted', false)

@@ -6,6 +6,7 @@ use App\Http\Services\DateService;
 use App\Query\QueryBuilder;
 use Illuminate\Database\Eloquent\Model;
 use App\Core\TatucoModel;
+use test\Mockery\SubclassWithFinalWakeup;
 
 class Event extends TatucoModel
 {
@@ -20,7 +21,8 @@ class Event extends TatucoModel
         "check",
         "clasification_id",
         "responsable",
-        "event_type"
+        "event_type",
+        "date_check"
     ];
     protected $casts = [
         'check' => 'boolean'
@@ -53,9 +55,11 @@ class Event extends TatucoModel
             ->get();
 
         foreach ($var as $it) {
-            $it->status_id =  DateService::validateDateEvent($it->date) ? 1 : 2;
-            $it->check = 1;
-            $it->update();
+            $sub = SubEvent::find($it->id);
+            $sub->status_id =  DateService::validateDateEvent($it->date) ? 1 : 2;
+            $sub->check = 1;
+            $sub->date_check = DateService::GetDateTime();
+            $sub->update();
         }
 
             //update(["check" => 1, 'status_id' => DateService::validateDateEvent($date) ? 1 : 2]);
