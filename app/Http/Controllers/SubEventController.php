@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Core\TatucoService;
+use App\Http\Services\DateService;
 use Illuminate\Http\Request;
 use App\Core\TatucoController;
 use App\Http\Services\SubEventService;
@@ -26,5 +28,13 @@ class SubEventController extends TatucoController
     {
         $request->merge(["status_id" => 3]);
         return parent::store($request);
+    }
+
+    public function update($id, Request $request)
+    {
+        if ($request->has('check') && $request->check === true) {
+            $request->merge(["date_check" => DateService::GetDateTime()]);
+        }
+        return parent::update($id, $request);
     }
 }

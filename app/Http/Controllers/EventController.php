@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\DateService;
 use Illuminate\Http\Request;
 use App\Core\TatucoController;
 use App\Http\Services\EventService;
@@ -54,5 +55,13 @@ class EventController extends TatucoController
         ];
         $request->merge(['file_' => $obj]);
         return $this->service->assignFileEvent($request);
+    }
+
+    public function update($id, Request $request)
+    {
+        if ($request->has('check') && $request->check === true) {
+            $request->merge(["date_check" => DateService::GetDateTime()]);
+        }
+        return parent::update($id, $request);
     }
 }

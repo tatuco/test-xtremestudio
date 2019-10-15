@@ -29,6 +29,10 @@ class DateService
         return $dates;
     }
 
+    static function GetDateTime()
+    {
+        return Carbon::now()->format('Y-m-d H:i:s');
+    }
 
     static function daysException($days = [], $date)
     {
