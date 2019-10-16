@@ -239,7 +239,7 @@ return [
         'PDF'   => Barryvdh\DomPDF\ServiceProvider::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Image' => Intervention\Image\Facades\Image::class,
-        'Agent' => Jenssegers\Agent\Facades\Agent::class
+        'Agent' => Jenssegers\Agent\Facades\Agent::class,
 
     ],
 

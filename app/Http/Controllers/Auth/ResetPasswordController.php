@@ -40,6 +40,31 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+    public function reset(Request $request)
+    {
+        $this->validate($request, $this->rules(), $this->validationErrorMessages());
+
+        $response = $this->broker()->reset(
+            $this->credentials($request), function ($user, $password) {
+            $this->resetPassword($user, $password);
+        }
+        );
+
+        return $response == \Password::PASSWORD_RESET
+            ? response()->success($response, 200)
+            : response()->error($response, 422);
+    }
+
+    protected function resetPassword($user, $password)
+    {
+        $user->forceFill([
+            'password' => $password,
+            'remember_token' => str_random(60),
+        ])->save();
+
+        // GENERAR TOKEN PARA SATELLIZER AQUI ??
+        // $this->guard()->login($user);
+    }
 
     /**
      * Send a reset link to the given user.
@@ -57,14 +82,31 @@ class ResetPasswordController extends Controller
 
         switch ($response) {
             case Password::RESET_LINK_SENT:
-                return response()->json( '' , Response::HTTP_NO_CONTENT);
+                return $this->sendResetLinkResponse($response);
 
             case Password::INVALID_USER:
-                return response()->json( ['email' => array(trans($response))] , Response::HTTP_UNPROCESSABLE_ENTITY);
+                return response()->json(['email' => array(trans($response))] , Response::HTTP_UNPROCESSABLE_ENTITY);
         }
     }
 
+    protected function sendResetLinkResponse($response)
+    {
+        if (request()->header('Content-Type') == 'application/json') {
+            return response()->json(['success' => 'Recovery email sent.']);
+        }
+        return back()->with('status', trans($response));
+    }
 
+    protected function sendResetLinkFailedResponse(Request $request, $response)
+    {
+        if (request()->header('Content-Type') == 'application/json') {
+            return response()->json(['error' => 'Oops something went wrong.']);
+        }
+
+        return back()->withErrors(
+            ['email' => trans($response)]
+        );
+    }
 
     /**
      * Reset the given user's password.

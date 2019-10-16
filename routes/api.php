@@ -29,7 +29,9 @@ Route::get('/confirmer/workpack/{id}', 'FileController@viewWorkPack');
 Route::post('/logout', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@logout', 'as' => 'logout']);
 Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@validate', 'as' => 'validate']);
 Route::post('/password/email', 'Auth\ResetPasswordController@postEmail');
-
+Route::post('/password/create', 'Auth\PasswordResetController@create');
+Route::get('/password/find/{token}', 'Auth\PasswordResetController@find');
+Route::post('/password/reset', 'Auth\PasswordResetController@reset');
 Route::get('/notices', 'NoticeController@index');
 
 Route::group([
@@ -43,7 +45,7 @@ Route::group([
         Route::resource('params', 'Acl\ParamController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
         Route::resource('roles', 'Acl\RoleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
         Route::resource('permissions', 'Acl\PermissionController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-        Route::resource('permissions/roles', 'Acl\PermissionRoleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+        Route::resource('permissions/roles', 'Acl\RoleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
         Route::post('users/role', 'Acl\UserController@assignedRole');
         Route::get('users/role/{user}/{role}', 'Acl\UserController@revokeRole');
         Route::post('roles/permission', 'Acl\RoleController@assignedPermission');
@@ -80,10 +82,10 @@ Route::group([
 
 Route::resource('companies', 'CompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('people', 'PersonController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('employees', 'EmployeeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('employees', 'EmployeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('accesses', 'AccessController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('contracts', 'ContractsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('admcontracts', 'AdmContractsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+//Route::resource('admcontracts', 'AdmContractsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('peoplecompanies', 'PeopleCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('positioncompanies', 'PositionCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('turns', 'TurnController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
@@ -94,7 +96,7 @@ Route::resource('employes', 'EmployeController', ['only' => ['index', 'store', '
 Route::resource('subevents', 'SubEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('events', 'EventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('detentions', 'DetentionController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('detentionevents', 'DetentionEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+//Route::resource('detentionevents', 'DetentionEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('files', 'FileController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('statusevents', 'StatusEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::resource('notices', 'NoticeController', ['only' => ['store', 'update', 'destroy']]);

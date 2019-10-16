@@ -5,4 +5,9 @@ $interval = $datetime1->diff($datetime2);
 echo ($datetime1->format('W')) . ' semana actual';
 */
 
-echo round(33.333, 0);
+
+$longitud = 8;
+
+$pass = substr(MD5(rand(5, 100)), 0, $longitud);
+
+echo $pass;
