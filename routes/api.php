@@ -29,9 +29,12 @@ Route::get('/confirmer/workpack/{id}', 'FileController@viewWorkPack');
 Route::post('/logout', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@logout', 'as' => 'logout']);
 Route::get('/validate', ['middleware' => ['jwt.auth'], 'uses' => 'Auth\AuthController@validate', 'as' => 'validate']);
 Route::post('/password/email', 'Auth\ResetPasswordController@postEmail');
-Route::post('/password/create', 'Auth\PasswordResetController@create');
+//Route::post('/password/create', 'Auth\PasswordResetController@create');
 Route::get('/password/find/{token}', 'Auth\PasswordResetController@find');
-Route::post('/password/reset', 'Auth\PasswordResetController@reset');
+//Route::post('/password/reset', 'Auth\PasswordResetController@reset');
+Route::post('/password/reset', 'Auth\PasswordResetController@resetPass');
+Route::post('/password/create', 'Auth\PasswordResetController@createTokenTemp');
+Route::post('/password/change', 'Auth\PasswordResetController@changePassword');
 Route::get('/notices', 'NoticeController@index');
 
 Route::group([

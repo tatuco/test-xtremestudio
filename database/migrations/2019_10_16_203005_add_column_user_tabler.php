@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserPasswordTemporalTable extends Migration
+class AddColumnUserTabler extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateUserPasswordTemporalTable extends Migration
      */
     public function up()
     {
-        Schema::table('password_resets', function (Blueprint $table) {
-            $table->increments('id');
-            $table->dateTime('updated_at')->nullable();
+        Schema::table('users', function (Blueprint $table) {
+            $table->boolean('temporal')->default(false);
         });
     }
 
@@ -26,6 +25,6 @@ class CreateUserPasswordTemporalTable extends Migration
      */
     public function down()
     {
-      //  Schema::dropIfExists('user_password_temporal');
+        //
     }
 }

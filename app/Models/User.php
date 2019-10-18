@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Tatuco
 {
-    use ShinobiTrait;
+    use ShinobiTrait, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -18,8 +18,14 @@ class User extends Tatuco
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'remember_token','date_expiration_password'
     ];
+
+    protected $casts = [
+      'temporal' => 'boolean'
+    ];
+
+
 
     /**
      * The attributes that should be hidden for arrays.
@@ -27,7 +33,7 @@ class User extends Tatuco
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password','date_expiration_password'
     ];
 
     public function person()
