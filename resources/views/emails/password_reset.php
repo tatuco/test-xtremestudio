@@ -55,8 +55,8 @@
             <strong>Estimado usuario:</strong><br><br>
 
             Debe ingresar una contraseña que tenga como mínimo 8 caracteres numéricos. <br><br>
-            Este enlace funciona para restablecer su contraseña una sola vez. <br><br>
-            Este enlace tiene una vigencia de 12 horas. Si dentro de este tiempo no ingresa una nueva contraseña, debe repetir el proceso de restablecimiento de contraseña en el sistema YoPlanifico <?php echo env("URL_FRONTEND"); ?>
+            Este mensaje funciona para restablecer su contraseña una sola vez. <br><br>
+            Esta contraseña tiene una vigencia de 12 horas. Si dentro de este tiempo no ingresa una nueva contraseña, debe repetir el proceso de restablecimiento de contraseña en el sistema YoPlanifico <?php echo env("URL_FRONTEND"); ?>
             <br><br>
 
             Usted ha solicitado el restablecimiento de su contraseña en YoPlanifico. Inicie sesión en el sistema YoPlanifico y automaticamente el sistema habilitara una ventana para ingresar la nueva contraseña<br><br>
