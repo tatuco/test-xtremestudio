@@ -36,10 +36,9 @@ class User extends Tatuco
         'password','date_expiration_password'
     ];
 
-    public function person()
+    public function account()
     {
-        return $this->belongsToMany('App\Models\Person');
-       // return $this->belongsToMany('App\Models\Person', 'people_user', 'user_id', 'people_id');
+        return $this->belongsTo(Account::class, 'account_id', 'id');
     }
 
     public function sendPasswordResetNotification($token)

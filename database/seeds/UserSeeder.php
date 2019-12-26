@@ -11,24 +11,19 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-      /*  DB::table('users')->insert([
-            'name' => "Carlos Gomez",
-            'email' => 'Carlosgomez@mcentinela.cl',
-            'password' => bcrypt('123456'),
-            'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
-        ]);*/
         DB::table('users')->insert([
-            'name' => "Carlos Gomez",
-            'email' => 'cgomezgal@mineracentinela.cl',
+            'name' => "Luis Ramirez",
+            'email' => 'developer1@plazfer.cl',
+            'account_id' => 1,
             'password' => bcrypt('123456'),
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
 
         DB::table('users')->insert([
-            'name' => "Admin M-Centinela",
-            'email' => 'admin@mcentinela.cl',
+            'name' => "Laura Chacon",
+            'email' => 'developer2@plazfer.cl',
+            'account_id' => 1,
             'password' => bcrypt('123456'),
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -37,14 +32,16 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => "Miguel plaza",
             'email' => 'miguel.plaza@plazfer.cl',
+            'account_id' => 1,
             'password' => bcrypt('123456'),
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
 
           DB::table('users')->insert([
-            'name' => "Ysrael Mendez",
-            'email' => 'ysrael.mendez@plazfer.cl',
+            'name' => "Javier Orellana",
+            'email' => 'javier.orellana@plazfer.cl',
+            'account_id' => 1,
             'password' => bcrypt('123456'),
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -53,6 +50,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => "Sysadmin",
             'email' => 'sysadmin@plazfer.cl',
+            'account_id' => 1,
             'password' => bcrypt('123456'),
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime

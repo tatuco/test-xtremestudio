@@ -174,4 +174,6 @@ class TatucoModel extends Model
         $carbon = new Carbon($value);
         return $carbon->subHours(5)->format('Y-m-d h:ia');
     }
+
+
 }

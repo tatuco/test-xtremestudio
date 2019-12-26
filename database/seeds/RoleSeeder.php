@@ -15,6 +15,7 @@ class RoleSeeder extends Seeder
             'name'=> 'sysadmin',
             'slug'=>'sysadmin',
             'description' => 'root of the system',
+            'account_id' => 1,
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
@@ -25,13 +26,14 @@ class RoleSeeder extends Seeder
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
-   
+
 
          DB::table('roles')->insert([
             'name'=> 'admin',
             'slug'=>'admin',
             'description' => 'system administrator',
-            'created_at'=> new DateTime,
+             'account_id' => 1,
+             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
 
@@ -45,6 +47,7 @@ class RoleSeeder extends Seeder
          DB::table('roles')->insert([
             'name'=> 'operador',
             'slug'=>'operator',
+             'account_id' => 1,
             'description' => 'system operator',
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
@@ -62,7 +65,8 @@ class RoleSeeder extends Seeder
             'slug'=>'guest',
             'description' => 'public user of the system',
             'created_at'=> new DateTime,
-            'updated_at'=> new DateTime
+            'updated_at'=> new DateTime,
+            'account_id' => 1
         ]);
 
         DB::table('role_user')->insert([

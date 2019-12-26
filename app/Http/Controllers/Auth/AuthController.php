@@ -19,8 +19,8 @@ class AuthController extends BaseController
 {
     public function login(Request $request)
     {
-       // $_credenciales = $request->only('email','password');
-        if (!$request->has('api') || !$request->api) {
+        $credenciales = $request->only('email','password');
+  /*      if (!$request->has('api') || !$request->api) {
             $password = Utils::cryptoJsAesDecrypt("prumplunch", $request->password);
         } else {
             $password = $request->password;
@@ -28,7 +28,7 @@ class AuthController extends BaseController
          $credenciales = [
              "email" => $request->email,
              "password" => $password
-            ];
+            ];*/
         try {
            if(!$token = \JWTAuth::attempt($credenciales)){
                 return response()->json([

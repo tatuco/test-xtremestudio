@@ -11,11 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call(ParamSeeder::class);
+      //   $this->call(ParamSeeder::class);
+        $this->call(AccountSeeder::class);
          $this->call(UserSeeder::class);
          $this->call(RoleSeeder::class);
          $this->call(PermissionSeeder::class);
-         $this->call(CompanySeeder::class);
+
+        /* $this->call(CompanySeeder::class);
          $this->call(PersonSeeder::class);
          $this->call(ContractsSeeder::class);
          $this->call(PositionCompanySeeder::class);
@@ -32,7 +34,7 @@ class DatabaseSeeder extends Seeder
          $this->call(ClasificationSeeder::class);
       //   $this->call(PeopleCompanySeeder::class);
         // $this->call(AccessSeeder::class);
-        // $this->call(AccessDetailsSeeder::class);
+        // $this->call(AccessDetailsSeeder::class);*/
 
     }
 }

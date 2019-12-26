@@ -32,21 +32,11 @@ class UserService extends TatucoService
                 $user->role_name = $roles[0]->name;
                 $user->role_slug = $roles[0]->slug;
             }
-            if(count($person) > 0) {
-                $user->person_id = $person[0]->id;
-                $user->person_thumbprint = $person[0]->thumbprint;
-                $user->person_name = $person[0]->name;
-                $user->person_last_name = $person[0]->last_name;
-                $user->person_date_birth = $person[0]->date_birth;
-                $user->person_civil_status = $person[0]->civil_status;
-                $user->person_sex = $person[0]->sex;
-                $user->person_address = $person[0]->address;
-                $user->person_email = $person[0]->email;
-            }
+
             unset($user->roles);
-            unset($user->person);
+
         }
-       return $users;
+       return ['data' => $users];
 
     }
 

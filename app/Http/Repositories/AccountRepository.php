@@ -9,14 +9,14 @@
 namespace App\Http\Repositories;
 
 use App\Core\TatucoRepository;
-use App\Models\FileType;
+use App\Models\Account;
 
-class FileTypeRepository extends TatucoRepository
+class AccountRepository extends TatucoRepository
 {
 
     public function __construct()
     {
-        parent::__construct(new FileType());
+        parent::__construct(new Account());
     }
 
 }
