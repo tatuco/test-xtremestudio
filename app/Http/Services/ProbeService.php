@@ -96,7 +96,7 @@ class ProbeService extends TatucoService
                     $i = 1;
                 }
 
-                $it->boxes->where("deleted", false);
+                $it->boxes = Probe::cajas($it->id);
                 if ($it->id == $request->id)
                 {
                     $it->active = true;

@@ -9,6 +9,7 @@
 namespace App\Http\Repositories;
 
 use App\Core\TatucoRepository;
+use App\Models\Probe;
 use App\Models\Project;
 
 class ProjectRepository extends TatucoRepository
@@ -30,7 +31,8 @@ class ProjectRepository extends TatucoRepository
         foreach ($query as $item) {
             $item->probes->where("deleted", false);
             foreach ($item->probes as $it) {
-                $it->boxes->where("deleted", false);
+                $it->boxes = Probe::cajas($it->id);
+             //   $it->boxes->where("deleted", false);
             }
         }
 

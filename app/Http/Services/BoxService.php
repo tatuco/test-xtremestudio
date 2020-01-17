@@ -45,7 +45,7 @@ class BoxService extends TatucoService
             $item->active = true;
             $item->probes->where("deleted", false);
             foreach ($item->probes as $it) {
-                $it->boxes->where("deleted", false);
+                $it->boxes = Probe::cajas($it->id);
                 if ($it->id == $request->probe_id) {
                     $it->active = true;
                 }
@@ -79,8 +79,8 @@ class BoxService extends TatucoService
             $project->probes->where("deleted", false);
             $project->active = true;
             foreach ($project->probes as $it) {
-                $it->boxes->where("deleted", false);
-                if ($it->id == $request->id)
+                $it->boxes = Probe::cajas($it->id);
+                if ($it->id == $probe->id)
                 {
                     $it->active = true;
                 }
