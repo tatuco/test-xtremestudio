@@ -19,6 +19,7 @@ class TatucoModel extends Model
     protected $images;
     protected $modelo;
     protected $fillable = ['*'];
+    protected $casts = ["deleted" => 'boolean'];
 
  /*   public function setImageAttribute($value)
     {

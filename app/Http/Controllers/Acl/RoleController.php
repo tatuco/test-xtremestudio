@@ -25,42 +25,50 @@ class RoleController extends TatucoController
 
     public function update($id, Request $request)
     {
-      return $this->service->update($id, $request);
+        return $this->service->update($id, $request);
     }
 
     public function assignedPermission(Request $request)
     {
-        try{
-            $roleId=$request->json(['role']);
-            $permissionId=$request->json(['permission']);
-            $rol=Role::find($roleId);
+        try {
+            $roleId = $request->json(['role']);
+            $permissionId = $request->json(['permission']);
+            $rol = Role::find($roleId);
             $rol->assignPermission($permissionId);
-          if($rol->save()){
+            if ($rol->save()) {
                 Log::info('Permiso Asignado');
                 return response()->json([
                     'status' => true,
                     'message' => 'Permiso Asignado '
                 ], 200);
             }
-        }catch (Exception $e){
+        } catch (Exception $e) {
             Log::critical("Error, archivo del peo: {$e->getFile()}, linea del peo: {$e->getLine()}, el peo: {$e->getMessage()}");
-            return response()->json(["msj"=>"Error de servidor"], 500);
+            return response()->json(["msj" => "Error de servidor"], 500);
         }
     }
+
     public function revokePermission($idRole, $idPermission)
     {
-        try{
+        try {
             $role = Role::find($idRole);
-            if($role->revokePermission($idPermission)){
+            if ($role->revokePermission($idPermission)) {
                 Log::info('Permiso Revocado');
                 return response()->json([
                     'status' => true,
                     'msj' => 'Permiso Revocado '
                 ], 200);
             }
-        }catch (Exception $e){
+        } catch (Exception $e) {
             Log::critical("Error, archivo del peo: {$e->getFile()}, linea del peo: {$e->getLine()}, el peo: {$e->getMessage()}");
-            return response()->json(["msj"=>"Error de servidor"], 500);
+            return response()->json(["msj" => "Error de servidor"], 500);
         }
+    }
+
+    public function selectRole(Request $request)
+    {
+        return response()->json([
+            "data" => Role::select(["id", "name"])->get()
+        ]);
     }
 }

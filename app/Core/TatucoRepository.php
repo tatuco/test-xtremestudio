@@ -31,7 +31,7 @@ class TatucoRepository
               else
                   $query = $this->model::doWhere($request)->get();
 
-        return $query;
+        return ["data" => $query];
     }
 
     public function getPag($request)
@@ -58,7 +58,7 @@ class TatucoRepository
     {
         $item = $this->model::find($id);
 
-        return $item;
+        return ["data"=>$item];
     }
 
     public function store($data)
@@ -68,7 +68,7 @@ class TatucoRepository
         }
         $new = $this->model::create($this->data);
 
-        return $new;
+        return ["data"=> $new];
     }
 
     public function update($id, $data)

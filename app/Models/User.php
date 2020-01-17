@@ -22,7 +22,8 @@ class User extends Tatuco
     ];
 
     protected $casts = [
-      'temporal' => 'boolean'
+      'temporal' => 'boolean',
+        'deleted' => 'boolean'
     ];
 
 

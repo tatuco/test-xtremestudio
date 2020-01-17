@@ -49,7 +49,16 @@ class AuthController extends BaseController
             'status' => true,
             'token' => $token,
             'type' => 'Bearer',
-            'user' => $user,
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'accountId' => $user->account->id,
+                'accountName' => $user->account->name,
+                'accountLogo' => $user->account->logo,
+                'accountConfig' => $user->account->config,
+                'role' => $user->roles
+            ],
             'temporal' => $user->temporal
         ], 200);
     }

@@ -10,7 +10,8 @@ class Account extends TatucoModel
     protected $guarded = ['id'];
 
     protected $casts = [
-        'config' => 'array'
+        'config' => 'array',
+        "deleted" => 'boolean'
     ];
 /*
     public function setConfigAttribute($value)

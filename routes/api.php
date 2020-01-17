@@ -45,16 +45,17 @@ Route::group([
         Route::post('confirmer/workpack', 'FileController@confirmedWorkpack');
         Route::get('download/{file}', 'FileController@download');
         Route::resource('user', 'Acl\UserController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-        Route::resource('params', 'Acl\ParamController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-        Route::resource('roles', 'Acl\RoleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-        Route::resource('permissions', 'Acl\PermissionController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-        Route::resource('permissions/roles', 'Acl\RoleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-        Route::post('users/role', 'Acl\UserController@assignedRole');
-        Route::get('users/role/{user}/{role}', 'Acl\UserController@revokeRole');
-        Route::post('roles/permission', 'Acl\RoleController@assignedPermission');
-        Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
-        Route::get('roles/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
-        Route::get('detentions/list', 'DetentionController@list');
+        Route::resource('param', 'Acl\ParamController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+        Route::resource('acl/role', 'Acl\RoleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+        Route::resource('acl/permission', 'Acl\PermissionController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+        Route::resource('acl/permission/role', 'Acl\RoleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+        Route::post('acl/user/role', 'Acl\UserController@assignedRole');
+        Route::get('acl/select/role', 'Acl\RoleController@selectRole');
+        Route::get('acl/user/role/{user}/{role}', 'Acl\UserController@revokeRole');
+        Route::post('acl/role/permission', 'Acl\RoleController@assignedPermission');
+        Route::get('acl/role/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
+        Route::get('acl/role/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
+        Route::resource('account', 'AccountController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 
 
         Route::group(['prefix' => 'select'], function () {
@@ -83,28 +84,10 @@ Route::group([
         Route::delete('file/destroy/{id}/{event}', 'FileController@fileDestroy');
         Route::get('detentions/clasification', 'DetentionController@clasifications');
 
-Route::resource('companies', 'CompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('people', 'PersonController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('employees', 'EmployeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('accesses', 'AccessController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('contracts', 'ContractsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('peoplecompanies', 'PeopleCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('positioncompanies', 'PositionCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('turns', 'TurnController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('requirementscompanies', 'RequirementsCompanyController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('requirementspeoples', 'RequirementsPeopleController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('accessdetails', 'AccessDetailsController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('employes', 'EmployeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('subevents', 'SubEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('events', 'EventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('detentions', 'DetentionController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('files', 'FileController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('statusevents', 'StatusEventController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
-Route::resource('notices', 'NoticeController', ['only' => ['store', 'update', 'destroy']]);
-Route::resource('clasifications', 'ClasificationController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+    Route::resource('projects', 'ProjectController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+    Route::resource('probes', 'ProbeController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+    Route::resource('boxes', 'BoxController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 
 });
 
-/** routes para Account **/
 
-Route::resource('accounts', 'AccountController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
