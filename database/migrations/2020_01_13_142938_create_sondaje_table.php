@@ -19,7 +19,7 @@ class CreatesondajeTable extends Migration
             $table->string('description')->nullable();
             $table->boolean('deleted')->default(false);
             $table->integer('project_id');
-            $table->foreign('project_id')->references('id')->on('proyects');
+            $table->foreign('project_id')->references('id')->on('projects');
             $table->integer('account_id');
             $table->foreign('account_id')->references('id')->on('accounts');
             $table->timestamps();
