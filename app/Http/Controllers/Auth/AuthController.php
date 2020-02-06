@@ -29,6 +29,7 @@ class AuthController extends BaseController
              "email" => $request->email,
              "password" => $password
             ];*/
+//        $login = User::where("email", $credenciales["email"])->first();
         try {
            if(!$token = \JWTAuth::attempt($credenciales)){
                 return response()->json([
@@ -43,8 +44,6 @@ class AuthController extends BaseController
             ], 500);
         }
         $user = \JWTAuth::toUser($token);
-        $user->roles = $user->getRoles();
-
         return response()->json([
             'status' => true,
             'token' => $token,
@@ -56,10 +55,8 @@ class AuthController extends BaseController
                 'accountId' => $user->account->id,
                 'accountName' => $user->account->name,
                 'accountLogo' => $user->account->logo,
-                'accountConfig' => $user->account->config,
-                'role' => $user->roles
+                'accountConfig' => $user->account->config
             ],
-            'temporal' => $user->temporal
         ], 200);
     }
 
@@ -89,10 +86,12 @@ class AuthController extends BaseController
     public function validate()
     {
         try{
-            if(!$user = \JWTAuth::parseToken()->authenticate())
+            if(!$user = \JWTAuth::parseToken()->authenticate()){
                 return response()->json([
                     'msj' => 'Usuario no Encontrado'
                 ], 404);
+            }
+
         }catch (\Tymon\JWTAuth\Exceptions\TokenExpiredException $e){
             return response()->json([
                 'msj' => 'Usuario no Encontrado'

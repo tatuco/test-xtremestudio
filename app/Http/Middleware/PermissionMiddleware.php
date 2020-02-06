@@ -21,11 +21,12 @@ class PermissionMiddleware
     public function handle($request, Closure $next, $permissions)
     {
         if (1==1) {
+
             if (!JWTAuth::parseToken()->authenticate()->can($permissions?:$this->permissions)) {
              //   if ($request->ajax()) {
                     return response()->json([
                         'status'=> false,
-                        'message' => 'no tienes permiso para => '.$permissions
+                        'message' => 'no tienes permiso para => '.$permissions,
                     ],403);
                // }
             }

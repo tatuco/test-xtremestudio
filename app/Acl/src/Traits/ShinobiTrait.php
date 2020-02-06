@@ -42,6 +42,7 @@ trait ShinobiTrait
      */
     public function getRoles()
     {
+        echo $this->id;
         if (!is_null($this->roles)) {
             return $this->roles->pluck('slug')->all();
         }
@@ -178,6 +179,7 @@ trait ShinobiTrait
      */
     public function can($permission, $arguments = [])
     {
+        $per = [];
         foreach ($this->roles as $role) {
             if ($role->special === 'no-access') {
                 return false;
@@ -187,8 +189,8 @@ trait ShinobiTrait
                 return true;
             }
         }
-
         return $this->hasAllPermissions($permission, $this->getPermissions());
+    //   return $this->hasAllPermissions($permission, $per);
     }
 
     /**

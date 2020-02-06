@@ -21,24 +21,24 @@ class UserService extends TatucoService
         parent::__construct(new UserRepository());
     }
 
-    public function index($request)
-    {
-        $users = parent::index($request);
-        foreach ($users as $user) {
-            $roles = $user->roles;
-            $person = $user->person;
-            if (count($roles) > 0) {
-                $user->role_id = $roles[0]->id;
-                $user->role_name = $roles[0]->name;
-                $user->role_slug = $roles[0]->slug;
-            }
-
-            unset($user->roles);
-
-        }
-       return ['data' => $users];
-
-    }
+//    public function index($request)
+//    {
+//        $users = parent::index($request);
+//        foreach ($users as $user) {
+//            $roles = $user->roles;
+//            $person = $user->person;
+//            if (count($roles) > 0) {
+//                $user->role_id = $roles[0]->id;
+//                $user->role_name = $roles[0]->name;
+//                $user->role_slug = $roles[0]->slug;
+//            }
+//
+//            unset($user->roles);
+//
+//        }
+//       return ['data' => $users];
+//
+//    }
 
     public function store(Request $request){
         try {
