@@ -11,6 +11,7 @@ use App\Traits\doWhereTrait;
 use Carbon\Carbon;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 
 class User extends Authenticatable
@@ -27,7 +28,7 @@ class User extends Authenticatable
     protected $modelo;
     protected $casts = ["deleted" => 'boolean'];
     protected $fillable = [
-        'name', 'email', 'password', 'remember_token','date_expiration_password'
+        'name', 'email', 'password', 'remember_token','date_expiration_password',"account_id", "deleted"
     ];
 
 
@@ -52,12 +53,18 @@ class User extends Authenticatable
     }
 
     public function scopeDoWhere($query, $request) {
-
+        $accountId = env("ACCOUNT_ID", 1);
+        $user = JWTAuth::parseToken()->authenticate();
         $list = QueryBuilder::for(static::class)
             ->select($this->getColumns($request))
             ->doJoin($this->getJoins($request))
             ->doWhere($this->getWhere($request))
+            ->where("deleted", false)
             ->sort($this->getSort($request));
+        if ($user->account_id != $accountId) {
+            $list->where("account_id", $user->account_id);
+        }
+
 
         if(isset($_GET['limit']))
         {

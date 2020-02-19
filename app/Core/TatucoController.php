@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Validator;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class TatucoController extends BaseController
 {
@@ -48,6 +49,11 @@ class TatucoController extends BaseController
 
     public function store(Request $request)
     {
+     /*   $accountId = env("ACCOUNT_ID", 1);
+        $user = JWTAuth::parseToken()->authenticate();
+        if ($user->account_id == $accountId) {
+            $request->merge(["account_id"=> $accountId]);
+        }*/
         $validator = Validator::make($request->all(), array_merge($this->validateStore, $this->validateDefault));
         if ($validator->fails()) {
             return response()->json([

@@ -102,9 +102,9 @@ class TatucoService
             if($this->object = $this->repository->store($request)){
               //  DB::commit();
                 return response()->json([
-                    "status" => 201,
+                    "status" => 200,
                     $this->name => $this->object],
-                    201);
+                    200)->setStatusCode(200, "Registro Creado");
             }
 
         }catch (\Exception $e){

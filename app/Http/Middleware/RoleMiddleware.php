@@ -17,16 +17,18 @@ class RoleMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $role)
+    public function handle($request, Closure $next, ...$roles)
     {
        // $user = JWTAuth::parseToken()->authenticate();
-        if (!JWTAuth::parseToken()->authenticate()->isRole($role)) {
 
-              //if ($request->ajax()) {
-                  return response()->json([
-                      "msj" => "Permiso Denegado",
-                      "description" => "necesitas rol de: ".$role
-                  ],401);
+            foreach($roles as $role) {
+                // Check if user has the role This check will depend on how your roles are set up
+                if (JWTAuth::parseToken()->authenticate()->isRole($role) || JWTAuth::parseToken()->authenticate()->isRole($role) == "sysadmin") {
+                    return $next($request);
+                }
+
+            //if ($request->ajax()) {
+
               //}
 
 
@@ -35,8 +37,11 @@ class RoleMiddleware
                 "description" => "necesitas rol de: ".$role
             ],401);*/
         }
-
-        return $next($request);
+        return response()->json([
+            "msj" => "Permiso Denegado",
+            "description" => "necesitas rol de: ".$role,
+            "roles" => $roles
+        ],401);
        // Log::info($user);
       /*  echo $user->isRole($role);
         if($user->isRole($role)){

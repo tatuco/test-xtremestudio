@@ -42,9 +42,17 @@ trait ShinobiTrait
      */
     public function getRoles()
     {
-        echo $this->id;
+       // echo $this->id;
         if (!is_null($this->roles)) {
             return $this->roles->pluck('slug')->all();
+        }
+    }
+
+    public function getObjectRoles()
+    {
+        // echo $this->id;
+        if (!is_null($this->roles)) {
+            return $this->roles->pluck('slug','id')->all();
         }
     }
 

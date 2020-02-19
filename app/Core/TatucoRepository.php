@@ -13,6 +13,7 @@ use App\Models\Space;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class TatucoRepository
 {
@@ -26,10 +27,21 @@ class TatucoRepository
 
     public function index($request = null)
     {
-              if(isset($_GET['paginate']))
-                   $query = $this->model::doWhere($request)->paginate($_GET['paginate']);
-              else
-                  $query = $this->model::doWhere($request)->get();
+      /*  $accountId = env("ACCOUNT_ID", 1);
+        $user = JWTAuth::parseToken()->authenticate();
+        if ($user->account_id == $accountId) {*/
+            if(isset($_GET['paginate']))
+                $query = $this->model::doWhere($request)->paginate($_GET['paginate']);
+            else
+                $query = $this->model::doWhere($request)->get();
+   /*     } else {
+            if(isset($_GET['paginate']))
+                $query = $this->model::doWhere($request)->where("account_id", $user->account_id)->paginate($_GET['paginate']);
+            else
+                $query = $this->model::doWhere($request)->where("account_id", $user->account_id)->get();
+        }*/
+        //$where = '?where=[{"op":"eq","field":"account_id","value":1}]';
+
 
         return ["data" => $query];
     }
@@ -58,11 +70,13 @@ class TatucoRepository
     {
         $item = $this->model::find($id);
 
-        return ["data"=>$item];
+        return $item;
     }
 
     public function store($data)
     {
+
+
         if (count($this->data) == 0) {
             $this->data = $data->all();
         }

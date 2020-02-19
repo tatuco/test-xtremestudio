@@ -16,7 +16,8 @@ class BoxController extends TatucoController
         'probe_id' => 'required|string',
         'account_id' => 'required|integer',
         'box' => 'required|integer',
-        'project_id' => 'required|integer'
+        'project_id' => 'required|integer',
+        'rack' => 'required|integer'
     ];
 
     public function __construct()

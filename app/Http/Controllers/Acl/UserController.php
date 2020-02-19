@@ -28,8 +28,8 @@ class UserController extends TatucoController
 
     public function update($id, Request $request)
     {
-        if ($request->json(['role'])) {
-            $this->service->assignedRole($id, $request->json(['role']));
+        if ($request->json(['roleId'])) {
+            $this->service->assignedRole($id, $request->json(['roleId']));
         }
         return parent::update($id, $request);
     }

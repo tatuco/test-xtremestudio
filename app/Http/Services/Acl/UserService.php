@@ -46,7 +46,7 @@ class UserService extends TatucoService
             $decrypted = Utils::cryptoJsAesDecrypt("prumplunch", $request->password);
             $pass = bcrypt($decrypted);
             $request->merge(['password' => $pass]);
-
+            //return $request->all();
             $user = User::create($request->all());
 
             if ($request->json(['role'])) {
@@ -54,7 +54,9 @@ class UserService extends TatucoService
             }
             $user->roles = $user->getRoles();
             //DB::commit();
-            return $user;
+            return response()->json([
+                $user
+            ], 200);
           //return $decrypted;
         } catch (\Exception $e) {
             //DB::rollBack();

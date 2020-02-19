@@ -5,9 +5,6 @@ $interval = $datetime1->diff($datetime2);
 echo ($datetime1->format('W')) . ' semana actual';
 */
 
+$string = "{\"colores\":{\"app_main_menu\":\"gradient-man-of-steel\"}}";
 
-$longitud = 8;
-
-$pass = substr(MD5(rand(5, 100)), 0, $longitud);
-
-echo $pass;
+echo json_decode($string);

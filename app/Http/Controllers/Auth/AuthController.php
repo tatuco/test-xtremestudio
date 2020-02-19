@@ -44,6 +44,7 @@ class AuthController extends BaseController
             ], 500);
         }
         $user = \JWTAuth::toUser($token);
+        $role = count($roles = $user->getRoles()) > 0 ? $roles[0] : "";
         return response()->json([
             'status' => true,
             'token' => $token,
@@ -55,7 +56,8 @@ class AuthController extends BaseController
                 'accountId' => $user->account->id,
                 'accountName' => $user->account->name,
                 'accountLogo' => $user->account->logo,
-                'accountConfig' => $user->account->config
+                'accountConfig' => $user->account->config,
+                'role' => $role
             ],
         ], 200);
     }

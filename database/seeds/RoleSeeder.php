@@ -93,6 +93,19 @@ class RoleSeeder extends Seeder
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
+
+        DB::table('role_user')->insert([
+            'user_id'=> 6,
+            'role_id'=> 2,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
+        DB::table('role_user')->insert([
+            'user_id'=> 7,
+            'role_id'=> 2,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime
+        ]);
     }
 
 }

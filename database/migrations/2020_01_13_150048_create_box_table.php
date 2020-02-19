@@ -23,6 +23,7 @@ class CreateboxTable extends Migration
             $table->integer('width');
             $table->integer('long');
             $table->boolean('deleted')->default(false);
+            $table->integer('rack');
             $table->integer('account_id');
             $table->foreign('account_id')->references('id')->on('accounts');
             $table->string('probe_id');

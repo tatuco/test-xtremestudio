@@ -39,6 +39,7 @@ class BoxService extends TatucoService
             $box->probe_id = $request->probe_id;
             $box->account_id = $request->account_id;
             $box->box = $request->box;
+            $box->rack = $request->rack;
             $box->save();
 
             $item = Project::find($request->project_id);

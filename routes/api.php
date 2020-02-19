@@ -40,51 +40,58 @@ Route::get('/notices', 'NoticeController@index');
 Route::group([
     'middleware' => ['jwt.auth']
     ], function (){
-        Route::post('email', 'FileController@email');
-        Route::get('email/{id}/{user}', 'FileController@detentionEmail');
-        Route::get('download/{file}', 'FileController@download');
 
-        Route::post('acl/user/role', 'Acl\UserController@assignedRole')->middleware('permission:assigned.role');
-        Route::get('acl/select/role', 'Acl\RoleController@selectRole')->middleware('permission:index.roles');
-        Route::get('acl/select/permission', 'Acl\PermissionController@select')->middleware('permission:index.permissions');
-        Route::get('acl/user/role/{user}/{role}', 'Acl\UserController@revokeRole')->middleware('permission:revoke.role');
-        Route::post('acl/role/permission', 'Acl\RoleController@assignedPermission')->middleware('permission:assigned.permission');
-        Route::get('acl/role/permission/{role}/{permission}', 'Acl\RoleController@revokePermission')->middleware('permission:revoke.permission');
 
-        Route::get('acl/role', 'Acl\UserController@index')->middleware('permission:index.roles');
-        Route::post('acl/role', 'Acl\UserController@index')->middleware('permission:store.roles');
-        Route::put('acl/role/{id}', 'Acl\UserController@index')->middleware('permission:update.roles');
-        Route::delete('acl/role/{id}', 'Acl\UserController@index')->middleware('permission:delete.roles');
+    Route::group(['middleware' => ['role:sysadmin']], function (){
 
-        Route::get('acl/permission', 'Acl\UserController@index')->middleware('permission:index.permissions');
-        Route::post('acl/permission', 'Acl\UserController@index')->middleware('permission:store.permissions');
-        Route::put('acl/permission/{id}', 'Acl\UserController@index')->middleware('permission:update.permissions');
-        Route::delete('acl/permission/{id}', 'Acl\UserController@index')->middleware('permission:delete.permissions');
+        Route::post('acl/user/role', 'Acl\UserController@assignedRole');
+        Route::get('acl/select/role', 'Acl\RoleController@selectRole');
+        Route::get('acl/select/permission', 'Acl\PermissionController@select');
+        Route::get('acl/user/role/{user}/{role}', 'Acl\UserController@revokeRole');
+        Route::post('acl/role/permission', 'Acl\RoleController@assignedPermission');
+        Route::get('acl/role/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
 
-        Route::get('user', 'Acl\UserController@index')->middleware('permission:index.users');
-        Route::post('user', 'Acl\UserController@index')->middleware('permission:store.users');
-        Route::put('user/{id}', 'Acl\UserController@index')->middleware('permission:update.users');
-        Route::delete('user/{id}', 'Acl\UserController@index')->middleware('permission:delete.users');
+        Route::get('acl/role', 'Acl\RoleController@index');
+        Route::post('acl/role', 'Acl\RoleController@store');
+        Route::put('acl/role/{id}', 'Acl\RoleController@update');
+        Route::delete('acl/role/{id}', 'Acl\RoleController@destroy');
 
-        Route::get('project', 'ProjectController@index')->middleware('permission:index.projects');
-        Route::post('project', 'ProjectController@index')->middleware('permission:store.projects');
-        Route::put('project/{id}', 'ProjectController@index')->middleware('permission:update.projects');
-        Route::delete('project/{id}', 'ProjectController@index')->middleware('permission:delete.projects');
+        Route::get('acl/permission', 'Acl\PermissionController@index');
+        Route::post('acl/permission', 'Acl\PermissionController@store');
+        Route::put('acl/permission/{id}', 'Acl\PermissionController@update');
+        Route::delete('acl/permission/{id}', 'Acl\PermissionController@destroy');
 
-        Route::get('account', 'AccountController@index')->middleware('permission:index.accounts');
-        Route::post('account', 'AccountController@index')->middleware('permission:store.accounts');
-        Route::put('account/{id}', 'AccountController@index')->middleware('permission:update.accounts');
-        Route::delete('account/{id}', 'AccountController@index')->middleware('permission:delete.accounts');
+        Route::get('accounts', 'AccountController@index');
+        Route::post('accounts', 'AccountController@store');
+        Route::put('accounts/{id}', 'AccountController@update');
+        Route::delete('accounts/{id}', 'AccountController@destroy');
+    });
 
-        Route::get('probe', 'ProbeController@index')->middleware('permission:index.probes');
-        Route::post('probe', 'ProbeController@index')->middleware('permission:store.probes');
-        Route::put('probe/{id}', 'ProbeController@index')->middleware('permission:update.probes');
-        Route::delete('probe/{id}', 'ProbeController@index')->middleware('permission:delete.probes');
+    Route::group(['middleware' => ['role:admin,sysadmin']], function (){
+        Route::get('users', 'Acl\UserController@index');
+        Route::post('users', 'Acl\UserController@store');
+        Route::put('users/{id}', 'Acl\UserController@update');
+        Route::delete('users/{id}', 'Acl\UserController@destroy');
 
-        Route::get('box', 'Acl\UserController@index')->middleware('permission:index.boxes');
-        Route::post('box', 'Acl\UserController@index')->middleware('permission:store.boxes');
-        Route::put('box/{id}', 'Acl\UserController@index')->middleware('permission:update.boxes');
-        Route::delete('box/{id}', 'Acl\UserController@index')->middleware('permission:delete.boxes');
+        Route::post('projects', 'ProjectController@store');
+        Route::put('projects/{id}', 'ProjectController@update');
+        Route::delete('projects/{id}', 'ProjectController@destroy');
+
+        Route::post('probes', 'ProbeController@store');
+        Route::put('probes/{id}', 'ProbeController@update');
+        Route::delete('probes/{id}', 'ProbeController@destroy');
+
+        Route::post('boxes', 'Acl\UserController@store');
+        Route::put('boxes/{id}', 'Acl\UserController@update');
+        Route::delete('boxes/{id}', 'Acl\UserController@destroy');
+    });
+
+    Route::group(['middleware' => ['role:operator,admin,sysadmin']], function (){
+        Route::get('projects', 'ProjectController@index');
+        Route::get('probes', 'ProbeController@index');
+        Route::get('boxes', 'Acl\UserController@index');
+
+    });
 
 
         Route::group(['prefix' => 'select'], function () {
