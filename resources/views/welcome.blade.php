@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>API - Yo Planifico</title>
+        <title>API - Geosam</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-        <link rel="icon" type="image/x-icon" href="{{ secure_asset('images/favicon.ico') }}">
-        <link href="{{ secure_asset('css/welcome.css') }}" rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
+        <link href="{{ asset('css/welcome.css') }}" rel='stylesheet'>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -29,13 +29,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                  <img src="{{ secure_asset('images/logocentinela.png') }}"  class="centinela-img">
-                  <img src="{{ secure_asset('images/yoplanifico.png') }}"  class="yoplanifico-img">
+                  <img src="{{ asset('images/geosam.png') }}"  class="centinela-img">
+            <!---  <img src="{{ asset('images/logocentinela.png') }}"  class="yoplanifico-img"> --->
             </div>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://yoplanifico.cl">Geosam</a>
+                    <a href="https://geosam.cl">Geosam</a>
                     <a href="http://www.aminerals.cl/">Antofasta Minerals</a>
                     <a href="https://www.plazfer.cl/">Plazfer Spa</a>
                     <a href="https://github.com/plazfer">GitHub</a>

@@ -68,7 +68,6 @@ Route::group([
     });
 
     Route::group(['middleware' => ['role:admin,sysadmin']], function (){
-        Route::get('users', 'Acl\UserController@index');
         Route::post('users', 'Acl\UserController@store');
         Route::put('users/{id}', 'Acl\UserController@update');
         Route::delete('users/{id}', 'Acl\UserController@destroy');
@@ -90,6 +89,7 @@ Route::group([
         Route::get('projects', 'ProjectController@index');
         Route::get('probes', 'ProbeController@index');
         Route::get('boxes', 'Acl\UserController@index');
+        Route::get('users', 'Acl\UserController@index');
 
     });
 

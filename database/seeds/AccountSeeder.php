@@ -16,7 +16,7 @@ class AccountSeeder extends Seeder
             'code' => 'plazfer.cl',
             'logo' => 'https://yoplanificobucket.s3-sa-east-1.amazonaws.com/noticias/CZqbcZwdgKrsUXOSTHwHkDmfrZZ6qbuoC57Maimx.png',
 
-            'config' => '{"colores":{"app_logo":"#2e3d50","app_main_menu":"#2e3d50","app_navbar":"#fff","app_main_content":"#f5f7fa"}}',/*[
+            'config' => '{"colores":{"app_logo":"#2e3d50","app_main_menu":"bg-blue-dark","app_navbar":"#fff","app_main_content":"#f5f7fa"}}',/*[
                 'colores' => [
                     'app_logo' => "#2e3d50",
                     'app_main_menu' => "#3c4e62",
