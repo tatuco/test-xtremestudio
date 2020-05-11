@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateproyectTable extends Migration
+class CreateTypeRackTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateproyectTable extends Migration
      */
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('type_racks', function (Blueprint $table) {
             $table->integer('id', true);
-            $table->string('name')->unique()->nullable();
-            $table->string('description')->nullable();
+            $table->string('name');
+            $table->integer('quantity');
+            $table->integer('floors')->default(1);
             $table->boolean('deleted')->default(false);
             $table->integer('account_id');
             $table->foreign('account_id')->references('id')->on('accounts');
@@ -31,6 +32,6 @@ class CreateproyectTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proyects');
+        Schema::dropIfExists('type_racks');
     }
 }

@@ -46,5 +46,32 @@ class AccountSeeder extends Seeder
             'created_at'=> new DateTime,
             'updated_at'=> new DateTime
         ]);
+
+        DB::table('type_racks')->insert([
+            'name' => '26 Bandejas',
+            'quantity' => 26,
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime,
+            'account_id' => 1
+        ]);
+
+        DB::table('type_racks')->insert([
+            'name' => '33 Bandejas',
+            'quantity' => 33,
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime,
+            'account_id' => 1
+        ]);
+
+        DB::table('type_racks')->insert([
+            'name' => '4 Pisos * 50 Bandejas',
+            'quantity' => 200,
+            'deleted' => false,
+            'created_at'=> new DateTime,
+            'updated_at'=> new DateTime,
+            'account_id' => 1
+        ]);
     }
 }

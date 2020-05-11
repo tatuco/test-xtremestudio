@@ -1,10 +1,30 @@
-<?php
-/*$datetime1 = new DateTime('2019-06-07');
-$datetime2 = new DateTime('2019-06-30');
-$interval = $datetime1->diff($datetime2);
-echo ($datetime1->format('W')) . ' semana actual';
-*/
-
-$string = "{\"colores\":{\"app_main_menu\":\"gradient-man-of-steel\"}}";
-
-echo json_decode($string);
+CREATE TABLE public.circuito
+(
+id_circuito int IDENTITY(1,1) PRIMARY KEY,
+cm int,
+numero_circuito int,
+contactor character varchar DEFAULT '0',
+seccion_cable integer DEFAULT 0,
+fases text,
+conductor text,
+cable_tierra text,
+seccion_cable_tierra int DEFAULT 0,
+int_mag_existe varchar(2) DEFAULT '0',
+int_mag_corte_omnipolar text,
+int_mag_polos int DEFAULT 0,
+int_mag_tension int DEFAULT 0,
+int_mag_intensidad int DEFAULT 0,
+int_mag_poder_corte int DEFAULT 0,
+int_mag_rearmable varchar(2) DEFAULT '0',
+int_dif_existe varchar(2) DEFAULT '0',
+int_dif_polos int DEFAULT 0,
+int_dif_tension int DEFAULT 0,
+int_dif_intensidad int DEFAULT 0,
+int_dif_sensibilidad int DEFAULT 0,
+int_dif_rearmable varchar(2) DEFAULT '0',
+idl text,
+fecha_de_creacion datetime,
+usuario_backend_id_creacion int NOT NULL DEFAULT 0,
+fecha_de_modificacion datetime,
+usuario_backend_id_modificacion int NOT NULL DEFAULT 0,
+)

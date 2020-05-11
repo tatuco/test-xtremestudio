@@ -32,7 +32,7 @@ class UserRepository extends TatucoRepository
 
         $result = [];
         foreach ($query as $user) {
-            $user->person;
+          //  $user->person;
             $user->code = count($user->roles) > 0 ? $user->roles[0]->slug : "";
             $user->roleId = count($user->roles) > 0 ? $user->roles[0]->id : "";
             array_push($result, $user);

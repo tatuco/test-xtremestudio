@@ -71,4 +71,11 @@ class RoleController extends TatucoController
             "data" => Role::select(["id", "name"])->get()
         ]);
     }
+
+    public function selectRoleNotSysadmin(Request $request)
+    {
+        return response()->json([
+            "data" => Role::select(["id", "name"])->whereIn("slug", ["admin", "operator"])->get()
+        ]);
+    }
 }

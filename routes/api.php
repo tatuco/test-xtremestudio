@@ -38,18 +38,17 @@ Route::post('/password/change', 'Auth\PasswordResetController@changePassword');
 Route::get('/notices', 'NoticeController@index');
 
 Route::group([
-    'middleware' => ['jwt.auth']
+    //'middleware' => ['jwt.auth']
+    'middleware' => ['api']
     ], function (){
 
-
     Route::group(['middleware' => ['role:sysadmin']], function (){
-
         Route::post('acl/user/role', 'Acl\UserController@assignedRole');
-        Route::get('acl/select/role', 'Acl\RoleController@selectRole');
         Route::get('acl/select/permission', 'Acl\PermissionController@select');
         Route::get('acl/user/role/{user}/{role}', 'Acl\UserController@revokeRole');
         Route::post('acl/role/permission', 'Acl\RoleController@assignedPermission');
         Route::get('acl/role/permission/{role}/{permission}', 'Acl\RoleController@revokePermission');
+        Route::get('acl/select/role', 'Acl\RoleController@selectRole');
 
         Route::get('acl/role', 'Acl\RoleController@index');
         Route::post('acl/role', 'Acl\RoleController@store');
@@ -71,18 +70,27 @@ Route::group([
         Route::post('users', 'Acl\UserController@store');
         Route::put('users/{id}', 'Acl\UserController@update');
         Route::delete('users/{id}', 'Acl\UserController@destroy');
+        Route::get('users/select/role', 'Acl\RoleController@selectRoleNotSysadmin');
 
         Route::post('projects', 'ProjectController@store');
         Route::put('projects/{id}', 'ProjectController@update');
         Route::delete('projects/{id}', 'ProjectController@destroy');
 
-        Route::post('probes', 'ProbeController@store');
-        Route::put('probes/{id}', 'ProbeController@update');
-        Route::delete('probes/{id}', 'ProbeController@destroy');
+        Route::post('sectors', 'SectorController@store');
+        Route::put('sectors/{id}', 'SectorController@update');
+        Route::delete('sectors/{id}', 'SectorController@destroy');
+        Route::put('racks/box/{id}', 'SectorController@updateRack');
 
-        Route::post('boxes', 'Acl\UserController@store');
-        Route::put('boxes/{id}', 'Acl\UserController@update');
-        Route::delete('boxes/{id}', 'Acl\UserController@destroy');
+
+       // Route::post('boxes', 'Acl\UserController@store');
+       // Route::put('boxes/{id}', 'Acl\UserController@update');
+       // Route::delete('boxes/{id}', 'Acl\UserController@destroy');
+        Route::put('racks/import/{id}', 'SectorController@updateImportBoxes');
+        Route::put('sectors/references/{id}', 'SectorController@updateReferences');
+        Route::post('typeracks', 'TypeRackController@store');
+        Route::put('typeracks/{id}', 'TypeRackController@update');
+        Route::delete('typeracks/{id}', 'TypeRackController@destroy');
+
     });
 
     Route::group(['middleware' => ['role:operator,admin,sysadmin']], function (){
@@ -90,9 +98,10 @@ Route::group([
         Route::get('probes', 'ProbeController@index');
         Route::get('boxes', 'Acl\UserController@index');
         Route::get('users', 'Acl\UserController@index');
-
+        Route::get('sectors', 'SectorController@index');
+        Route::get('sectors/racks/{id}', 'SectorController@findRacks');
+        Route::get('typeracks', 'TypeRackController@index');
     });
-
 
         Route::group(['prefix' => 'select'], function () {
 
@@ -105,7 +114,8 @@ Route::group([
         Route::group(['prefix' => 'type'], function () {
 
         });
-
+  //  Route::resource('typeracks', 'TypeRackController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 });
+
 
 

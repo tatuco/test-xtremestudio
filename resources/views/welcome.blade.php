@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-        <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('images/plazfer.png') }}">
         <link href="{{ asset('css/welcome.css') }}" rel='stylesheet'>
     </head>
     <body>

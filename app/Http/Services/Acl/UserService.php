@@ -43,14 +43,14 @@ class UserService extends TatucoService
     public function store(Request $request){
         try {
            // DB::beginTransaction();
-            $decrypted = Utils::cryptoJsAesDecrypt("prumplunch", $request->password);
-            $pass = bcrypt($decrypted);
+           // $decrypted = Utils::cryptoJsAesDecrypt("prumplunch", $request->password);
+            $pass = bcrypt($request->password);
             $request->merge(['password' => $pass]);
             //return $request->all();
             $user = User::create($request->all());
 
-            if ($request->json(['role'])) {
-                $this->assignedRole($user->id, $request->json(['role']));
+            if ($request->json(['roleId'])) {
+                $this->assignedRole($user->id, $request->json(['roleId']));
             }
             $user->roles = $user->getRoles();
             //DB::commit();

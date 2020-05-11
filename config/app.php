@@ -175,13 +175,15 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        // Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         App\Acl\Src\ShinobiServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         App\Reports\src\ServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        Sichikawa\LaravelSendgridDriver\SendgridTransportServiceProvider::class
+        Sichikawa\LaravelSendgridDriver\SendgridTransportServiceProvider::class,
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
+        BaoPham\DynamoDb\DynamoDbServiceProvider::class,
 
     ],
 

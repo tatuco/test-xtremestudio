@@ -31,7 +31,7 @@ class AuthController extends BaseController
             ];*/
 //        $login = User::where("email", $credenciales["email"])->first();
         try {
-           if(!$token = \JWTAuth::attempt($credenciales)){
+           if(!$token = auth()->attempt($credenciales)){
                 return response()->json([
                     'message' => 'Datos Incorrectos. '
                 ], 401);
@@ -43,7 +43,7 @@ class AuthController extends BaseController
                 'message' => 'Error al intentar crear el token. Intente de nuevo'
             ], 500);
         }
-        $user = \JWTAuth::toUser($token);
+        $user = auth()->user();
         $role = count($roles = $user->getRoles()) > 0 ? $roles[0] : "";
         return response()->json([
             'status' => true,

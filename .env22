@@ -7,19 +7,35 @@ APP_URL=https://api.yoplanifico.cl
 LOG_CHANNEL=stack
 
 DB_CONNECTION=mysql
-DB_HOST=geosam.c2zizkozfdia.us-east-2.rds.amazonaws.com
+DB_HOST=34.95.239.49
 DB_PORT=3306
 DB_DATABASE=geosam
-DB_USERNAME=admin
-DB_PASSWORD=geosam2020plazfer
+DB_USERNAME=plazfer
+DB_PASSWORD=Geosam2020
+
+
+DB_CONNECTION_MONGO=mongodb
+DB_HOST_MONGO=34.95.198.136
+DB_PORT_MONGO=27017
+DB_DATABASE_MONGO=geosam
+DB_USERNAME_MONGO=Plazfer
+DB_PASSWORD_MONGO=geosam2020Plazfer
+
+
 
 DB_CONNECTION=mysql
-DB_HOST=yoplanifico.cz6jwagb0kpq.sa-east-1.rds.amazonaws.com
+DB_HOST=localhost
 DB_PORT=3306
-DB_DATABASE=ywpamjhaakbvmxdj
-DB_USERNAME=adminjavier
-DB_PASSWORD=WW9wbGFuaWZpY28yMDE5UkRT
+DB_DATABASE=geo
+DB_USERNAME=root
+DB_PASSWORD=
 
+DB_CONNECTION_MONGO=mongodb
+DB_HOST_MONGO=localhost
+DB_PORT_MONGO=27017
+DB_DATABASE_MONGO=geosam
+DB_USERNAME_MONGO=myServerAdmin
+DB_PASSWORD_MONGO=123456
 
 
 BROADCAST_DRIVER=log
