@@ -59,11 +59,6 @@ Route::group([
         Route::post('acl/permission', 'Acl\PermissionController@store');
         Route::put('acl/permission/{id}', 'Acl\PermissionController@update');
         Route::delete('acl/permission/{id}', 'Acl\PermissionController@destroy');
-
-        Route::get('accounts', 'AccountController@index');
-        Route::post('accounts', 'AccountController@store');
-        Route::put('accounts/{id}', 'AccountController@update');
-        Route::delete('accounts/{id}', 'AccountController@destroy');
     });
 
     Route::group(['middleware' => ['role:admin,sysadmin']], function (){
@@ -72,35 +67,10 @@ Route::group([
         Route::delete('users/{id}', 'Acl\UserController@destroy');
         Route::get('users/select/role', 'Acl\RoleController@selectRoleNotSysadmin');
 
-        Route::post('projects', 'ProjectController@store');
-        Route::put('projects/{id}', 'ProjectController@update');
-        Route::delete('projects/{id}', 'ProjectController@destroy');
-
-        Route::post('sectors', 'SectorController@store');
-        Route::put('sectors/{id}', 'SectorController@update');
-        Route::delete('sectors/{id}', 'SectorController@destroy');
-        Route::put('racks/box/{id}', 'SectorController@updateRack');
-
-
-       // Route::post('boxes', 'Acl\UserController@store');
-       // Route::put('boxes/{id}', 'Acl\UserController@update');
-       // Route::delete('boxes/{id}', 'Acl\UserController@destroy');
-        Route::put('racks/import/{id}', 'SectorController@updateImportBoxes');
-        Route::put('sectors/references/{id}', 'SectorController@updateReferences');
-        Route::post('typeracks', 'TypeRackController@store');
-        Route::put('typeracks/{id}', 'TypeRackController@update');
-        Route::delete('typeracks/{id}', 'TypeRackController@destroy');
-
     });
 
     Route::group(['middleware' => ['role:operator,admin,sysadmin']], function (){
-        Route::get('projects', 'ProjectController@index');
-        Route::get('probes', 'ProbeController@index');
-        Route::get('boxes', 'Acl\UserController@index');
         Route::get('users', 'Acl\UserController@index');
-        Route::get('sectors', 'SectorController@index');
-        Route::get('sectors/racks/{id}', 'SectorController@findRacks');
-        Route::get('typeracks', 'TypeRackController@index');
     });
 
         Route::group(['prefix' => 'select'], function () {
@@ -114,7 +84,6 @@ Route::group([
         Route::group(['prefix' => 'type'], function () {
 
         });
-  //  Route::resource('typeracks', 'TypeRackController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 });
 
 

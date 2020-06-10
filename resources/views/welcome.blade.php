@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>API - Geosam</title>
+        <title>API - REST</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-        <link rel="icon" type="image/x-icon" href="{{ asset('images/plazfer.png') }}">
+       <!-- <link rel="icon" type="image/x-icon" href="{{ asset('images/plazfer.png') }}"> -->
         <link href="{{ asset('css/welcome.css') }}" rel='stylesheet'>
     </head>
     <body>
@@ -29,16 +29,16 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                  <img src="{{ asset('images/geosam.png') }}"  class="centinela-img">
+            <!---      <img src="{{ asset('images/geosam.png') }}"  class="centinela-img"> --->
             <!---  <img src="{{ asset('images/logocentinela.png') }}"  class="yoplanifico-img"> --->
             </div>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://geosam.cl">Geosam</a>
-                    <a href="http://www.aminerals.cl/">Antofasta Minerals</a>
-                    <a href="https://www.plazfer.cl/">Plazfer Spa</a>
-                    <a href="https://github.com/plazfer">GitHub</a>
+                    <a href="">API-REST</a>
+                    <a href="">Luis Ramirez</a>
+                    <a href="">Plazfer Spa</a>
+                    <a href="https://github.com/tatuco">GitHub</a>
                 </div>
             </div>
         </div>
