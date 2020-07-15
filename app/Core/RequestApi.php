@@ -35,15 +35,16 @@ class RequestApi
                     ]);
                 } else {
                     $response = self::curlForm($requestUrl, $formParams, $method);
-                    return $response;
+                    return json_decode($response, true);
+
                 }
             } elseif ($method == 'PUT') {
                 if ($formParams instanceof Request) {
                     $response = self::curlForm($requestUrl, $formParams->all(), $method);
-                    return $response;
+                    return json_decode($response, true);
                 } else {
                     $response = self::curlForm($requestUrl, $formParams, $method);
-                    return $response;
+                    return json_decode($response, true);
                 }
             }
             if ($method !== 'POST' || $method !== 'PUT') {
