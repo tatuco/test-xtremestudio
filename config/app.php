@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'America/Santiago',
+    'timezone' => 'America/Bogota',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,7 +176,6 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         // Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
-        App\Acl\Src\ShinobiServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         App\Reports\src\ServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
@@ -236,7 +235,6 @@ return [
 
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
-        'Shinobi' =>  App\Acl\Src\ShinobiServiceProvider::class,
         'Report' => App\Reports\src\ServiceProvider::class,
         'PDF'   => Barryvdh\DomPDF\ServiceProvider::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,

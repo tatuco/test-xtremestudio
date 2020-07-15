@@ -8,7 +8,6 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-       <!-- <link rel="icon" type="image/x-icon" href="{{ asset('images/plazfer.png') }}"> -->
         <link href="{{ asset('css/welcome.css') }}" rel='stylesheet'>
     </head>
     <body>
@@ -37,7 +36,6 @@
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="">API-REST</a>
                     <a href="">Luis Ramirez</a>
-                    <a href="">Plazfer Spa</a>
                     <a href="https://github.com/tatuco">GitHub</a>
                 </div>
             </div>

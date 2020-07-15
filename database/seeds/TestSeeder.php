@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class BoxSeeder extends Seeder
+class TestSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class BoxSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('boxes')->insert([
+        DB::table('tests')->insert([
             'name' => '',
             'description' => '',
             'deleted' => false,
