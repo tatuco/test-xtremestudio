@@ -27,3 +27,4 @@ Route::get('/', function (){
 
 Route::resource('tests', 'TestController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 Route::get('tests/rick/morty/{id}', 'TestController@getRickAndMortyapi');
+
